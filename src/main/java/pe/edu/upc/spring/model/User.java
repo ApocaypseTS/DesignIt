@@ -31,7 +31,7 @@ public class User {
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id")
-	private List<Service> services;
+	private List<Rol> roles;
 
 	public Long getId() {
 		return id;
@@ -65,12 +65,13 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	public List<Service> getRoles() {
-		return services;
+	public List<Rol> getRoles() {
+		return roles;
 	}
 
-	public void setRoles(List<Service> services) {
-		this.services = services;
+	public void setRoles(List<Rol> roles) {
+		this.roles = roles;
 	}
 
 }
+

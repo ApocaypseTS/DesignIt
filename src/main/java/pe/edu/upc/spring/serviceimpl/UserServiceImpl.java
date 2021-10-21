@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import pe.edu.upc.spring.model.Service;
+import pe.edu.upc.spring.model.Rol;
 import pe.edu.upc.spring.model.User;
 import pe.edu.upc.spring.repository.IUserRepository;
 
@@ -30,8 +30,8 @@ public class UserServiceImpl implements UserDetailsService {
 		User user = userRepository.findByUsername(username);
 		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		
-		for(Services service : user.getService()) {
-			authorities.add(new SimpleGrantedAuthority(service.getAuthoriry()));
+		for(Rol role : user.getRoles()) {
+			authorities.add(new SimpleGrantedAuthority(role.getAuthoriry()));
 		}
 		
 		return new User(user.getUsername(), user.getPassword(), user.getEnabled(), true, true, true, authorities);
