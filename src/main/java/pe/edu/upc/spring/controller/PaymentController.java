@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.text.ParseException;
 
 import pe.edu.upc.spring.model.Payment;
-import pe.edu.upc.spring.service.IMethodPaymentService;
+import pe.edu.upc.spring.service.IPaymentMethodService;
 import pe.edu.upc.spring.service.IPaymentService;
 import pe.edu.upc.spring.service.IRequestService;
 
@@ -25,7 +25,7 @@ public class PaymentController {
 	private IPaymentService pService;
 	
 	@Autowired
-	private IMethodPaymentService mService;
+	private IPaymentMethodService mService;
 
 	@Autowired
 	private IRequestService rService;
@@ -44,7 +44,7 @@ public class PaymentController {
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("payment", new Payment());
-		model.addAttribute("listaMethodPayment", mService.listar());
+		model.addAttribute("listaPaymentMethod", mService.listar());
 		model.addAttribute("listaRequest", rService.listar());
 		return "payment/payment";
 	}
@@ -71,7 +71,7 @@ public class PaymentController {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
 			return "redirect:/payment/listar";
 		} else {
-			model.addAttribute("listaMethodPayment", mService.listar());
+			model.addAttribute("listaPaymentMethod", mService.listar());
 			model.addAttribute("listaRequest", rService.listar());
 			model.addAttribute("payment", objPayment);
 			return "payment/payment";

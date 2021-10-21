@@ -16,7 +16,7 @@ import pe.edu.upc.spring.model.EventPlanner;
 
 import pe.edu.upc.spring.service.IEventPlannerService;
 import pe.edu.upc.spring.service.IPlannerService;
-import pe.edu.upc.spring.service.IEvenpService;
+import pe.edu.upc.spring.service.IEventService;
 
 @Controller
 @RequestMapping("/eventplanner")
@@ -25,7 +25,7 @@ public class EventPlannerController {
 	@Autowired
 	private IEventPlannerService evplService;
 	@Autowired
-	private IEvenpService eService;
+	private IEventService eService;
 	@Autowired
 	private IPlannerService pService;
 

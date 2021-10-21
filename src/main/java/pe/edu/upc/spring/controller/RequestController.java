@@ -116,17 +116,16 @@ public class RequestController {
 		Planner planner = new Planner();
 		Event event = new Event();
 
-		planner.setNombre(solicitudClase.getEventPlanner().getEvent().getNombreEvent());
-		event.setNombreEvent(solicitudClase.getEventPlanner().getEvent().getNombreEvent());
+		planner.setNombre(solicitudClase.getEventPlanner().getEvent().getNameEvent());
+		event.setNameEvent(solicitudClase.getEventPlanner().getEvent().getNameEvent());
 		
 		eventPlanner.setPlanner(planner);
 		eventPlanner.setEvent(event);
 		
 		solicitudClase.setEventPlanner(eventPlanner);
-		listaRequest = rService.buscarNombrePlanner(solicitudClase.getEventPlanner().getPlanner().getNombre());
+		listaRequest = rService.buscarNamePlanner(solicitudClase.getEventPlanner().getPlanner().getNombre());
 		if (listaRequest.isEmpty()) {
-			listaRequest = rService
-					.buscarNombreEvent(solicitudClase.getEventPlanner().getEvent().getNombreEvent());
+			listaRequest = rService.buscarNameEvent(solicitudClase.getEventPlanner().getEvent().getNameEvent());
 		}
 		if (listaRequest.isEmpty()) {
 			model.put("mensaje", "No se encontraron coincidencias");
