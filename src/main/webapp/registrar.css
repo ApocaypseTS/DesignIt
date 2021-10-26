@@ -1,1 +1,60 @@
 @charset "ISO-8859-1";
+h1{
+    color: red;
+    position: relative;
+    top:50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body
+{
+    background-color: rgba(245, 245, 80, 0.952);
+    overflow-x:hidden;
+}
+#cuadro{
+    position: relative;
+    top: 100px;
+    left: 80px;
+}
+#cuadro input{
+    height: 30px;
+    width: 300px;
+    position: relative;
+    left: 40px;
+    
+}
+#cuadro p{
+    font-size: 20px;
+}
+#cuadro1 p {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+#cuadro1 input{
+    position: relative;
+    top: 50px;
+    left: 100px;
+   
+
+}
+#cuadro1  p{
+    position: relative;
+    top: 120px;
+    left: 140px;
+    font-size: 15px;
+}
+h2{
+    position: relative;
+    top: 120px;
+    left: 140px;
+    font-size: 20px;
+}
+button{
+    position: relative;
+    top: 120px;
+    left: 140px;
+    height: 35px;
+    width: 70px;
+    background: rgba(80, 80, 245, 0.897);
+    color: white;
+}
