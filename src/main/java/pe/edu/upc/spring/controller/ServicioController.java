@@ -34,7 +34,7 @@ public class ServicioController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "bienvenido"; //"bienvenido" es una pagina del frontend
+		return "landing"; //"landing" es una pagina del frontend
 	}
 	
 	@RequestMapping("/")
