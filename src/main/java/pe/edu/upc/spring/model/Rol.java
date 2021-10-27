@@ -1,5 +1,8 @@
 package pe.edu.upc.spring.model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,28 +10,44 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="rol")
-public class Rol {
+@Table(name="Rol")
+public class Rol implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int idRol;
 	
-	public String authoriry;
+	@Column(name = "nombreRol", length = 25, nullable=false)
+	public String nameRol;
 
-	public Long getId() {
-		return id;
+	public Rol() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public Rol(int idRol, String nameRol) {
+		super();
+		this.idRol = idRol;
+		this.nameRol = nameRol;
 	}
 
-	public String getAuthoriry() {
-		return authoriry;
+	public int getIdRol() {
+		return idRol;
 	}
 
-	public void setAuthoriry(String authoriry) {
-		this.authoriry = authoriry;
+	public void setIdRol(int idRol) {
+		this.idRol = idRol;
 	}
+
+	public String getNameRol() {
+		return nameRol;
+	}
+
+	public void setNameRol(String nameRol) {
+		this.nameRol = nameRol;
+	}
+
+	
 }
