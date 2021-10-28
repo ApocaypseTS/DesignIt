@@ -1,0 +1,78 @@
+#arriba {
+  background-color:white;  
+  position: relative;
+  top: -16px;
+  right: 10px;
+  height: 60px;
+  width: 1365px;
+
+}
+body {
+    overflow-x:hidden;
+}
+#arriba a{
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    margin: 60px;
+    font-size: 19px;
+    position: relative;
+    top: -8px;
+    left: 110px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#arriba li{
+    list-style:none
+}
+#arriba img {
+    height: 50px;
+    width: 90px;
+    position: relative;
+    top: 5px;
+}
+#bienvenido img{
+    height: 350px;
+    position: relative;
+    width: 1365px;
+    top: -16px;
+    right: 10px;
+    filter: brightness(60%);
+
+}
+h1{
+    position: relative;
+    top: -300px;
+ left: 450px;
+ color: white;
+ filter: brightness(100%);
+ 
+ font-size: 70px;
+ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#bienvenido p{
+    position: relative;
+    top: -340px;
+    left: 380px;
+    font-size: 40px;
+    font-style: italic;
+    color: white;
+}
+#entradas img{
+    position: relative;
+    top:-380px;
+    height: 70px;
+    left: 100px;
+    margin: 140px;
+}
+#entradas li{
+    list-style:none
+}
+#entradas2 a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top:-500px;
+left: 90px;
+margin: 148px;
+font-size: 19px;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
