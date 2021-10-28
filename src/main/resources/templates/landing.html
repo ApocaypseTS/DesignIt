@@ -8,13 +8,13 @@
         <meta name="author" content="" />
         <title>Design It</title>
       
-        <link href="css/styles_land.css" rel="stylesheet" />
+        <link href="@{/css/styles_land.css}" rel="stylesheet" />
     </head>
     <body>
         <div class="barra">
         <nav >
             <ul>
-          <img id ="imagen1"src="img/logo.png" alt="">
+          <img id ="imagen1"th:src="@{/img/logo.png}" alt="">
          <li>Inicio</li>
          <li><a href="#seccion2">Nosotros</a></li>
          <li><a href="#seccion3"> Contactanos</a></li>
@@ -37,10 +37,10 @@
                 </div>
                 <div id="seccion2"></div>
                 <div class="caja">
-                    <img src="img/5.jpg" alt="">
-                    <img src="img/4.jpeg" alt="">
-                    <img src="img/8.jfif" alt="">
-                    <img src="img/9.jfif" alt="">
+                    <img th:src="@{/img/5.jpg}" alt="">
+                    <img th:src="@{/img/4.jpeg}" alt="">
+                    <img th:src="@{/img/8.jfif}" alt="">
+                    <img th:src="@{/img/9.jfif}" alt="">
                     <div id="a5">
                         <h1>Local</h1>
                    <p>En design it podras encontrar</p>
