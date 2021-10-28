@@ -46,6 +46,11 @@ public class ReservaController {
 	public String irPaginaBienvenida() {
 		return "landing"; 
 	}
+	@RequestMapping("/reserva")
+	public String irPaginareserva() {
+		return "reserva"; //"landing" es una pagina del frontend
+	}
+	
 	
 	@RequestMapping("/")
 	public String irPaginaListadoReservas(Map<String, Object> model) {

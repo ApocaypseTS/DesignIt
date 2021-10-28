@@ -16,5 +16,16 @@ public class InicioController {
 	public String irPaginaInicio() {
 		return "index"; //"landing" es una pagina del frontend
 	}
-	
+	@RequestMapping("/reserva")
+	public String irPaginaReserva() {
+		return "reserva"; //"landing" es una pagina del frontend
+	}
+	@RequestMapping("/pago")
+	public String irPaginaPago() {
+		return "pago"; //"landing" es una pagina del frontend
+	}
+	@RequestMapping("/historial")
+	public String irPaginaReserva2() {
+		return "historial"; //"landing" es una pagina del frontend
+	}
 }

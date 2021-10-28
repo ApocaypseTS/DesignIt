@@ -1,7 +1,7 @@
 #arriba {
     background-color:rgba(218, 216, 216, 0.438);    
     position: relative;
-    top: -10px;
+    top: -17px;
     right: 10px;
     height: 60px;
     width: 1365px;
@@ -16,7 +16,7 @@
       margin: 60px;
       font-size: 19px;
       position: relative;
-    top:16px;
+    top:-20px;
       left: 110px;
       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }

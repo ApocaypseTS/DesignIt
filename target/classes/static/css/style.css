@@ -1,43 +1,4 @@
-#arriba {
-  background-color:white;  
-  position: relative;
-  top: -16px;
-  right: 10px;
-  height: 60px;
-  width: 1365px;
 
-}
-body {
-    overflow-x:hidden;
-}
-#arriba a{
-    color: rgb(8, 8, 8);
-    text-decoration: none;
-    margin: 60px;
-    font-size: 19px;
-    position: relative;
-    top: -8px;
-    left: 110px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-#arriba li{
-    list-style:none
-}
-#arriba img {
-    height: 50px;
-    width: 90px;
-    position: relative;
-    top: 5px;
-}
-#bienvenido img{
-    height: 350px;
-    position: relative;
-    width: 1365px;
-    top: -16px;
-    right: 10px;
-    filter: brightness(60%);
-
-}
 h1{
     position: relative;
     top: -300px;
