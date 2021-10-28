@@ -27,12 +27,12 @@
             <ul>
                 
             <li>
-                <img src="img/logo.png" alt="">
-                <a href="index_prestamista.html">Inicio</a>
-                <a href="solicitud.html">Mis solicitudes</a>
-                <a href="trabajador.html">Mis trabajadores</a>
-                <a href="pago_prestamista.html">Mis pagos</a>
-                <a href="nosotros.html">Nosotros</a>
+               <img th:src="@{/img/logo.png}" alt="">
+                <a th:href="@{/inicio/index}">Inicio</a>
+                <a th:href="@{/reserva/listareserva}">Reservas</a>
+                <a th:href="@{/orden/pago}">Mis pagos</a>
+                <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
+                <a th:href="@{/inicio/index}">Nosotros</a>
             </li>
            </ul>
         </nav>
