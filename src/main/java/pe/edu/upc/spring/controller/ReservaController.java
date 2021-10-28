@@ -52,6 +52,11 @@ public class ReservaController {
 		return "reserva"; 
 	}
 	
+	@RequestMapping("/regristrar")
+	public String irPaginaregistro() {
+		return "selecionar_reserva"; //"selecionar_reserva" es una pagina del frontend
+	}
+	
 	@RequestMapping("/")
 	public String irPaginaListadoReservas(Map<String, Object> model) {
 		model.put("listaReservas", rService.listar());
