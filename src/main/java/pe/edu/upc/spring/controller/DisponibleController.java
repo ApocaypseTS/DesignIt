@@ -32,13 +32,13 @@ public class DisponibleController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "landing"; //"landing" es una pagina del frontend
+		return "landing";
 	}
 	
 	@RequestMapping("/")
 	public String irPaginaListadoUsuarios(Map<String, Object> model) {
 		model.put("listaDisponibles", dService.listar());
-		return "listDisponible"; //"listDisponible" es una pagina del frontend
+		return "listDisponible"; 
 	}
 	
 	@RequestMapping("/irRegistrar")
@@ -49,7 +49,7 @@ public class DisponibleController {
 		model.addAttribute("disponible", new Disponible());
 		model.addAttribute("orden", new Orden());
 
-		return "disponible"; //"disponible" es una pagina del frontend para insertar y/o modificar
+		return "disponible"; 
 	}
 	
 	@RequestMapping("/registrar")

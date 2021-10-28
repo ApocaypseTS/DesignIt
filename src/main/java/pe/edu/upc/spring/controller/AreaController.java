@@ -27,19 +27,19 @@ public class AreaController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "landing"; //"landing" es una pagina del frontend
+		return "landing"; 
 	}
 	
 	@RequestMapping("/")
 	public String irPaginaListadoAreas(Map<String, Object> model) {
 		model.put("listaAreas", rService.listar());
-		return "listArea"; //"listArea" es una pagina del frontend
+		return "listArea"; 
 	}
 	
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("area", new Area());
-		return "area"; //"area" es una pagina del frontend para insertar y/o modificar
+		return "area"; 
 	}
 	
 	@RequestMapping("/registrar")
