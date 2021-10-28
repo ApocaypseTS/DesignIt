@@ -74,7 +74,7 @@ public class DisponibleController {
 	public String modificar(@PathVariable int id, Model model, RedirectAttributes objRedir) throws ParseException{
 		Optional<Disponible> objDisponible = dService.listarId(id);
 		if(objDisponible == null) {
-			objRedir.addFlashAttribute("mensaje","Ocurrio un roche, LUZ ROJA");
+			objRedir.addFlashAttribute("mensaje","Ocurrio un error");
 			return "redirect:/disponible/listar";
 		}
 		else {
