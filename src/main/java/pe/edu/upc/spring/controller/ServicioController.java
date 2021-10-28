@@ -34,13 +34,13 @@ public class ServicioController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "landing"; //"landing" es una pagina del frontend
+		return "landing";
 	}
 	
 	@RequestMapping("/")
 	public String irPaginaListadoServicios(Map<String, Object> model) {
 		model.put("listaServicios", sService.listar());
-		return "listServicio"; //"listServicio" es una pagina del frontend
+		return "listServicio"; 
 	}
 	
 	@RequestMapping("/irRegistrar")
@@ -51,7 +51,7 @@ public class ServicioController {
 		model.addAttribute("servicio", new Servicio());
 		model.addAttribute("area", new Area());
 
-		return "servicio"; //"servicio" es una pagina del frontend para insertar y/o modificar
+		return "servicio";
 	}
 	
 	@RequestMapping("/registrar")

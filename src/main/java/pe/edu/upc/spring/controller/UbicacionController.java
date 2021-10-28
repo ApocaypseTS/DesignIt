@@ -27,19 +27,19 @@ public class UbicacionController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "landing"; //"landing" es una pagina del frontend
+		return "landing"; 
 	}
 	
 	@RequestMapping("/")
 	public String irPaginaListadoUbicaciones(Map<String, Object> model) {
 		model.put("listaUbicaciones", rService.listar());
-		return "listUbicaciones"; //"listUbicaciones" es una pagina del frontend
+		return "listUbicaciones";
 	}
 	
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("ubicacion", new Ubicacion());
-		return "ubicacion"; //"ubicacion" es una pagina del frontend para insertar y/o modificar
+		return "ubicacion"; 
 	}
 	
 	@RequestMapping("/registrar")

@@ -27,19 +27,19 @@ public class RolController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "landing"; //"landing" es una pagina del frontend
+		return "landing"; 
 	}
 	
 	@RequestMapping("/")
 	public String irPaginaListadoRoles(Map<String, Object> model) {
 		model.put("listaRoles", rService.listar());
-		return "listRoles"; //"listRoles" es una pagina del frontend
-	}
+		return "listRoles";
+	} 
 	
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("rol", new Rol());
-		return "rol"; //"rol" es una pagina del frontend para insertar y/o modificar
+		return "rol";
 	}
 	
 	@RequestMapping("/registrar")

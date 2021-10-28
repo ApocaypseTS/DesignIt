@@ -44,13 +44,13 @@ public class ReservaController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "landing"; //"landing" es una pagina del frontend
+		return "landing"; 
 	}
 	
 	@RequestMapping("/")
 	public String irPaginaListadoReservas(Map<String, Object> model) {
 		model.put("listaReservas", rService.listar());
-		return "listReserva"; //"listReserva" es una pagina del frontend
+		return "listReserva";
 	}
 	
 	@RequestMapping("/irRegistrar")
@@ -65,7 +65,7 @@ public class ReservaController {
 		model.addAttribute("ubicacion", new Ubicacion());
 		model.addAttribute("orden", new Orden());
 
-		return "reserva"; //"reserva" es una pagina del frontend para insertar y/o modificar
+		return "reserva"; 
 	}
 	
 	@RequestMapping("/registrar")
