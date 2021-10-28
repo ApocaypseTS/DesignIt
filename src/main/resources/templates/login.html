@@ -25,16 +25,18 @@
        <!--validar usuario-->
         <label id="label1">Usuario<input type="text" id="Name" name="Name" placeholder="usuario"/></label>
        <!--validar contraseña-->
+       <div id="tried">
        <label id="label2">Contraseña<input type="password" id="Name" name="Name"placeholder="contraseña"
         title="Una contraseña válida es un conjuto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menor un dígito" 
         ></label>
+        </div>
       
     <!--inicio de prueba -->
        <a th:href="@{/inicio/index}"><button>Iniciar</button></a>
 
 
-        <p>¿No tienes cuenta?</p>
-        <a th:href="@{/usuario/irRegistrar}">Crear cuenta</a>
+        <p>�No tienes cuenta?</p>
+        <a th:href="@{/inicio/registro}">Crear cuenta</a>
     </div>
 
 

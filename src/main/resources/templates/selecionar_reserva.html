@@ -3,75 +3,47 @@
 
 
 <head>
-    <meta charset="UTF-8"></meta>
-		<title>seleccionar reserva</title>
-		
-		<script type="text/javascript"
+   <script type="text/javascript"
 				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
 		</script>
 		
-		<link
-			href="bootstrap.min.css"
-			rel="stylesheet" id="bootstrap-css">
-		</link>
-        <link rel="stylesheet" href="css/reserva.css">
+		
 		
 		<script
 			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
 		</script>
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <link href="../static/css/reserva.css" th:href="@{/css/reserva.css}" rel="stylesheet" />
-		<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/reserva.css}" rel="stylesheet" />
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link rel="stylesheet" th:href="@{/css/solcitud.css}"/>
+       
 		
 		
 </head>
 <body>
-    <div class="barra">
-        <nav id="arriba">
-            <ul>
-                
-            <li>
-               <img src="img/logo.png" alt="">
-                <a href="index.html">Inicio</a>
-                <a href="reserva.html">Reservas</a>
-                <a href="pago.html">Mis pagos</a>
-                <a href="historial.html">Mis reservas</a>
-                <a href="nosotros.html">Nosotros</a>
-            </li>
-           </ul>
-        </nav>
-       </div>
-       <div class="form-group"></div>
+   <div th:replace="fragments/header :: header"></div>
+   
     <label for="idPrestamista">ID:</label>
-    				<input type="text" class="form-control" th:field="*{idPrestamista}"></input>
-
-        <div class="form-group">
-            <label for="">Servicio:</label>
-                            <input type="text" class="form-control" th:field=""></input>
-
-        <div class="form-group">
-                    <label for="">Prestamista:</label>
-                                    <input type="text" class="form-control" th:field=""></input>
-         <div class="form-group">
-                            <label for="">Precio:</label>
-                                            <input type="text" class="form-control" th:field=""></input>
-                                       
-        <div class="form-group">
+    				<input type="text" class="form-control" ></input>
+    				<!-- ponerle su field y su for  -->
+    				<label for="Servicio">Servicio:</label>
+    				<input type="text" class="form-control" ></input>
+    				<label for="NamePrestamista">Prestamista:</label>
+    				<input type="text" class="form-control" ></input>
+    				<label for="precio">Precio:</label>
+    				<input type="text" class="form-control" ></input>
+    				
                                     <label for="">Fecha de reserva:</label>
                                     <input type="date" id="start" name="trip-start"
                                     value="2021-10-26"
                                     min="2021-10-26" max="2021-12-26">
-         <div class="form-group">
-                                    <label for="">Ubicacion:</label>
-                                            <input type="text" class="form-control" th:field=""></input>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                        <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
+                                    <br>
+    				<label for="ubicacion">Ubicacion:</label>
+    				<input type="text" class="form-control" ></input>
+
+                   
+                                        <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href="@{/reserva/listareserva}"
         id="add-row" type="button" class="btn btn-primary btn-md left-block">
         <span class="glyphicon glyphicon-search"></span> Reservar
        </a>

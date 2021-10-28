@@ -17,12 +17,13 @@ h1{
     font-style: italic;
     color: white;
 }
-#entradas img{
+#entradas li img{
     position: relative;
     top:-380px;
     height: 70px;
     left: 100px;
     margin: 140px;
+    width:70px;
 }
 #entradas li{
     list-style:none
@@ -36,4 +37,13 @@ left: 90px;
 margin: 148px;
 font-size: 19px;
 font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#bienvenido img{
+    height: 350px;
+    position: relative;
+    width: 1365px;
+    top: -16px;
+    right: 10px;
+    filter: brightness(60%);
+
 }

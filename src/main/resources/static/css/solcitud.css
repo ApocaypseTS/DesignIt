@@ -16,7 +16,7 @@
       margin: 60px;
       font-size: 19px;
       position: relative;
-    top:-20px;
+    top:-15px;
       left: 110px;
       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
@@ -29,20 +29,5 @@
       position: relative;
       top: 5px;
   }
-  input{
-      width: 300px;
-      height: 30px;
-      position: relative;
-      
-      left: 0px;
-  }
   
-  button{
-      height: 30px;
-      width: 80px;
-      color: white;
-      background-color: rgb(52, 52, 202);
-      position: relative;
-      left: 450px;
-  }
   
