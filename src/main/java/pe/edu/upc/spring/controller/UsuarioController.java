@@ -114,7 +114,7 @@ public class UsuarioController {
 		}
 		else {
 			model.addAttribute("usuario", objUsuario);
-			return "usuario";
+			return "registrar_trabajador";
 		}
 	}
 	
