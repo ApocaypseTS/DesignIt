@@ -21,8 +21,8 @@
 		</script>
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link href="../static/css/reserva.css" th:href="@{/css/reserva.css}" rel="stylesheet" />
-		<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/reserva.css}" rel="stylesheet" />
+		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
 		
 		
 </head>
@@ -32,12 +32,12 @@
             <ul>
                 
             <li>
-               <img src="img/logo.png" alt="">
-                <a href="index.html">Inicio</a>
-                <a href="reserva.html">Reservas</a>
-                <a href="pago.html">Mis pagos</a>
-                <a href="historial.html">Mis reservas</a>
-                <a href="nosotros.html">Nosotros</a>
+               <img th:src="@{/img/logo.png}" alt="">
+                <a th:href="@{/inicio/index}">Inicio</a>
+                <a th:href="@{/reserva/listareserva}">Reservas</a>
+                <a th:href="@{/orden/pago}">Mis pagos</a>
+                <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
+                <a th:href="@{/inicio/index}">Nosotros</a>
             </li>
            </ul>
         </nav>

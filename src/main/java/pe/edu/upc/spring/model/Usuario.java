@@ -33,6 +33,9 @@ public class Usuario implements Serializable{
 	@Column(name = "contrasena", length = 50, nullable=false)
 	private String contrasena;
 
+	@Column(name = "profesion", length = 50, nullable=true)
+	private String profesion;
+	
 	@ManyToOne
 	@JoinColumn(name="idRol", nullable = false)
 	private Rol rol;
@@ -42,13 +45,15 @@ public class Usuario implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Usuario(int idUsuario, String nameUsuario, String apellido, String email, String contrasena, Rol rol) {
+	public Usuario(int idUsuario, String nameUsuario, String apellido, String email, String contrasena,
+			String profesion, Rol rol) {
 		super();
 		this.idUsuario = idUsuario;
 		this.nameUsuario = nameUsuario;
 		this.apellido = apellido;
 		this.email = email;
 		this.contrasena = contrasena;
+		this.profesion = profesion;
 		this.rol = rol;
 	}
 
@@ -92,6 +97,14 @@ public class Usuario implements Serializable{
 		this.contrasena = contrasena;
 	}
 
+	public String getProfesion() {
+		return profesion;
+	}
+
+	public void setProfesion(String profesion) {
+		this.profesion = profesion;
+	}
+
 	public Rol getRol() {
 		return rol;
 	}
@@ -99,8 +112,6 @@ public class Usuario implements Serializable{
 	public void setRol(Rol rol) {
 		this.rol = rol;
 	}
-	
-	
 	
 	
 }
