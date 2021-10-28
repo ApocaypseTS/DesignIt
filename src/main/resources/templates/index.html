@@ -20,22 +20,7 @@
 
 <body>
 
-    <div class="barra">
-     <nav id="arriba">
-         <ul>
-            <li>
-                <img th:src="@{/img/logo.png}" alt="">
-                 <a th:href="@{/index.html}">Inicio</a>
-                 <a th:href="@{/reserva.html}">Reservas</a>
-                 <a th:href="@{/pago.html}">Mis pagos</a>
-                 <a th:href="@{/historial.html}">Mis reservas</a>
-                 <a th:href="@{/nosotros.html}">Nosotros</a>
-         </li>
-        </ul>
-     </nav>
-    </div>
-    <div id="bienvenido">
-        
+    <div th:replace="fragments/header :: header"></div>
    <img th:src="@{/img/cop.jpg}" alt="">
    <h1>Bienvenidos</h1>
         <p>Planea tus eventos con nosotros </p>
