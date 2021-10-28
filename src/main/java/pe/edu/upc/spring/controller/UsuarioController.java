@@ -33,6 +33,11 @@ public class UsuarioController {
 		return "landing"; 
 	}
 	
+	@RequestMapping("/login")
+	public String irPaginaLogueo() {
+		return "login"; //"login" es una pagina del frontend
+	}
+	
 	@RequestMapping("/")
 	public String irPaginaListadoUsuarios(Map<String, Object> model) {
 		model.put("listaUsuarios", uService.listar());
@@ -47,7 +52,7 @@ public class UsuarioController {
 		model.addAttribute("usuario", new Usuario());
 		model.addAttribute("rol", new Rol());
 
-		return "usuario"; 
+		return "usuario"; //"usuario" es una pagina del frontend para insertar y/o modificar
 	}
 	
 	@RequestMapping("/registrar")
