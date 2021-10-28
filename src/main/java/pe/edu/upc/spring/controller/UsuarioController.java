@@ -65,7 +65,7 @@ public class UsuarioController {
 		else {
 			boolean flag = uService.grabar(objUsuario);
 			if(flag)
-				return "redirect:/usuario/listar";
+				return "redirect:/usuario/login";
 			else {
 				model.addAttribute("mensaje", "Ocurrio un accidente, LUZ ROJA");
 				return "redirect:/usuario/irRegistrar";
