@@ -52,7 +52,7 @@ public class UsuarioController {
 		model.addAttribute("usuario", new Usuario());
 		model.addAttribute("rol", new Rol());
 
-		return "usuario"; //"usuario" es una pagina del frontend para insertar y/o modificar
+		return "registrar"; //"registrar" es una pagina del frontend para insertar y/o modificar
 	}
 	
 	@RequestMapping("/registrar")
