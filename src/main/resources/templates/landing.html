@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
     <head>
         
       
-        <link href="../static/css/styles_land.css" rel="stylesheet" />
+        <link rel="stylesheet" th:href="@{/css/styles_land.css}"/>
     </head>
     <body>
         <div class="barra">
         <nav >
             <ul>
-          <img id ="imagen1"th:src="../static/img/logo.png" alt="">
+          <img id ="imagen1"th:src="@{/img/logo.png}" alt="">
          <li>Inicio</li>
          <li><a href="#seccion2">Nosotros</a></li>
          <li><a href="#seccion3"> Contactanos</a></li>
@@ -20,7 +19,7 @@
         
            
             <div class="centro">
-                <img src="../static/img/2.jpg" alt="">
+                <img th:src="@{/img/2.jpg}" alt="">
                  <p id="titulo">Design It</p>
                  <hr>
                  <p> Organiza a tu manera eventos sin peder tiempo en buscar servicios </p>
@@ -33,10 +32,10 @@
                 </div>
                 <div id="seccion2"></div>
                 <div class="caja">
-                    <img src="../static/img/5.jpg" alt="">
-                    <img src="../static/img/4.jpeg" alt="">
-                    <img src="../static/img/8.jfif" alt="">
-                    <img src="../static/img/9.jfif" alt="">
+                    <img th:src="@{/img/5.jpg}" alt="">
+                    <img th:src="@{/img/4.jpeg}" alt="">
+                    <img th:src="@{/img/8.jfif}" alt="">
+                    <img th:src="@{/img/9.jfif}" alt="">
                     <div id="a5">
                         <h1>Local</h1>
                    <p>En design it podras encontrar</p>
