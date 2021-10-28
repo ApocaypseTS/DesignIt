@@ -8,9 +8,12 @@
 			href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 			rel="stylesheet" id="bootstrap-css">
 		</link>
+		<link rel="stylesheet" th:href="@{/css/solcitud.css}"/>
 		<script
 			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
 		</script>
+		
+        
 	</head>
 
 	<body>
@@ -18,6 +21,7 @@
 		<!-- Sintaxis th:fragment="Nombre del fragment" -->
 		<div th:fragment="header">
 			<!-- this is header -->
+<<<<<<< HEAD
 			<nav class="navbar navbar-inverse">
 				<div class="container">
 					
@@ -35,14 +39,33 @@
 							<li class="active"><a th:href="@{/usuario/listar}">Prestamistas</a></li>
 							<li class="active"><a th:href="@{/inicio/index}">Nosotros</a></li>
 	
+=======
+			
+		 <div class="barra">
+		 
+        <nav id="arriba">
+						<ul >
+						 <li>
+						 <img th:src="@{/img/logo.png}" alt="">
+                 <a th:href="@{/inicio/index}">Inicio</a>
+                 <a th:href="@{/reserva/listareserva}">Reservas</a>
+                 <a th:href="@{/orden/pago}">Mis pagos</a>
+                 <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
+                 <a th:href="@{/inicio/index}">Nosotros</a>
+	                      </li>
+>>>>>>> Nicole-Branch
 						</ul>
-						 
+						 </nav>
 					</div>
 					
 				</div>
-			</nav>
-		</div>
-	
+
+
+
+
+
+
+ 
 	</body>
 	
 </html>
