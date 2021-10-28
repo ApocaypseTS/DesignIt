@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8"></meta>
+		<title>Reserva</title>
+		
+		<script type="text/javascript"
+				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
+		</script>
+		
+		
+		<script
+			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+		</script>
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link href="../static/css/solcitud.css" th:href="@{/css/solcitud.css}" rel="stylesheet" />
+		<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		
+		
+</head>
+<body>
+    <div class="barra">
+        <nav id="arriba">
+            <ul>
+                
+            <li>
+                <img src="img/logo.png" alt="">
+                <a href="index_prestamista.html">Inicio</a>
+                <a href="solicitud.html">Mis solicitudes</a>
+                <a href="trabajador.html">Mis trabajadores</a>
+                <a href="pago_prestamista.html">Mis pagos</a>
+                <a href="nosotros.html">Nosotros</a>
+            </li>
+           </ul>
+        </nav>
+       </div>
+       
+      
+
+<input type="text" id="" name="servicio" placeholder="servicio">
+
+     <!--llenar los href con la direccion-->
+ <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
+ id="add-row" type="button" class="btn btn-primary btn-md left-block">
+ <span class="glyphicon glyphicon-search"></span> Buscar 
+ <!--cambiar el href ya que tiene direccion inmediata y agregar el th-->
+ <a	style="border-bottom-color: rgb(13, 0, 128)"  href="registrar_trabajador.html"
+ id="add-row" type="button" class="btn btn-primary btn-md left-block">
+ <span class="glyphicon glyphicon-search"></span> Agregar 
+</a>
+       </a>
+        
+       </div>
+       
+    	<div class="container">
+    		<form id="myform">
+    			<div class="row clearfix">
+    				<div class="col-md-12 column">
+    					
+    					
+    					<table class="table table-bordered table-hover table-striped" id="tab_logic">
+    						<thead>
+    							<tr>
+    								<th class="text-center">Codigo</th>
+    								<th class="text-center">Nombre</th>
+    								<th class="text-center">Apellido</th>
+                                    <th class="text-center">Servicio que desempeña</th>
+                                    <th class="text-center">Email</th>
+                                    <th class="text-center">Operacion1</th>
+                                    <th class="text-center">Operacion2</th>
+
+    							</tr>
+    						</thead>
+    						<tbody>
+    							<tr th:each="">
+    								<td th:text=""></td>
+    								<td th:text=""></td>
+    								<td th:text=""></td>   								
+    								<td th:text=""></td>
+                                    <td th:text=""></td>
+                                    <td><a th:href="@{''}+${">Modificar</a></td>
+                                    <td><a th:href="@{''}+${">Eliminar</a></td>
+                                    
+    							</tr>
+    						</tbody>
+                            <tr>
+                                <!-- este es un ejemplo , eliminarlo -->
+                                <td>001</td>
+                                <td>Nicole Alexandra</td>
+                                <td>Kraenau</td>
+                                <td >Bailarina</td>
+                                <td>nicolkraenau@hotmail.com</td>   
+                                <td><a href="registrar_trabajador.html">Modificar</a></td>
+                                <td><a th:href="@{''}+${">Eliminar</a></td>								
+                    
+                                
+                            </tr>
+
+                            </tr>
+    					</table> 
+    					
+    				</div>
+    			</div>
+    			<div th:if="${mensaje}" class="alert alert-danger">
+    				<p th:text="${mensaje}"></p>
+    			</div>
+    		</form>
+    	</div>
+    	<div th:replace="fragments/footer :: footer"></div>
+</body>

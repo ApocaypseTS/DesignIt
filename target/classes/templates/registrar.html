@@ -10,28 +10,66 @@
 </head>
 <body>
     <h1>Registrar</h1>
-    <div id=cuadro>
-    <p>Nombre: <input type="text" id="" name="nombre" placeholder="Nombre"></p>
-    <p>Apellido: <input type="text" id="" name="nombre" placeholder="Apellido"></p>
-    <p>Email:  <input type="text" id="" name="nombre" placeholder="email"></p>
-    <p>Contraseña: <input type="text" id="" name="nombre" placeholder="contraseña"></p>
-   
-    
+    <div class="container">
+    	<form th:action="@{/usuario/registrar}" method="post" th:object="${usuario}">
+    				<div class="form-group">
+    					<label for="idusuario">ID:</label>
+    					<input type="text" class="form-control" th:field="*{idUsuario}"></input>
+    				
+    				<div class="form-group">
+    					<label for="nombre">NOMBRE:</label>
+    					<input type="text" class="form-control" th:field="*{nameUsuario}" id="nombre"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('nameUsuario')}" 
+								th:errors="*{nameUsuario}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">APELLIDO:</label>
+    					<input type="text" class="form-control" th:field="*{apellido}" id="apellido"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('apellido')}" 
+								th:errors="*{apellido}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">EMAIL:</label>
+    					<input type="text" class="form-control" th:field="*{email}" id="email"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('email')}" 
+								th:errors="*{email}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">CONTRASEÑA:</label>
+    					<input type="password" class="form-control" th:field="*{contrasena}" id="contrasena"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('contrasena')}" 
+								th:errors="*{contrasena}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="text">ROL:</label>
+    					<select class="form-control" th:field="*{rol.idRol}">
+    						<option th:each="r: ${listaRoles}"
+    								th:value="${r.idRol}"
+    								th:text="${r.nameRol}"
+    								th:selected="(${r.idRol}==*{rol.idRol})"> 
+    						</option>    					
+    					</select>    					
+    				</div> 		 
+			</div>
+			 <button type="submit" class="btn btn-primary">Aceptar</button>
+    		 <a href="/usuario/login" class="btn btn-danger">Cancelar</a>
+		</form>
 </div>
-<h2>Rol</h2>
-<div id="cuadro1">
-    <p>Cliente</p>
-    <p>Prestamista</p>
-
-<input type="radio" name="rol" value="1">
-<br>
-<br>
-<input type="radio" name="rol" value="2" >
-
-
-    <button>Registrar</button>
-    </div>
-    <!-- cuando se valide
-         <input type="text" id="nombre" name="nombre" placeholder="Nombre"></p>-->
     
 </body>
