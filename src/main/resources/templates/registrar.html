@@ -2,21 +2,12 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 
-<script type="text/javascript"
-				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
-		</script>
-		
-		
-		
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-		</script>
-		
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link th:href="@{/css/style.css}" rel="stylesheet" />
-        <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-        <link rel="stylesheet" th:href="@{/css/solcitud.css}"/>
-       
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+	<link th:href="@{/css/registrar.css}" rel="stylesheet" />
+</head>
 <body>
     <h1>Registrar</h1>
     <div class="container">
@@ -25,8 +16,70 @@
     					<label for="idusuario">ID:</label>
     					<input type="text" class="form-control" th:field="*{idUsuario}"></input>
     				
-   
-    				
+    				<div class="form-group">
+    					<label for="nombre">NOMBRE:</label>
+    					<input type="text" class="form-control" th:field="*{nameUsuario}" id="nombre"></input>
 
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('nameUsuario')}" 
+								th:errors="*{nameUsuario}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">APELLIDO:</label>
+    					<input type="text" class="form-control" th:field="*{apellido}" id="apellido"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('apellido')}" 
+								th:errors="*{apellido}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">EMAIL:</label>
+    					<input type="text" class="form-control" th:field="*{email}" id="email"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('email')}" 
+								th:errors="*{email}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">CONTRASEÑA:</label>
+    					<input type="password" class="form-control" th:field="*{contrasena}" id="contrasena"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('contrasena')}" 
+								th:errors="*{contrasena}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">PROFESION:(Opcional)</label>
+    					<input type="text" class="form-control" th:field="*{profesion}" id="profesion"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('profesion')}" 
+								th:errors="*{profesion}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="text">ROL:</label>
+    					<select class="form-control" th:field="*{rol.idRol}">
+    						<option th:each="r: ${listaRoles}"
+    								th:value="${r.idRol}"
+    								th:text="${r.nameRol}"
+    								th:selected="(${r.idRol}==*{rol.idRol})"> 
+    						</option>    					
+    					</select>    					
+    				</div> 		 
+			</div>
+			 <button type="submit" class="btn btn-primary">Aceptar</button>
+    		 <a href="/usuario/login" class="btn btn-danger">Cancelar</a>
+		</form>
+</div>
     
 </body>
