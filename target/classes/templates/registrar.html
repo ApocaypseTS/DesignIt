@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+	<link href="../static/css/registrar.css" th:href="@{/css/registrar.css}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Registrar</h1>
+    <div id=cuadro>
+    <p>Nombre: <input type="text" id="" name="nombre" placeholder="Nombre"></p>
+    <p>Apellido: <input type="text" id="" name="nombre" placeholder="Apellido"></p>
+    <p>Email:  <input type="text" id="" name="nombre" placeholder="email"></p>
+    <p>Contraseña: <input type="text" id="" name="nombre" placeholder="contraseña"></p>
+   
+    
+</div>
+<h2>Rol</h2>
+<div id="cuadro1">
+    <p>Cliente</p>
+    <p>Prestamista</p>
+
+<input type="radio" name="rol" value="1">
+<br>
+<br>
+<input type="radio" name="rol" value="2" >
+
+
+    <button>Registrar</button>
+    </div>
+    <!-- cuando se valide
+         <input type="text" id="nombre" name="nombre" placeholder="Nombre"></p>-->
+    
+</body>
