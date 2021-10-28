@@ -41,6 +41,14 @@ public class UsuarioController {
 		return "login"; //"login" es una pagina del frontend
 	}
 	
+
+
+	@RequestMapping("/trabajador")
+	public String irPaginaTrabajador() {
+		return "trabajador"; //"trabajador" es una pagina del frontend
+	}
+
+
 	@RequestMapping("/")
 	public String irPaginaListadoUsuarios(Map<String, Object> model) {
 		model.put("listaUsuarios", uService.listar());
