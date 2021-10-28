@@ -2,26 +2,34 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="@{/css/style.css}">
-</head>
+<script type="text/javascript"
+				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
+		</script>
+		
+		
+		
+		<script
+			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+		</script>
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+        <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+       
+		
 
 <body>
 
     <div class="barra">
      <nav id="arriba">
          <ul>
-             
-         <li>
-            <img th:src="@{/img/logo.png}" alt="">
-             <a href="index.html">Inicio</a>
-             <a href="">Reservas</a>
-             <a href="">Mis pagos</a>
-             <a href="">Mis reservas</a>
-             <a href="">Nosotros</a>
+            <li>
+                <img src="img/logo.png" alt="">
+                 <a href="index.html">Inicio</a>
+                 <a href="reserva.html">Reservas</a>
+                 <a href="pago.html">Mis pagos</a>
+                 <a href="historial.html">Mis reservas</a>
+                 <a href="nosotros.html">Nosotros</a>
          </li>
         </ul>
      </nav>
