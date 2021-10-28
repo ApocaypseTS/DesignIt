@@ -52,6 +52,11 @@ public class ReservaController {
 	}
 	
 	
+	@RequestMapping("/listareserva")
+	public String irPaginaReserva() {
+		return "reserva"; 
+	}
+	
 	@RequestMapping("/")
 	public String irPaginaListadoReservas(Map<String, Object> model) {
 		model.put("listaReservas", rService.listar());

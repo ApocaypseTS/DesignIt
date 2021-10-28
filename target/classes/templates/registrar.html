@@ -57,6 +57,16 @@
     				</div>
     				
     				<div class="form-group">
+    					<label for="nombre">PROFESION:(Opcional)</label>
+    					<input type="text" class="form-control" th:field="*{profesion}" id="profesion"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('profesion')}" 
+								th:errors="*{profesion}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
     					<label for="text">ROL:</label>
     					<select class="form-control" th:field="*{rol.idRol}">
     						<option th:each="r: ${listaRoles}"

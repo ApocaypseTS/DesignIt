@@ -42,6 +42,11 @@ public class OrdenController {
 		return "landing"; //"landing" es una pagina del frontend
 	}
 	
+	@RequestMapping("/pago")
+	public String irPaginaPago() {
+		return "pago"; //"pago" es una pagina del frontend
+	}
+	
 	@RequestMapping("/")
 	public String irPaginaListadoOrdenes(Map<String, Object> model) {
 		model.put("listaOrdenes", oService.listar());
