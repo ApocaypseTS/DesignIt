@@ -16,26 +16,25 @@
 		</script>
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link href="../static/css/solcitud.css" th:href="@{/css/solcitud.css}" rel="stylesheet" />
-		<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link href="../static/css/solcitud.css" th:href="@{/css/reserva.css}" rel="stylesheet" />
+		<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 		
 		
 </head>
 <body>
     <div class="barra">
+		 
         <nav id="arriba">
-            <ul>
-                
-            <li>
-               <img th:src="@{/img/logo.png}" alt="">
-                <a th:href="@{/inicio/index}">Inicio</a>
-                <a th:href="@{/reserva/listareserva}">Reservas</a>
-                <a th:href="@{/orden/pago}">Mis pagos</a>
-                <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
-                <a th:href="@{/inicio/index}">Nosotros</a>
-            </li>
-           </ul>
-        </nav>
+						<ul >
+						 <li>
+						 <img th:src="@{/img/logo.png}" alt="">
+                 <a th:href="@{/inicio/index2}">Inicio</a>
+                 <a th:href="@{/inicio/solicitud}">Mis Solicitudes</a>
+               <a th:href="@{/usuario/registroPrestamista}">Mis trabajadores</a>
+                 <a th:href="@{/orden/pago}">Mis pagos</a>
+                  </li>
+						</ul>
+						 </nav>
        </div>
        
        <h1>Historial de solicitudes de reserva </h1> <style>h1{
@@ -49,11 +48,11 @@
         min="2021-10-01" max="2022-01-01">
 
      <!--llenar los href con la direccion-->
- <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
+ <a	style="border-bottom-color: rgb(13, 0, 128)" 
  id="add-row" type="button" class="btn btn-primary btn-md left-block">
  <span class="glyphicon glyphicon-search"></span> Buscar
 </a>
-       </a>
+       
         
        </div>
        
@@ -74,16 +73,7 @@
 
     							</tr>
     						</thead>
-    						<tbody>
-    							<tr th:each="">
-    								<td th:text=""></td>
-    								<td th:text=""></td>
-    								<td th:text=""></td>   								
-    								<td th:text=""></td>
-                                    <td th:text=""></td>
-                                    
-    							</tr>
-    						</tbody>
+    						
                             <tr>
                                 <td>001</td>
                                 <td>Jose Carlos</td>
@@ -94,7 +84,7 @@
                                 
                             </tr>
 
-                            </tr>
+                          
     					</table> 
     					
     				</div>

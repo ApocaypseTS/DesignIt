@@ -13,30 +13,35 @@
    text-decoration: none;
    
 }
+body{
+  background-color: rgba(0, 0, 0, 0.945);
+}
 .barra a {
     color: white;
    text-decoration: none;
    
 }
 
-.barra #imagen1{
+.barra img{
     height: 50px;
-    position: relative;
-    right: 25%;
-    z-index: 200;
+    z-index: 1;
+    
 }
 
 .barra .centro{
     position: relative;
     top: -10px;
+    
 }
 .centro img{
 height: 100%;
-width: 100%;
+width: 105%;
 position: relative;
-top: -75px;
+top: -76px;
 filter: brightness(50%);
-z-index:22;
+
+left: -0.7%;
+z-index: -1;
 }
 .centro #titulo{
  position: relative;
@@ -65,8 +70,9 @@ hr {
     font-size: 20px;
 }
 .centro button{
-    background-color: rgba(255, 255, 0, 0.445);
+  background-color:transparent;
     position: relative;
+    color: white;
     top: -640px;
     left: 40%;
     z-index: 200;
@@ -75,7 +81,7 @@ hr {
     border-radius: 20%;
     font-size: 150%;
     font-weight: bold;
-    border: 3px solid rgb(14, 13, 13);
+    border: 3px solid rgb(255, 255, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -88,59 +94,83 @@ hr {
   margin-left: 60px;
   position: relative;
   
-  top: -350px;
+  top: -250px;
 }
+
 #a5 h1{
  position: relative;
   
-  top: -355px;
+  top: -255px;
   left: 12%;
-  
+  color: white;
+
   
 }
 #a5 p{
     position: relative;
      
-     top: -355px;
+     top: -255px;
      left: 5%;
+     color: white;
    }
 
 #a4 h2{
     position: relative;
      
-     top: -580px;
+     top: -480px;
      left: 30%;
      font-size: 25px;
+     color: white;
    }
    #a4 p{
     position: relative;
      
-     top: -580px;
+     top: -480px;
      left: 29%;
+     color: white;
    }
    #a8 h3{
     position: relative;
      
-     top: -805px;
+     top: -705px;
      left: 57%;
      font-size: 25px;
+     color: white;
    }
    #a8 p{
     position: relative;
      
-     top: -805px;
+     top: -705px;
+     color: white;
      left: 53%;
    }
    #a9 h4{
     position: relative;
      
-     top: -1055px;
+     top: -955px;
      left: 80%;
+     color: white;
      font-size: 25px;
    }
    #a9 p{
     position: relative;
-     
-     top: -1055px;
+    color: white;
+     top: -955px;
      left: 77%;
+   }
+  
+   h5{position: absolute;
+     top: 110%;  
+     left: 35%;
+     color: rgb(255, 255, 255);
+font-size: 50px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+   .seccion3 u{
+     width: 100px;
+     color: white;
+     height: 10px;
+     position: absolute;
+     top: 110%;  
+
    }
