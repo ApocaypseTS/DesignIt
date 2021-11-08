@@ -2,31 +2,101 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 
-<script type="text/javascript"
-				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
-		</script>
+<meta charset="ISO-8859-1"></meta>
+	<head>
+
+		<title>Login</title>
 		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		
-		
+		<link 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+				rel="stylesheet" id="bootstrap-css">
+
 		<script
 			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
 		</script>
 		
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link th:href="@{/css/style.css}" rel="stylesheet" />
-        <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-        <link rel="stylesheet" th:href="@{/css/solcitud.css}"/>
-       
+		<script type="text/javascript" th:src="@{/js/race.js}"></script>
+        <link th:href="@{/css/registrar.css}" rel="stylesheet" />
+    </head>
+				
 <body>
-    <h1>Registrar</h1>
+    <!--  img -->
+      <img th:src="@{/img/img3.svg}" alt="">
+    <div id=cuadro>
+    <h1>Registrarte</h1>
+   <!--  
+    
     <div class="container">
     	<form th:action="@{/usuario/registrar}" method="post" th:object="${usuario}">
     				<div class="form-group">
-    					<label for="idusuario">ID:</label>
+    					<label for="idusuario">Id:</label>
     					<input type="text" class="form-control" th:field="*{idUsuario}"></input>
     				
-   
-    				
+    				<div class="form-group">
+    					<label for="nombre">Nombre:</label>
+    					<input type="text" class="form-control" th:field="*{nameUsuario}" id="nombre"></input>
 
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('nameUsuario')}" 
+								th:errors="*{nameUsuario}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">Apellido:</label>
+    					<input type="text" class="form-control" th:field="*{apellido}" id="apellido"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('apellido')}" 
+								th:errors="*{apellido}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">Email:</label>
+    					<input type="text" class="form-control" th:field="*{email}" id="email"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('email')}" 
+								th:errors="*{email}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">Contraseña:</label>
+    					<input type="password" class="form-control" th:field="*{contrasena}" id="contrasena"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('contrasena')}" 
+								th:errors="*{contrasena}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">Profesion:</label>
+    					<input type="text" class="form-control" th:field="*{profesion}" id="profesion"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('profesion')}" 
+								th:errors="*{profesion}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="text">Rol:</label>
+    					<select class="form-control" th:field="*{rol.idRol}">
+    						<option th:each="r: ${listaRoles}"
+    								th:value="${r.idRol}"
+    								th:text="${r.nameRol}"
+    								th:selected="(${r.idRol}==*{rol.idRol})"> 
+    						</option>    					
+    					</select>    					
+    				</div> 		 
+			</div>
+			 <button type="submit" class="btn btn-primary">Aceptar</button>
+    		 <a href="/usuario/login" class="btn btn-danger">Cancelar</a>
+		</form>
+</div>
+-->
     
-</body>
