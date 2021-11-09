@@ -73,13 +73,27 @@
     								<th class="text-center">Precio</th>
                                     <th class="text-center">Operacion</th>
     							</tr>
-    						</thead>
-    							 <td>001</td>
+    						  <tr>
+                                <td>001</td>
                                 <td>Hora loca</td>
                                 <td >Jan Carlos Muñoz</td>
 								<td>Show con payasos , 1 hora y 2 personajes</td>
-                                <td>120</td>   								
+                                <td>130</td>   								
                     
+                                <td><a td:href="@{/reserva/registrar}">Seleccionar</a></td>
+                            </tr>
+
+                            </tr>
+    					</table> 
+    					
+    				</div>
+    			</div>
+    			<div th:if="${mensaje}" class="alert alert-danger">
+    				<p th:text="${mensaje}"></p>
+    			</div>
+    		</form>
+    	</div>
+    	<div th:replace="fragments/footer :: footer"></div>
     						
     						
 </body>
