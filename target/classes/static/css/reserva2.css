@@ -1,6 +1,7 @@
+@charset "ISO-8859-1";
 body {
     overflow-x:hidden;
-   background: black;
+   background-color: black;
 }
 #arriba{
     background: white;
@@ -20,11 +21,8 @@ body {
 
 #arriba img{
     position: absolute;
-    height: 61%;
+    height: 60%;
     width: 7%;
-    position: relative;
-    top: 15px;
-
 }
 #arriba a{
     text-decoration: none;
@@ -32,11 +30,12 @@ body {
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-size: 20px;
 position: relative;
-left: 7%;
+left: 15%;
 margin: 4%;
-top: 25px;
+top: 10px;
 
 }
+
 .container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
 
 .buscar{
@@ -131,5 +130,4 @@ white-space: normal;
 }
 h1{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
 }
