@@ -8,13 +8,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import pe.edu.upc.spring.auth.handler.LoginSucessHandler;
-import pe.edu.upc.spring.serviceimpl.JpaUserDetails;
+import pe.edu.upc.spring.serviceimpl.JpaUserDetailsServiceImpl;
 
 @EnableGlobalMethodSecurity(securedEnabled = true)
 
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
-	private JpaUserDetailsService userDetailsService;
+	private JpaUserDetailsServiceImpl userDetailsService;
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	@Autowired

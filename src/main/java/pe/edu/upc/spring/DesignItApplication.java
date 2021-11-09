@@ -25,7 +25,7 @@ public class DesignItApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		String password = "CLIENTE";
-		String contra = "TUTOR";
+		String contra = "PRESTADOR";
 		String contrasena = "ADMIN";
 
 
