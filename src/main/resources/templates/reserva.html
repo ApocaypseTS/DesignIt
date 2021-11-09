@@ -4,8 +4,8 @@
 
 <head>
    
-		<link th:href="@{/css/reserva2.css}" rel="stylesheet" />
-		<link th:href="@{/css/1.css}" rel="stylesheet" />
+		<link th:href="@{/css/reserva.css}" rel="stylesheet" />
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
       
       
     
@@ -73,6 +73,7 @@
     								<th class="text-center">Precio</th>
                                     <th class="text-center">Operacion</th>
     							</tr>
+    								<tbody>
     						  <tr>
                                 <td>001</td>
                                 <td>Hora loca</td>
@@ -80,10 +81,10 @@
 								<td>Show con payasos , 1 hora y 2 personajes</td>
                                 <td>130</td>   								
                     
-                                <td><a td:href="@{/reserva/registrar}">Seleccionar</a></td>
+                                <td><a th:href="@{/reserva/registrar}">Seleccionar</a></td>
                             </tr>
 
-                            </tr>
+                            	</tbody>
     					</table> 
     					
     				</div>
