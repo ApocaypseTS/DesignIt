@@ -17,8 +17,8 @@
 		</script>
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link th:href="@{/css/pago.css}" rel="stylesheet" />
-		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/pago1.css}" rel="stylesheet" />
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 		
 </head>
 <body>
@@ -37,19 +37,28 @@
            </ul>
         </nav>
        </div>
-       <div id="buscar">
-       
+      	<div id ="calendario">
+					 <input type="date" id="start" name="trip-start"
+						value="2021-10-26"
+						min="2021-10-26" max="2021-12-26"> </div>
 
-        <input type="date" id="start" name="trip-start"
-               value="2021-07-22"
-               min="2020-01-01" max="2021-12-01">
-       
-        	<!--llenar los href con la direccion-->
-        <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
-        id="add-row" type="button" class="btn btn-primary btn-md left-block">
-        <span class="glyphicon glyphicon-search"></span> Buscar
-       </a>
-        
+			<a   type="button">
+						<span class="glyphicon glyphicon-search"></span> Buscar
+					   </a>
+				
+	  
+	   
+					   <br>
+					   <br>  
+					   <br>  
+					   <br>  
+					   <br>  
+					   <br>
+					   <br>
+					   <br>
+					   <br>
+	   
+      
        </div>
        
     	<div class="container">
@@ -67,23 +76,13 @@
     								<th class="text-center">Precio</th>
     							</tr>
     						</thead>
-    						<tbody>
-    							<tr th:each="">
-    								<td th:text=""></td>
-    								<td th:text=""></td>
-    								<td th:text=""></td>   								
-    								<td th:text=""></td>
-                                    
-    							</tr>
-    						</tbody>
+    						
                             <tr>
                                 <td>12/10/2021</td>
                                 <td>Hora loca</td>
                                 <td >Jan Carlos Muñoz</td>
                                 <td>120</td>   								
                 
-                            </tr>
-
                             </tr>
     					</table> 
     					
