@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
+<head>
 
-<script type="text/javascript"
-				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
-		</script>
-		
-		
-		
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-		</script>
-		
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link th:href="@{/css/style.css}" rel="stylesheet" />
-        <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-       
-		
+		<title>Inicio</title>
 
+     	<link th:href="@{/css/style.css}" rel="stylesheet" />
+    </head>
+				
 <body>
+		
+
+
+
 
     <div class="barra">
-     <nav id="arriba">
-         <ul>
+        <nav id="arriba">
+            <ul>
+                
             <li>
-                <img th:src="@{/img/logo.png}" alt="">
+               	 <img th:src="@{/img/logo.png}" alt="">
                  <a th:href="@{/inicio/index}">Inicio</a>
                  <a th:href="@{/reserva/listareserva}">Reservas</a>
                  <a th:href="@{/orden/pago}">Mis pagos</a>
-                 <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
+                 <a th:href="@{/reserva/listareserva}">Mis reservas</a>
                  <a th:href="@{/inicio/index}">Nosotros</a>
-         </li>
-        </ul>
-     </nav>
-    </div>
-    <div id="bienvenido">
-        
-   <img th:src="@{/img/cop.jpg}" alt="">
-   <h1>Bienvenidos</h1>
-        <p>Planea tus eventos con nosotros </p>
-
-</div>
-<div id="entradas">
+            </li>
+           </ul>
+        </nav>
+       </div>
+   <div id=cuadro>
+    <p>Con <b>Design it</b>  , tienes todo planificado</p>
+    <div id="dentro">
     <li>
-   <img th:src="@{/img/fiesta.png}" alt="">
-   <img th:src="@{/img/persona.png}" alt="">
-   <img th:src="@{/img/camra.png}" alt="">
-   </li>
-   <li id="entradas2">
-       <a href="Seccion2">Evento</a>
-       <a href="Seccion3">Clientes</a>
-       <a href="Seccion4">Fotos</a>
-
-   </li>
+    <img th:src="@{/img/reloj.png}" alt="">
+    <img th:src="@{/img/seleccionar.png}" alt="">
+    <h1> Ahorra tiempo</h1>
+    <h2>Encuentra servicios</h2>
+    
+</li>
 </div>
+    </div>
+
+
+
+
 </body>
 
-</html>

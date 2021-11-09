@@ -20,21 +20,23 @@
     </head>
 				
 <body>
+<img  th:src="@{/img/img1.svg}" alt="">
     <div id="cuadro">
-        <h1>Registrate</h1>
+         <h1>Registrate</h1>
        <!--validar usuario-->
-        <label id="label1">Usuario<input type="text" id="Name" name="Name" placeholder="usuario"/></label>
-       <!--validar contraseÃ±a-->
-       <label id="label2">ContraseÃ±a<input type="password" id="Name" name="Name"placeholder="contraseÃ±a"
-        title="Una contraseÃ±a vÃ¡lida es un conjuto de caracteres, donde cada uno consiste de una letra mayÃºscula o minÃºscula, o un dÃ­gito. La contraseÃ±a debe empezar con una letra y contener al menor un dÃ­gito" 
+       <label id="label1">Usuario    <input name="usuario" type="text" class="Input" value="" size="20" /> </label>
+       <!--validar contraseña-->
+       <label id="label2">Contrasena <input type="password" id="contraseña" name="Name"placeholder="contrasena" /
+        title="Una contraseña válida es un conjuto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menor un dígito" 
         ></label>
-      
-    <!--inicio de prueba -->
-       <a th:href="@{/inicio/index}"><button>Iniciar</button></a>
-
-
-        <p>Â¿No tienes cuenta?</p>
-        <a th:href="@{/usuario/irRegistrar}">Crear cuenta</a>
+        
+        
+        <a	  th:href="@{/inicio/index}"
+        id="inicio" type="button" class="inicio1">
+        <span class="glyphicon glyphicon-search"></span> Inicio
+       </a>
+     
+ <a th:href="@{/usuario/registro}" type="link" id="cuenta" >No tienes cuenta?Registrate</a>
     </div>
 
 

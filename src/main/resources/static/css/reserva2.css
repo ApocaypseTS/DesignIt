@@ -23,17 +23,16 @@ body {
     position: absolute;
     height: 60%;
     width: 7%;
-    top:5%;
 }
 #arriba a{
     text-decoration: none;
-    color: black;
+    color: #400080;
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-size: 20px;
 position: relative;
 left: 15%;
 margin: 4%;
-top: 35px;
+top: 20px;
 
 }
 
@@ -111,7 +110,7 @@ left: 20px;
 }
 #reservado{
     position: absolute;
-   top: 90%;
+   top: 85%;
    left:40%;
     right: 70px;
    

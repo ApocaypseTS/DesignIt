@@ -16,8 +16,8 @@
 		</script>
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link href="../static/css/solcitud.css" th:href="@{/css/solcitud.css}" rel="stylesheet" />
-		<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/solcitud.css}" rel="stylesheet" />
+		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
 		
 		
 </head>
@@ -31,7 +31,7 @@
                 <a th:href="@{/inicio/index}">Inicio</a>
                 <a th:href="@{/reserva/listareserva}">Reservas</a>
                 <a th:href="@{/orden/pago}">Mis pagos</a>
-                <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
+                <a th:href="@{/usuario/listar}">Prestamistas</a>
                 <a th:href="@{/inicio/index}">Nosotros</a>
             </li>
            </ul>
@@ -43,17 +43,16 @@
 <input type="text" id="" name="servicio" placeholder="servicio">
 
      <!--llenar los href con la direccion-->
- <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
+ <!--  <a style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
  id="add-row" type="button" class="btn btn-primary btn-md left-block">
- <span class="glyphicon glyphicon-search"></span> Buscar 
+ <span class="glyphicon glyphicon-search"></span> Buscar -->
  <!--cambiar el href ya que tiene direccion inmediata y agregar el th-->
- <a	style="border-bottom-color: rgb(13, 0, 128)"  href="registrar_trabajador.html"
+ <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href="@{/usuario/registroPrestamista}"
  id="add-row" type="button" class="btn btn-primary btn-md left-block">
  <span class="glyphicon glyphicon-search"></span> Agregar 
 </a>
-       </a>
+       
         
-       </div>
        
     	<div class="container">
     		<form id="myform">
@@ -67,7 +66,7 @@
     								<th class="text-center">Codigo</th>
     								<th class="text-center">Nombre</th>
     								<th class="text-center">Apellido</th>
-                                    <th class="text-center">Servicio que desempeña</th>
+                                    <th class="text-center">Profesion</th>
                                     <th class="text-center">Email</th>
                                     <th class="text-center">Operacion1</th>
                                     <th class="text-center">Operacion2</th>
@@ -75,31 +74,17 @@
     							</tr>
     						</thead>
     						<tbody>
-    							<tr th:each="">
-    								<td th:text=""></td>
-    								<td th:text=""></td>
-    								<td th:text=""></td>   								
-    								<td th:text=""></td>
-                                    <td th:text=""></td>
-                                    <td><a th:href="@{''}+${">Modificar</a></td>
-                                    <td><a th:href="@{''}+${">Eliminar</a></td>
+    							<tr th:each="usuario: ${listaUsuarios}">
+    								<td th:text="${usuario.idUsuario}"></td>
+    								<td th:text="${usuario.nameUsuario}"></td>
+    								<td th:text="${usuario.apellido}"></td>
+                                    <td th:text="${usuario.profesion}"></td>
+    								<td th:text="${usuario.email}"></td>   								
+                                    <td><a th:href="@{/usuario/eliminar?id=}+${usuario.idUsuario}">Eliminar</a></td>
+                                    <td><a th:href="@{'/usuario/modificar/'}+${usuario.idUsuario}">Modificar</a></td>
                                     
     							</tr>
     						</tbody>
-                            <tr>
-                                <!-- este es un ejemplo , eliminarlo -->
-                                <td>001</td>
-                                <td>Nicole Alexandra</td>
-                                <td>Kraenau</td>
-                                <td >Bailarina</td>
-                                <td>nicolkraenau@hotmail.com</td>   
-                                <td><a href="registrar_trabajador.html">Modificar</a></td>
-                                <td><a th:href="@{''}+${">Eliminar</a></td>								
-                    
-                                
-                            </tr>
-
-                            </tr>
     					</table> 
     					
     				</div>
@@ -109,5 +94,4 @@
     			</div>
     		</form>
     	</div>
-    	<div th:replace="fragments/footer :: footer"></div>
 </body>
