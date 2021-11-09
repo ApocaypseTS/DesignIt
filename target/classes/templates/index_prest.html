@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
-
 <head>
-    <meta charset="UTF-8"></meta>
-		<title>Reserva</title>
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-		</script>
-		
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link th:href="@{/css/solcitud.css}" rel="stylesheet" />
-		<link th:href="@{/css/style.css}" rel="stylesheet" />
-	
-        <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
-       
-       
-		
 
+		<title>Login</title>
+		
+        <link th:href="@{/css/style.css}" rel="stylesheet" />
+    </head>
+				
 <body>
- <div class="barra">
-		 
+		
+
+
+    <div class="barra">
         <nav id="arriba">
-						<ul >
-						 <li>
-						 <img th:src="@{/img/logo.png}" alt="">
-                 <a th:href="@{/inicio/index2}">Inicio</a>
-                 <a th:href="@{/inicio/solicitud}">Mis Solicitudes</a>
-               <a th:href="@{/usuario/registroPrestamista}">Mis trabajadores</a>
-                 <a th:href="@{/orden/pago}">Mis pagos</a>
-                  </li>
-						</ul>
-						 </nav>
-                    <div id="bienvenido">
-                  <img th:src="@{/img/cop.jpg}" alt="">
-   <h1>Bienvenidos</h1>
-        <p>Planea tus eventos con nosotros </p>
-
-
-
+            <ul>
+                
+            <li>
+               	 <img th:src="@{/img/logo.png}" alt="" th:href="@{/inicio/index}">
+                 <a th:href="@{/inicio/index_prest}">Inicio</a>
+                 <a th:href="@{/reserva/}">Mis Servicios</a>
+                 <a th:href="@{/orden/}">Mis Solicitudes</a>
+                 <a th:href="@{/reserva/pago}">Mis Pagos</a>
+                 <a th:href="@{/nosotros.html}">Nosotros</a>
+            </li>
+           </ul>
+        </nav>
+       </div>
+   <div id=cuadro>
+    <p>Con <b>Design it</b>  , tienes todo planificado</p>
+    <div id="dentro">
+    <li>
+    <img th:src="@{/img/reloj.png}" alt="">
+    <img th:src="@{/img/seleccionar.png}" alt="">
+    <h1> Ahorra tiempo</h1>
+    <h2>Encuentra servicios</h2>
+    
+</li>
 </div>
-</body>
-                 
+    </div>
 
-</html>
+
+
+
+</body>
+
