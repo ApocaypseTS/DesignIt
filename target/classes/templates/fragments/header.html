@@ -8,7 +8,9 @@
 			href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
 			rel="stylesheet" id="bootstrap-css">
 		</link>
-		<link rel="stylesheet" th:href="@{/css/solcitud.css}"/>
+		<link rel="stylesheet" th:href="@{/css/style_nav.css}"/>
+		<!--  <link th:href="@{/js/js_van.js}"/>-->
+		<script type="text/javascript" th:href="@{/js/js_van.js}"></script>
 		<script
 			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
 		</script>
@@ -20,32 +22,29 @@
 		<!-- th:fragment define un fragment los cuales sirven para evitar la redundancia de codigo -->
 		<!-- Sintaxis th:fragment="Nombre del fragment" -->
 		<div th:fragment="header">
-			<!-- this is header -->
-
-		 <div class="barra">
-		 
-        <nav id="arriba">
-						<ul >
-						 <li>
-						 <img th:src="@{/img/logo.png}" alt="">
-                 <a th:href="@{/inicio/index}">Inicio</a>
-                 <a th:href="@{/reserva/listareserva}">Reservas</a>
-                 <a th:href="@{/orden/pago}">Mis pagos</a>
-                 <a th:href="@{/usuario/listar}">Prestamistas</a>
-                 <a th:href="@{/inicio/index}">Nosotros</a>
-	                      </li>
-</ul>
-						 </nav>
-					</div>
-					
-				</div>
-
-
-
-
-
-
- 
+		
+		<nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="#">Design It</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <div class="hori-selector">
+                <div class="left"></div><div class="right"></div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-home"></i>Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-users"></i>Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);"><i class="fas fa-envelope"></i>Contactanos</a>
+                    </li>
+                    </ul>
+                    </div>
+                    </nav></div>
 	</body>
 	
 </html>
