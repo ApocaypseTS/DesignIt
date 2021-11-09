@@ -6,23 +6,11 @@
     <meta charset="UTF-8"></meta>
 		<title>Historial de reserva</title>
 		
-		<script type="text/javascript"
-				src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.js">
-		</script>
-		
-		<link
-			href="bootstrap.min.css"
-			rel="stylesheet" id="bootstrap-css">
-		</link>
-        
-		
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-		</script>
+
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<link th:href="@{/css/pago.css}" rel="stylesheet" />
-		<link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+		<link th:href="@{/css/pago1.css}" rel="stylesheet" />
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 		
 		
 </head>
@@ -36,26 +24,30 @@
                 <a th:href="@{/inicio/index}">Inicio</a>
                 <a th:href="@{/reserva/listareserva}">Reservas</a>
                 <a th:href="@{/orden/pago}">Mis pagos</a>
-                <a th:href="@{/usuario/registroPrestamista}">Prestamistas</a>
+                  <a th:href="@{/reserva/listareserva}">Mis reservas</a>
                 <a th:href="@{/inicio/index}">Nosotros</a>
             </li>
            </ul>
         </nav>
        </div>
-       <div id="buscar">
-       
+       <div id ="calendario">
+		<input type="date" id="start" name="trip-start" value="2021-10-26" min="2021-10-26" max="2021-12-26"> </div>
+		
+<!-- poner el href -->
+            <a  id="buscar" type="button"> <span class="glyphicon glyphicon-search"></span> Buscar</a>
+   
 
-        <input type="date" id="start" name="trip-start"
-               value="2021-07-22"
-               min="2020-01-01" max="2021-12-01">
-       
-        	<!--llenar los href con la direccion-->
-        <a	style="border-bottom-color: rgb(13, 0, 128)"  th:href=""
-        id="add-row" type="button" class="btn btn-primary btn-md left-block">
-        <span class="glyphicon glyphicon-search"></span> Buscar
-       </a>
-        
-       </div>
+
+		  <br>
+		  <br>  
+		  <br>  
+		  <br>  
+		  <br>  
+		  <br>
+		  <br>
+		  <br>
+		  <br>
+
        
     	<div class="container">
     		<form id="myform">
@@ -72,16 +64,7 @@
     								<th class="text-center">Ubicacion</th>
     							</tr>
     						</thead>
-    						<tbody>
-    							<tr th:each="">
-    								<td th:text=""></td>
-    								<td th:text=""></td>
-    								<td th:text=""></td>   								
-    								<td th:text=""></td>
-                                    
-                                    
-    							</tr>
-    						</tbody>
+    						
                             <tr>
                                 <td>12/10/2021</td>
                                 <td>Hora loca</td>
@@ -90,7 +73,7 @@
                 
                             </tr>
 
-                            </tr>
+                           
     					</table> 
     					
     				</div>
@@ -101,4 +84,5 @@
     		</form>
     	</div>
     	<div th:replace="fragments/footer :: footer"></div>
+    	
 </body>

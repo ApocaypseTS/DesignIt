@@ -46,6 +46,10 @@ public class ReservaController {
 	public String irPaginaBienvenida() {
 		return "landing"; 
 	}
+	@RequestMapping("/historial")
+	public String irhistorial() {
+		return "historial"; 
+	}
 	
 	
 	@RequestMapping("/registro")

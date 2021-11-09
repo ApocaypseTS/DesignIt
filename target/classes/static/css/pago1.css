@@ -24,6 +24,7 @@ body {
     position: absolute;
     height: 60%;
     width: 7%;
+    top:20px;
 }
 #arriba a{
     text-decoration: none;
