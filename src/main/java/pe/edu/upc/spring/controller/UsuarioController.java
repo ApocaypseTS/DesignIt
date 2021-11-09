@@ -41,11 +41,7 @@ public class UsuarioController {
 		return "login"; //"login" es una pagina del frontend
 	}
 	
-<<<<<<< HEAD
-=======
 
-
->>>>>>> main
 	@RequestMapping("/trabajador")
 	public String irPaginaTrabajador() {
 		return "trabajador"; //"trabajador" es una pagina del frontend

@@ -23,6 +23,7 @@ body {
     position: absolute;
     height: 60%;
     width: 7%;
+    top:5%;
 }
 #arriba a{
     text-decoration: none;
