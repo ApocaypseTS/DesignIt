@@ -41,12 +41,17 @@ public class UsuarioController {
 		return "login"; //"login" es una pagina del frontend
 	}
 	
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> main
 	@RequestMapping("/trabajador")
 	public String irPaginaTrabajador() {
 		return "trabajador"; //"trabajador" es una pagina del frontend
 	}
 
-	
+
 	@RequestMapping("/")
 	public String irPaginaListadoUsuarios(Map<String, Object> model) {
 		model.put("listaUsuarios", uService.listar());
@@ -126,7 +131,7 @@ public class UsuarioController {
 		}
 		else {
 			model.addAttribute("usuario", objUsuario);
-			return "usuario";
+			return "registrar_trabajador";
 		}
 	}
 	
@@ -143,12 +148,12 @@ public class UsuarioController {
 			model.put("mensaje","Ocurrio un error");
 			model.put("listaUsuarios", uService.listar());
 		}
-		return "listUsuario";
+		return "trabajador";
 	}
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaUsuarios", uService.listar());
-		return "listUsuario";
+		return "trabajador";
 	}
 }

@@ -2,6 +2,7 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 
+<<<<<<< HEAD
 <meta charset="ISO-8859-1"></meta>
 	<head>
 
@@ -20,6 +21,14 @@
         <link th:href="@{/css/registrar.css}" rel="stylesheet" />
     </head>
 				
+=======
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+	<link th:href="@{/css/registrar.css}" rel="stylesheet" />
+</head>
+>>>>>>> main
 <body>
     <!--  img -->
       <img th:src="@{/img/img3.svg}" alt="">
@@ -34,7 +43,11 @@
     					<input type="text" class="form-control" th:field="*{idUsuario}"></input>
     				
     				<div class="form-group">
+<<<<<<< HEAD
     					<label for="nombre">Nombre:</label>
+=======
+    					<label for="nombre">NOMBRE:</label>
+>>>>>>> main
     					<input type="text" class="form-control" th:field="*{nameUsuario}" id="nombre"></input>
 
 						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('nameUsuario')}" 
@@ -42,6 +55,7 @@
 						</div>
     					
     				</div>
+<<<<<<< HEAD
     				
     				<div class="form-group">
     					<label for="nombre">Apellido:</label>
@@ -67,6 +81,33 @@
     					<label for="nombre">Contraseña:</label>
     					<input type="password" class="form-control" th:field="*{contrasena}" id="contrasena"></input>
 
+=======
+    				
+    				<div class="form-group">
+    					<label for="nombre">APELLIDO:</label>
+    					<input type="text" class="form-control" th:field="*{apellido}" id="apellido"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('apellido')}" 
+								th:errors="*{apellido}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">EMAIL:</label>
+    					<input type="text" class="form-control" th:field="*{email}" id="email"></input>
+
+						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('email')}" 
+								th:errors="*{email}">
+						</div>
+    					
+    				</div>
+    				
+    				<div class="form-group">
+    					<label for="nombre">CONTRASEÃ‘A:</label>
+    					<input type="password" class="form-control" th:field="*{contrasena}" id="contrasena"></input>
+
+>>>>>>> main
 						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('contrasena')}" 
 								th:errors="*{contrasena}">
 						</div>
@@ -74,7 +115,11 @@
     				</div>
     				
     				<div class="form-group">
+<<<<<<< HEAD
     					<label for="nombre">Profesion:</label>
+=======
+    					<label for="nombre">PROFESION:(Opcional)</label>
+>>>>>>> main
     					<input type="text" class="form-control" th:field="*{profesion}" id="profesion"></input>
 
 						<div 	class="alert alert-danger" th:if="${#fields.hasErrors('profesion')}" 
@@ -84,7 +129,11 @@
     				</div>
     				
     				<div class="form-group">
+<<<<<<< HEAD
     					<label for="text">Rol:</label>
+=======
+    					<label for="text">ROL:</label>
+>>>>>>> main
     					<select class="form-control" th:field="*{rol.idRol}">
     						<option th:each="r: ${listaRoles}"
     								th:value="${r.idRol}"
@@ -98,5 +147,10 @@
     		 <a href="/usuario/login" class="btn btn-danger">Cancelar</a>
 		</form>
 </div>
+<<<<<<< HEAD
 -->
     
+=======
+    
+</body>
+>>>>>>> main
