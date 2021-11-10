@@ -37,29 +37,29 @@ public class EventPlannerController {
 	@RequestMapping("/")
 	public String irPaginaListadoPlanneres(Map<String, Object> model) {
 		model.put("listaEventPlanner", evplService.listar());
-		return "eventplanner/listEventPlanner";
+		return "eventoprestador/listEventoPrestador";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
-		model.addAttribute("eventplanner", new EventPlanner());
-		model.addAttribute("listaPlanneres", pService.listar());
+		model.addAttribute("eventPlanner", new EventPlanner());
+		model.addAttribute("listaPlanners", pService.listar());
 		model.addAttribute("listaEvents", eService.listar());
 
-					return "eventplanner/eventplanner";
+					return "eventoprestador/eventoprestador";
 	}
 
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute EventPlanner objEventPlanner, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors()) {
-				return "eventplanner/eventplanner";
+				return "eventoprestador/eventoprestador";
 		}else {
 			boolean flag = evplService.insertar(objEventPlanner);
 			if (flag)
-				return "redirect:/eventplanner/listar";
+				return "redirect:/eventPlanner/listar";
 			else {
 				model.addAttribute("mensaje", "Ocurrió un error");
-				return "redirect:/eventplanner/irRegistrar";
+				return "redirect:/eventPlanner/irRegistrar";
 			}
 		}
 	}
@@ -69,13 +69,13 @@ public class EventPlannerController {
 		EventPlanner objEventPlanner = evplService.listarId(id).get();
 		if (objEventPlanner == null) {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
-			return "redirect:/eventplanner/listar";
+			return "redirect:/eventPlanner/listar";
 		} else {
 			model.addAttribute("listaEvents", eService.listar());
-			model.addAttribute("listaPlanneres", pService.listar());
-			model.addAttribute("eventplanner", objEventPlanner);
+			model.addAttribute("listaPlanners", pService.listar());
+			model.addAttribute("eventPlanner", objEventPlanner);
 
-			return "eventplanner/eventplanner";
+			return "eventoprestador/eventoprestador";
 		}
 	}
 	
@@ -91,12 +91,12 @@ public class EventPlannerController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaEventPlanner", evplService.listar());
 		}
-		return "eventplanner/listEventPlanner";
+		return "eventoprestador/listEventoPrestador";
 		}
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaEventPlanner", evplService.listar());
-		return "eventplanner/listEventPlanner";
+		return "eventoprestador/listEventoPrestador";
 	}
 }

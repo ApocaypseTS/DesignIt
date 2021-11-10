@@ -29,19 +29,19 @@ public class PlannerController {
 	@RequestMapping("/")
 	public String irPaginaListadoPlanners(Map<String, Object> model) {
 		model.put("listaPlanners", pService.listar());
-		return "planner/listPlanner";
+		return "prestador/listPrestador";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("planner", new Planner());
-		return "planner/planner";
+		return "prestador/prestador";
 	}
 
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute Planner objPlanner, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors())
-			return "planner/planner";
+			return "prestador/prestador";
 		else {
 			boolean flag = pService.insertar(objPlanner);
 			if (flag)
@@ -61,7 +61,7 @@ public class PlannerController {
 			return "redirect:/planner/listar";
 		} else {
 			model.addAttribute("planner", objPlanner);
-			return "planner/planner";
+			return "prestador/prestador";
 		}
 	}
 	
@@ -77,12 +77,12 @@ public class PlannerController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaPlanners", pService.listar());
 		}
-		return "planner/listPlanner";
+		return "prestador/listPrestador";
 		}
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaPlanners", pService.listar());
-		return "planner/listPlanner";
+		return "prestador/listPrestador";
 	}
 }

@@ -13,7 +13,7 @@ import javax.validation.constraints.Pattern;
 
 
 @Entity
-@Table(name = "metodopago")
+@Table(name = "paymentMethod")
 
 public class PaymentMethod implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -23,8 +23,8 @@ public class PaymentMethod implements Serializable {
 	private int idMethod;
 	
 
-	@NotBlank(message = "Debe ingresar su name")
-	@Pattern(regexp = "[A-Za-zñ ]+", message="El name solo puede tener letras")
+	@NotBlank(message = "Debe ingresar su nombre")
+	@Pattern(regexp = "[A-Za-zñ ]+", message="El nombre solo puede tener letras")
 	@Column(name= "name", nullable= false, length=50)
 	private String name;
 	

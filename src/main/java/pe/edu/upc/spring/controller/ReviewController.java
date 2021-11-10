@@ -40,7 +40,7 @@ public class ReviewController {
 	@RequestMapping("/")
 	public String irPaginaListadoResena(Map<String, Object> model) {
 		model.put("listaReview", rService.listar());
-		return "resenaplanner/listReview";
+		return "resenaPrestador/listResenaPresatdor";
 	}
 
 	@RequestMapping("/irRegistrar")
@@ -48,20 +48,20 @@ public class ReviewController {
 		model.addAttribute("resenaplanner", new Review());
 		model.addAttribute("listaCustomers", cService.listar());
 		model.addAttribute("listaPlanners", pService.listar());
-		return "resenaplanner/resenaplanner";
+		return "resenaPrestador/resenaPrestador";
 	}
 	
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute Review objResena, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors()) {
-			return "resenaplanner/resenaplanner";
+			return "resenaPrestador/resenaPrestador";
 		}else {
 			boolean flag = rService.insertar(objResena);
 			if (flag)
-				return "redirect:/resenaplanner/listar";
+				return "redirect:/review/listar";
 			else {
 				model.addAttribute("mensaje", "Ocurrió un error");
-				return "redirect:/resenaplanner/irRegistrar";
+				return "redirect:/review/irRegistrar";
 			}
 		}
 	}
@@ -71,12 +71,12 @@ public class ReviewController {
 		Review objResena = rService.listarId(id).get();
 		if (objResena == null) {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
-			return "redirect:/resenaplanner/listar";
+			return "redirect:/review/listar";
 		} else {
 			model.addAttribute("listaCustomers", cService.listar());
-			model.addAttribute("listaPlanneres", pService.listar());
+			model.addAttribute("listaPlanners", pService.listar());
 			model.addAttribute("resenaplanner", objResena);
-			return "resenaplanner/resenaplanner";
+			return "resenaPrestador/listResenaPresatdor";
 		}
 	}
 	
@@ -92,13 +92,13 @@ public class ReviewController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaReview", rService.listar());
 		}
-		return "resenaplanner/listReview";
+		return "resenaPrestador/listResenaPresatdor";
 		}
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaReview", rService.listar());
-		return "resenaplanner/listReview";
+		return "resenaPrestador/listResenaPresatdor";
 	}
 	
 

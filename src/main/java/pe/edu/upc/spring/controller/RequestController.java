@@ -42,21 +42,21 @@ public class RequestController {
 	@RequestMapping("/")
 	public String irPaginaListadoPlanneres(Map<String, Object> model) {
 		model.put("listaRequest", rService.listar());
-		return "request/listRequest";
+		return "solicitudevento/listSolicitudEvento";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("request", new Request());
 		model.addAttribute("listaEventPlanner", evplService.listar());
-		return "request/request";
+		return "solicitudevento/solicitudevento";
 	}
 
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute Request objRequest, BindingResult binRes, Model model)
 			throws ParseException {
 		if (binRes.hasErrors())
-			return "request/request";
+			return "solicitudevento/solicitudevento";
 		else {
 			boolean flag = rService.insertar(objRequest);
 			if (flag)
@@ -77,7 +77,7 @@ public class RequestController {
 		} else {
 
 			model.addAttribute("request", objRequest);
-			return "request/request";
+			return "solicitudevento/solicitudevento";
 		}
 	}
 
@@ -93,19 +93,19 @@ public class RequestController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaRequest", rService.listar());
 		}
-		return "request/listRequest";
+		return "solicitudevento/listSolicitudEvento";
 	}
 
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaRequest", rService.listar());
-		return "request/listRequest";
+		return "solicitudevento/listSolicitudEvento";
 	}
 
 	@RequestMapping("/irBuscar")
 	public String buscar(Model model) {
 		model.addAttribute("requestEvent", new Request());
-		return "request/buscar";
+		return "solicitudevento/buscar";
 	}
 
 	@RequestMapping("/buscar")
@@ -132,7 +132,7 @@ public class RequestController {
 			model.put("mensaje", "No se encontraron coincidencias");
 		}
 		model.put("listaRequest", listaRequest);
-		return "request/buscar";
+		return "solicitudevento/buscar";
 	}
 
 }
