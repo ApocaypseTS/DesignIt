@@ -149,10 +149,10 @@
 						</thead>
 						<tbody>
 								<tr th:each="mp: ${listaMetodoPago}">
-									<td th:text="${mp.idMetodo}"></td>
-									<td th:text="${mp.nombre}"></td>
-									<td><a th:href="@{/metodopago/eliminar?id=}+${mp.idMetodo}">Eliminar</a></td>
-									<td><a th:href="@{'/metodopago/modificar/' + ${mp.idMetodo}}">Modificar</a></td>
+									<td th:text="${mp.idMethod}"></td>
+									<td th:text="${mp.name}"></td>
+									<td><a th:href="@{/paymentMethod/eliminar?id=}+${mp.idMethod}">Eliminar</a></td>
+									<td><a th:href="@{'/paymentMethod/modificar/' + ${mp.idMethod}}">Modificar</a></td>
 								</tr>
 						</tbody>
 					</table>
