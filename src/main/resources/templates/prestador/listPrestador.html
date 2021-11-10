@@ -45,7 +45,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -147,12 +147,12 @@
 									<th class="text-center">TELEFONO</th>																		
 									<th class="text-center">CORREO</th>
 																											
-									<th class="text-center">OPERACIÓN</th>
-									<th class="text-center">OPERACIÓN</th>
+									<th class="text-center">OPERACI&Oacute;N</th>
+									<th class="text-center">OPERACI&Oacute;N</th>
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="p: ${listPlanner}">
+								<tr th:each="p: ${listaPlanners}">
 									<td th:text="${p.idPlanner}"></td>
 									<td th:text="${p.nombre}"></td>
 									<td th:text="${p.apellido}"></td>
