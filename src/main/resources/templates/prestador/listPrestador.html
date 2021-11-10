@@ -129,7 +129,7 @@
 				<div class="container-fluid">
 					<h1 class="h3 mb-4 text-gray-800">TUTORES REGISTRADOS</h1>
 
-					<a  style="border-bottom-color:blue" th:href="@{/tutor/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/planner/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span> AGREGAR
@@ -152,15 +152,15 @@
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="tu: ${listaTutores}">
-									<td th:text="${tu.idTutor}"></td>
-									<td th:text="${tu.nombre}"></td>
-									<td th:text="${tu.apellido}"></td>
-									<td th:text="${tu.dni}"></td>
-									<td th:text="${tu.telefono}"></td>
-									<td th:text="${tu.correo}"></td>									
-									<td><a th:href="@{/prestador/eliminar?id=}+${tu.idTutor}">Eliminar</a></td>
-									<td><a th:href="@{'/prestador/modificar/' + ${tu.idTutor}}">Modificar</a></td>
+								<tr th:each="p: ${listPlanner}">
+									<td th:text="${p.idPlanner}"></td>
+									<td th:text="${p.nombre}"></td>
+									<td th:text="${p.apellido}"></td>
+									<td th:text="${p.dni}"></td>
+									<td th:text="${p.telefono}"></td>
+									<td th:text="${p.correo}"></td>									
+									<td><a th:href="@{/planner/eliminar?id=}+${p.idPlanner}">Eliminar</a></td>
+									<td><a th:href="@{'/planner/modificar/' + ${p.idPlanner}}">Modificar</a></td>
 								</tr>
 						</tbody>
 					</table>

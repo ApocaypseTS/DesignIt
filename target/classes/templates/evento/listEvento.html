@@ -132,9 +132,9 @@
 
 
 				<div class="container-fluid">
-					<h1 class="h3 mb-4 text-gray-800">CURSOS REGISTRADOS</h1>
+					<h1 class="h3 mb-4 text-gray-800">EVENTOS REGISTRADOS</h1>
 
-					<a  style="border-bottom-color:blue" th:href="@{/curso/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/event/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span> AGREGAR
@@ -152,14 +152,14 @@
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="cur: ${listaCurso}">
-									<td th:text="${cur.idCurso}"></td>
-									<td th:text="${cur.nombreCurso}"></td>
+								<tr th:each="cust: ${listEvent}">
+									<td th:text="${cust.idEvent}"></td>
+									<td th:text="${cust.nameEvent}"></td>
 									
 									
 									
-									<td><a th:href="@{/curso/eliminar?id=}+${cur.idCurso}">Eliminar</a></td>
-									<td><a th:href="@{'/curso/modificar/' + ${cur.idCurso}}">Modificar</a></td>
+									<td><a th:href="@{/event/eliminar?id=}+${cust.idEvent}">Eliminar</a></td>
+									<td><a th:href="@{'/event/modificar/' + ${cust.idEvent}}">Modificar</a></td>
 								</tr>
 						</tbody>
 					</table>

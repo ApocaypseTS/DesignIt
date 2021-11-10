@@ -27,7 +27,7 @@ public class EventController {
 	}
 
 	@RequestMapping("/")
-	public String irPaginaListadoTutores(Map<String, Object> model) {
+	public String irPaginaListadoPlanners(Map<String, Object> model) {
 		model.put("listaEvents", evService.listar());
 		return "event/listEvent";
 	}

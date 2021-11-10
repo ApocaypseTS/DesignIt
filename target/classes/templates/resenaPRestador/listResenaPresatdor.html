@@ -129,7 +129,7 @@
 				<div class="container-fluid">
 					<h1 class="h3 mb-4 text-gray-800">HISTORIAL DE RESENAS</h1>
 
-					<a  style="border-bottom-color:blue" th:href="@{/resenatutor/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/review/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span> AGREGAR
@@ -150,12 +150,12 @@
 						<tbody>
 								<tr th:each="re: ${listaResenaTutor}">
 									<td th:text="${re.idResena}"></td>
-									<td th:text="${re.valoracion}"></td>
-									<td th:text="${re.tutor.nombre}"></td>	
-									<td th:text="${re.cliente.nombre}"></td>	
+									<td th:text="${re.valoration}"></td>
+									<td th:text="${re.planner.nombre}"></td>	
+									<td th:text="${re.customer.nombre}"></td>	
 									
-									<td><a th:href="@{/resenatutor/eliminar?id=}+${re.idResena}">Eliminar</a></td>
-									<td><a th:href="@{'/resenatutor/modificar/' + ${re.idResena}}">Modificar</a></td>								
+									<td><a th:href="@{/review/eliminar?id=}+${re.idResena}">Eliminar</a></td>
+									<td><a th:href="@{'/review/modificar/' + ${re.idResena}}">Modificar</a></td>								
 								</tr>
 						</tbody>
 					</table>

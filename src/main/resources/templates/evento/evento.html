@@ -130,24 +130,24 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/curso/registrar}" method="post" th:object="${curso}">
+					<form th:action="@{/event/registrar}" method="post" th:object="${event}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO DE
-									CURSOS</h2>
+									EVENTOS</h2>
 							</div>
 							<div class="form-group">
 					
-					<label for="idCurso">ID:</label> 
-					<input type="text" class="form-control" th:field="*{idCurso}"></input>
+					<label for="idEvent">ID:</label> 
+					<input type="text" class="form-control" th:field="*{idEvent}"></input>
 					
 					<div class="form-group">
 					
-						<label 	for="nombreCurso">NOMBRE:</label> 
-						<input type="text" th:field="*{nombreCurso}" class="form-control" id="nombreCurso"></input>
+						<label 	for="nameEvent">NOMBRE:</label> 
+						<input type="text" th:field="*{nameEvent}" class="form-control" id="nameEvent"></input>
 	
-						<div class="alert alert-danger" th:if="${#fields.hasErrors('nombreCurso')}" 
-							th:errors="*{nombreCurso}">
+						<div class="alert alert-danger" th:if="${#fields.hasErrors('nameEvent')}" 
+							th:errors="*{nameEvent}">
 						</div>
 						
 										
@@ -163,7 +163,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/curso/listar}"
+							<a th:href="@{/event/listar}"
 								class="btn btn-danger"> Cancelar</a>
 						</div>
 					</form>

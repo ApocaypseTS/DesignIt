@@ -133,13 +133,13 @@
 							
 							
 
-					<a  style="border-bottom-color:blue" th:href="@{/solicitudevento/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/eventPlanner/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span>Agregar</a>
 							
 					<a style="border-bottom-color: green"
-						th:href="@{/solicitudevento/irBuscar}" id="add-row" type="button"
+						th:href="@{/eventPlanner/irBuscar}" id="add-row" type="button"
 						class="btn btn-primary btn-md left-block"> <span
 						class="glyphicon glyphicon-search"></span>
 					</a>
@@ -162,15 +162,15 @@
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="mp: ${listaSolicitudClase}">
-									<td th:text="${mp.idSolicitudClase}"></td>							
-									<td th:text="${mp.cursoTutor.tutor.nombre}"></td>
-									<td th:text="${mp.cursoTutor.curso.nombreCurso}"></td>
-									<td th:text="${mp.cursoTutor.horarioDisponible}"></td>
-									<td th:text="${mp.fechaClase}"></td>
-									<td th:text="${mp.horasCurso}"></td>
-									<td th:text="${mp.cursoTutor.costoHora}"></td>
-									<td th:text="${#numbers.formatDecimal(mp.montoTotal,0,'COMMA',2,'POINT')}"></td>
+								<tr th:each="se: ${listRequest}">
+									<td th:text="${se.idEventPlanner}"></td>							
+									<td th:text="${se.eventPlanner.planner.nombre}"></td>
+									<td th:text="${se.eventPlanner.event.nameEvent}"></td>
+									<td th:text="${se.eventPlanner.horarioDisponible}"></td>
+									<td th:text="${se.fechaEvento}"></td>
+									<td th:text="${se.horasEvento}"></td>
+									<td th:text="${se.eventPlanner.costoHora}"></td>
+									<td th:text="${#numbers.formatDecimal(se.montoTotal,0,'COMMA',2,'POINT')}"></td>
 									
 								</tr>
 						</tbody>

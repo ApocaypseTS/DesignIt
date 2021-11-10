@@ -130,7 +130,7 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/resenaevento/registrar}" method="post" th:object="${resenatutor}">
+					<form th:action="@{/review/registrar}" method="post" th:object="${review}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO RESE&Ntilde;AS</h2>
@@ -142,30 +142,30 @@
 					
 					<div class="form-group">
 					
-						<label 	for="valoracion">VALORACION:</label> 
-						<input type="text" th:field="*{valoracion}" class="form-control" id="valoracion"></input>
+						<label 	for="valoration">VALORACION:</label> 
+						<input type="text" th:field="*{valoration}" class="form-control" id="valoration"></input>
 	
-						<div class="alert alert-danger" th:if="${#fields.hasErrors('valoracion')}" 
-							th:errors="*{valoracion}">
+						<div class="alert alert-danger" th:if="${#fields.hasErrors('valoration')}" 
+							th:errors="*{valoration}">
 						</div>
 						
-						<label for=cliente.nombre>NOMBRE DEL CLIENTE: </label>
+						<label for=customer.nombre>NOMBRE DEL CLIENTE: </label>
 						<select
-							class="form-control" th:field="*{cliente.idCliente}">
+							class="form-control" th:field="*{customer.idCustomer}">
 
-							<option th:each="m: ${listaClientes}" th:value="${m.idCliente}"
+							<option th:each="m: ${listaClientes}" th:value="${m.idCustomer}"
 								th:text="${m.nombre}"
-								th:selected="(${m.idCliente} == *{cliente.idCliente})"></option>
+								th:selected="(${m.idCustomer} == *{customer.idCustomer})"></option>
 						</select>
 						
 						
-						<label for=tutor.nombre>NOMBRE DEL PRESTADOR: </label>
+						<label for=planner.nombre>NOMBRE DEL PRESTADOR: </label>
 						<select
-							class="form-control" th:field="*{tutor.idTutor}">
+							class="form-control" th:field="*{planner.idPlanner}">
 
-							<option th:each="m: ${listaTutores}" th:value="${m.idTutor}"
+							<option th:each="m: ${listPlanner}" th:value="${m.idPlanner}"
 								th:text="${m.nombre}"
-								th:selected="(${m.idTutor} == *{tutor.idTutor})"></option>
+								th:selected="(${m.idPlanner} == *{tutor.idPlanner})"></option>
 						</select>
 
 					</div>
@@ -179,7 +179,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/resenatutor/listar}"
+							<a th:href="@{/review/listar}"
 								class="btn btn-danger"> Cancelar</a>
 						</div>
 					</form>

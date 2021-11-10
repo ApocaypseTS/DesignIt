@@ -129,20 +129,20 @@
 				<div class="container-fluid">
 					<h1 class="h3 mb-4 text-gray-800">Buscar solicitud Evento</h1>
 
-					<form th:action="@{/solicitudevento/buscar}" method="post"
-						th:object="${solicitudClase}">
+					<form th:action="@{/request/buscar}" method="post"
+						th:object="${request}">
 
 						<div class="form-group">
 
 							<div class="col-sm-12">
 
-								<input type="text" class="form-control" th:field="*{cursoTutor.curso.nombreCurso}"
+								<input type="text" class="form-control" th:field="*{eventPlanner.event.nameEvent}"
 									id="rep" placeholder="Ingrese dato a buscar por Nombre o Evento">
 								</input>
 
 								<div align="left">
 									<button type="submit" class="btn btn-primary btn-md left-block">Buscar</button>
-									<a href="/solicitudclase/listar" class="btn btn-dark">Cancelar</a>
+									<a href="/review/listar" class="btn btn-dark">Cancelar</a>
 								</div>
 
 							</div>
@@ -163,11 +163,11 @@
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="mp: ${listaSolicitudClase}">
-									<td th:text="${mp.cursoTutor.tutor.nombre}"></td>
-									<td th:text="${mp.cursoTutor.tutor.apellido}"></td>									
-									<td th:text="${mp.cursoTutor.curso.nombreCurso}"></td>
-									<td th:text="${mp.cursoTutor.costoHora}"></td>
+								<tr th:each="r: ${listaSolicitudClase}">
+									<td th:text="${r.eventPlanner.planner.nombre}"></td>
+									<td th:text="${r.eventPlanner.planner.apellido}"></td>									
+									<td th:text="${r.eventPlanner.event.nameEvent}"></td>
+									<td th:text="${r.eventPlanner.costoHora}"></td>
 									
 								</tr>
 						</tbody>

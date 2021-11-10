@@ -129,7 +129,7 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/prestador/registrar}" method="post" th:object="${tutor}">
+					<form th:action="@{/planner/registrar}" method="post" th:object="${planner}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO DE
@@ -138,7 +138,7 @@
 							<div class="form-group">
 					
 					<label for="idTutor">ID:</label> 
-					<input type="text" class="form-control" th:field="*{idTutor}"></input>
+					<input type="text" class="form-control" th:field="*{idPlanner}"></input>
 					
 					<div class="form-group">
 					
@@ -196,7 +196,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/tutor/listar}"
+							<a th:href="@{/planner/listar}"
 								class="btn btn-danger"> Cancelar</a>
 						</div>
 					</form>

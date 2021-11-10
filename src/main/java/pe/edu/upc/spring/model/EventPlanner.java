@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "eventplanner")
+@Table(name = "eventPlanner")
 public class EventPlanner implements Serializable{
 	private static final long serialVersionUID = 1L;
 

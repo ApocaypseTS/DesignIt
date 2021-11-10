@@ -130,8 +130,8 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/solicitudclase/registrar}" method="post"
-						th:object="${solicitudclase}">
+					<form th:action="@{/request/registrar}" method="post"
+						th:object="${request}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO DE
@@ -139,35 +139,35 @@
 							</div>
 							<div class="form-group">
 
-								<label for="idSolicitudClase">ID:</label> <input type="text"
-									class="form-control" th:field="*{idSolicitudClase}"></input>
+								<label for="idRequest">ID:</label> <input type="text"
+									class="form-control" th:field="*{idRequest}"></input>
 
 								<div class="form-group">
 
 									<label for=metodoPago>TIPO DE EVENTO - PRESTADOR - HORA DEL EVENTO: </label> <select
-										class="form-control" th:field="*{cursoTutor.idCursoTutor}">
+										class="form-control" th:field="*{eventPlanner.idEventPlanner}">
 
-										<option th:each="c: ${listaCursoTutor}"
-											th:value="${c.idCursoTutor}"
-											th:text="${c.curso.nombreCurso} + ' - ' + ${c.tutor.nombre} + ' - ' + ${c.horarioDisponible}"
-											th:selected="(${c.idCursoTutor} == *{cursoTutor.idCursoTutor})"></option>
+										<option th:each="c: ${listEventPlanner}"
+											th:value="${c.idEventPlanner}"
+											th:text="${c.event.nameEvent} + ' - ' + ${c.planner.nombre} + ' - ' + ${c.horarioDisponible}"
+											th:selected="(${c.idEventPlanner} == *{eventPlanner.idEventPlanner})"></option>
 									</select> 
 
 
-									<label for="fechaClase">FECHA:</label> <input type="date"
-										th:field="*{fechaClase}" class="form-control" id="fechaClase"></input>
+									<label for="fechaEvento">FECHA:</label> <input type="date"
+										th:field="*{fechaEvento}" class="form-control" id="fechaEvento"></input>
 
 									<div class="alert alert-danger"
-										th:if="${#fields.hasErrors('fechaClase')}"
-										th:errors="*{fechaClase}"></div>
+										th:if="${#fields.hasErrors('fechaEvento')}"
+										th:errors="*{fechaEvento}"></div>
 
-									<label for="horasCurso">DURACION DEL EVENTO:</label> <input
-										type="text" th:field="*{horasCurso}" class="form-control"
-										id="horasCurso"></input>
+									<label for="horasEvento">DURACION DEL EVENTO:</label> <input
+										type="text" th:field="*{horasEvento}" class="form-control"
+										id="horasEvento"></input>
 
 									<div class="alert alert-danger"
-										th:if="${#fields.hasErrors('horasCurso')}"
-										th:errors="*{horasCurso}"></div>
+										th:if="${#fields.hasErrors('horasEvento')}"
+										th:errors="*{horasEvento}"></div>
 										
 										
 								</div>
@@ -181,7 +181,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/solicitudclase/listar}" class="btn btn-danger">
+							<a th:href="@{/request/listar}" class="btn btn-danger">
 								Cancelar</a>
 						</div>
 					</form>

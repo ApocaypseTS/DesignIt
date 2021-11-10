@@ -131,7 +131,7 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/cursotutor/registrar}" method="post" th:object="${cursotutor}">
+					<form th:action="@{/eventPlanner/registrar}" method="post" th:object="${eventPlanner}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO CURSOS</h2>
@@ -139,7 +139,7 @@
 							<div class="form-group">
 					
 					<label for="idCursoTutor">ID:</label> 
-					<input type="text" class="form-control" th:field="*{idCursoTutor}"></input>
+					<input type="text" class="form-control" th:field="*{idEventPlanner}"></input>
 					
 					<div class="form-group">
 						
@@ -150,29 +150,23 @@
 							th:errors="*{costoHora}">
 						</div>
 						
-						<label 	for="nota">NOTA:</label> 
-						<input type="text" th:field="*{nota}" class="form-control" id="nota"></input>
-	
-						<div class="alert alert-danger" th:if="${#fields.hasErrors('nota')}" 
-							th:errors="*{nota}">
-						</div>
 						
-						<label for=curso.nombreCurso>NOMBRE DEL CURSO: </label>
+						<label for=event.nameEvent>NOMBRE DEL EVENTO: </label>
 						<select
-							class="form-control" th:field="*{curso.idCurso}">
+							class="form-control" th:field="*{event.idEvent}">
 
-							<option th:each="c: ${listaCursos}" th:value="${c.idCurso}"
-								th:text="${c.nombreCurso}"
-								th:selected="(${c.idCurso} == *{curso.idCurso})"></option>
+							<option th:each="e: ${listEvent}" th:value="${e.idEvent}"
+								th:text="${e.nameEvent}"
+								th:selected="(${e.idEvent} == *{event.idEvent})"></option>
 						</select>
 						
-						<label for=tutor.nombre>NOMBRE DEL TUTOR: </label>
+						<label for=planner.nombre>NOMBRE DEL PRESTADOR: </label>
 						<select
-							class="form-control" th:field="*{tutor.idTutor}">
+							class="form-control" th:field="*{planner.idPlanner}">
 
-							<option th:each="t: ${listaTutores}" th:value="${t.idTutor}"
-								th:text="${t.nombre}"
-								th:selected="(${t.idTutor} == *{tutor.idTutor})"></option>
+							<option th:each="p: ${listPlanner}" th:value="${p.idPlanner}"
+								th:text="${p.nombre}"
+								th:selected="(${p.idPlanner} == *{planner.idPlanner})"></option>
 						</select>
 						
 						<label 	for="horarioDisponible">HORARIO DISPONIBLE:</label> 
@@ -193,7 +187,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/cursotutor/listar}"
+							<a th:href="@{/eventPlanner/listar}"
 								class="btn btn-danger"> Cancelar</a>
 						</div>
 					</form>
