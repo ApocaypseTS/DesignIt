@@ -18,7 +18,7 @@ import pe.edu.upc.spring.service.IPaymentMethodService;
 
 
 @Controller
-@RequestMapping("/methodpayment")
+@RequestMapping("/paymentMethod")
 public class PaymentMethodController {
 
 	@Autowired

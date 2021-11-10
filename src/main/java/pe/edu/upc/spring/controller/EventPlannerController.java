@@ -19,7 +19,7 @@ import pe.edu.upc.spring.service.IPlannerService;
 import pe.edu.upc.spring.service.IEventService;
 
 @Controller
-@RequestMapping("/eventplanner")
+@RequestMapping("/eventPlanner")
 public class EventPlannerController {
 
 	@Autowired
