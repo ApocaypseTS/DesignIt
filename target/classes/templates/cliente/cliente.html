@@ -130,7 +130,7 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/cliente/registrar}" method="post" th:object="${cliente}">
+					<form th:action="@{/customer/registrar}" method="post" th:object="${customer}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO DE
@@ -139,7 +139,7 @@
 							<div class="form-group">
 					
 					<label for="idCliente">ID:</label> 
-					<input type="text" class="form-control" th:field="*{idCliente}"></input>
+					<input type="text" class="form-control" th:field="*{idCustomer}"></input>
 
 												<div class="form-group col-md-12">
 								<label for="nombre">NOMBRE: </label> <input type="text"
@@ -201,7 +201,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Guardar
 							</button>
-							<a th:href="@{/cliente/listar}"
+							<a th:href="@{/customer/listar}"
 								class="btn btn-danger"> Cancelar</a>
 						</div>
 					</form>

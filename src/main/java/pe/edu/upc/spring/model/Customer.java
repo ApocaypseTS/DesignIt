@@ -44,13 +44,13 @@ public class Customer implements Serializable{
 	@Column(name="apellido", nullable=false, length=50)
 	private String apellido;
 
-	@NotBlank(message = "Debe ingresar codigo al alumno")
+	@NotBlank(message = "Debe ingresar codigo al cliente")
 	@Size(min = 8, max = 8, message = "La contrasena solo debe tener 8 digitos")
 	@Pattern(regexp = "[0-9]+", message="El teléfono solo puede tener números")
 	@Column(name="dni", nullable=false, length=8)
 	private String dni;
 	
-	@NotBlank(message = "Debe ingresar codigo al alumno")
+	@NotBlank(message = "Debe ingresar codigo al cliente")
 	@Size(min = 9, max = 9, message = "La contrasena solo debe tener 9 digitos")
 	@Pattern(regexp = "[0-9]+", message="El teléfono solo puede tener números")
 	@Column(name="telefono", nullable=false, length=9)

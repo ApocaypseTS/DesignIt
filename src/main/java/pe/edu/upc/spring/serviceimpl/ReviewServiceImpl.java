@@ -18,8 +18,8 @@ public class ReviewServiceImpl implements IReviewService {
 
 	@Override
 	@Transactional
-	public boolean insertar(Review resenatutor) {
-		Review objReview = dResena.save(resenatutor);
+	public boolean insertar(Review review) {
+		Review objReview = dResena.save(review);
 		if (objReview == null)
 			return false;
 		else
@@ -28,10 +28,10 @@ public class ReviewServiceImpl implements IReviewService {
 
 	@Override
 	@Transactional
-	public boolean modificar(Review resenatutor) {
+	public boolean modificar(Review review) {
 		boolean flag = false;
 		try {
-			dResena.save(resenatutor);
+			dResena.save(review);
 			flag = true;
 		} catch (Exception ex) {
 			System.out.println("Sucedió un error al modificar");

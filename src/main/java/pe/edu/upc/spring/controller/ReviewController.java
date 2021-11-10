@@ -47,7 +47,7 @@ public class ReviewController {
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("resenaplanner", new Review());
 		model.addAttribute("listaCustomers", cService.listar());
-		model.addAttribute("listaPlanneres", pService.listar());
+		model.addAttribute("listaPlanners", pService.listar());
 		return "resenaplanner/resenaplanner";
 	}
 	

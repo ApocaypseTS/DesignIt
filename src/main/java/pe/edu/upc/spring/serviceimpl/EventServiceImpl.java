@@ -19,8 +19,8 @@ public class EventServiceImpl implements IEventService {
 
 	@Override
 	@Transactional
-	public boolean insertar(Event curso) {
-		Event objEvent = dEvent.save(curso);
+	public boolean insertar(Event event) {
+		Event objEvent = dEvent.save(event);
 		if (objEvent == null)
 			return false;
 		else
@@ -29,10 +29,10 @@ public class EventServiceImpl implements IEventService {
 
 	@Override
 	@Transactional
-	public boolean modificar(Event curso) {
+	public boolean modificar(Event event) {
 		boolean flag = false;
 		try {
-			dEvent.save(curso);
+			dEvent.save(event);
 			flag = true;
 		} catch (Exception ex) {
 			System.out.println("Sucedió un error al modificar");

@@ -18,9 +18,9 @@ public class EventPlannerServiceImpl implements IEventPlannerService {
 
 	@Override
 	@Transactional
-	public boolean insertar(EventPlanner cursotutor) {
-		EventPlanner objCurso = dEventPlanner.save(cursotutor);
-		if (objCurso == null)
+	public boolean insertar(EventPlanner eventplanner) {
+		EventPlanner objEvent = dEventPlanner.save(eventplanner);
+		if (objEvent == null)
 			return false;
 		else
 			return true;
@@ -28,10 +28,10 @@ public class EventPlannerServiceImpl implements IEventPlannerService {
 
 	@Override
 	@Transactional
-	public boolean modificar(EventPlanner cursotutor) {
+	public boolean modificar(EventPlanner eventplanner) {
 		boolean flag = false;
 		try {
-			dEventPlanner.save(cursotutor);
+			dEventPlanner.save(eventplanner);
 			flag = true;
 		} catch (Exception ex) {
 			System.out.println("Sucedió un error al modificar");

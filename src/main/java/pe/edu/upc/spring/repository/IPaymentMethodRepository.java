@@ -11,7 +11,7 @@ import pe.edu.upc.spring.model.PaymentMethod;
 @Repository
 public interface IPaymentMethodRepository extends JpaRepository<PaymentMethod, Integer> {
 
-	@Query("From PaymentMethod c where c.nombre like %:nombre%")
-	List<PaymentMethod> SearchByName(@Param("nombre")String nombre);
+	@Query("From PaymentMethod c where c.name like %:name%")
+	List<PaymentMethod> buscarNombre(@Param("name")String name);
 	
 }

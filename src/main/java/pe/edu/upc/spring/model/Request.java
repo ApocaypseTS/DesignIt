@@ -16,7 +16,7 @@ import javax.persistence.Transient;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name = "solicitudclase")
+@Table(name = "request")
 public class Request implements Serializable{
     private static final long serialVersionUID = 1L;
 
@@ -26,10 +26,10 @@ public class Request implements Serializable{
     
     @Column(name="fecha_clase", nullable=false, length=50)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date fechaClase;
+    private Date fechaEvento;
     
-    @Column(name="cantidad_de_hora_por_curso", nullable=false, length=50)
-    private int horasCurso;
+    @Column(name="cantidad_de_hora_por_evento", nullable=false, length=50)
+    private int horasEvento;
 
 	@Transient
 	private double montoTotal;
@@ -45,13 +45,13 @@ public class Request implements Serializable{
     }
 
 
-	public Request(int idRequest, Date fechaClase, int horasCurso, double montoTotal,
+	public Request(int idRequest, Date fechaEvento, int horasEvento, double montoTotal,
 			EventPlanner eventPlanner) {
 		super();
 		this.idRequest = idRequest;
-		this.fechaClase = fechaClase;
-		this.horasCurso = horasCurso;
-		this.montoTotal = eventPlanner.getCostoHora()*horasCurso;
+		this.fechaEvento = fechaEvento;
+		this.horasEvento = horasEvento;
+		this.montoTotal = eventPlanner.getCostoHora()*horasEvento;
 		this.eventPlanner = eventPlanner;
 	}
 
@@ -66,28 +66,28 @@ public class Request implements Serializable{
 	}
 
 
-	public Date getFechaClase() {
-		return fechaClase;
+	public Date getFechaEvento() {
+		return fechaEvento;
 	}
 
 
-	public void setFechaClase(Date fechaClase) {
-		this.fechaClase = fechaClase;
+	public void setFechaEvento(Date fechaEvento) {
+		this.fechaEvento = fechaEvento;
 	}
 
 
-	public int getHorasCurso() {
-		return horasCurso;
+	public int getHorasEvento() {
+		return horasEvento;
 	}
 
 
-	public void setHorasCurso(int horasCurso) {
-		this.horasCurso = horasCurso;
+	public void setHorasEvento(int horasEvento) {
+		this.horasEvento = horasEvento;
 	}
 
 
 	public double getMontoTotal() {
-		return eventPlanner.getCostoHora()*horasCurso;
+		return eventPlanner.getCostoHora()*horasEvento;
 	}
 
 

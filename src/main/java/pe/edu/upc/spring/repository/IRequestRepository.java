@@ -16,10 +16,10 @@ import pe.edu.upc.spring.model.Request;
 public interface IRequestRepository extends JpaRepository<Request, Integer> {
 
 	
-	@Query("From Request r where r.eventplanner.planner.name like %:name%")
-	List<Request> SearchByNamePlanner(@Param("name") String name);
+	@Query("From Request r where r.eventPlanner.planner.nombre like %:nombre%")
+	List<Request> SearchByNamePlanner(@Param("nombre") String name);
 	
-	@Query("From Request r where r.eventplanner.event.nameEvent like %:nameEvent%")
+	@Query("From Request r where r.eventPlanner.event.nameEvent like %:nameEvent%")
 	List<Request> SearchByNameEvent(@Param("nameEvent") String nameEvent);
 	
 }

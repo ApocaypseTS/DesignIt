@@ -19,7 +19,7 @@ public class Event implements Serializable{
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int idEvent;
 
-	@Column(name="name_event", nullable=false, length=50)
+	@Column(name="nameEvent", nullable=false, length=50)
 	private String nameEvent;
 	
 	public Event() {

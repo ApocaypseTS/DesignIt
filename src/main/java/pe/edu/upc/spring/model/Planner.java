@@ -36,12 +36,7 @@ public class Planner implements Serializable{
 	
 	@Column(name="telefono", nullable=false, length=9)
 	private int telefono;
-	
-	@Column(name="nombre_de_la_univerdidad", nullable=false, length=60)
-	private String nombre_uni;
-	
-	@Column(name="carrera_universitaria", nullable=false, length=60)
-	private String carrera_uni;
+
 		
 	
 	public Planner() {
@@ -49,8 +44,8 @@ public class Planner implements Serializable{
 	}
 
 	public Planner(int idPlanner, String correo, String contrasena, String nombre, String apellido, int dni, int telefono,
-			String nombre_uni, String carrera_uni, String horario_disponible, Set<Request> solicitudClases,
-			Set<EventPlanner> cursoPlanneres, Set<Review> reviews) {
+			String horario_disponible, Set<Request> solicitudEventos,
+			Set<EventPlanner> cursoPlanners, Set<Review> reviews) {
 		super();
 		this.idPlanner = idPlanner;
 		this.correo = correo;
@@ -59,8 +54,7 @@ public class Planner implements Serializable{
 		this.apellido = apellido;
 		this.dni = dni;
 		this.telefono = telefono;
-		this.nombre_uni = nombre_uni;
-		this.carrera_uni = carrera_uni;
+
 
 	}
 
@@ -120,21 +114,7 @@ public class Planner implements Serializable{
 		this.telefono = telefono;
 	}
 
-	public String getNombre_uni() {
-		return nombre_uni;
-	}
 
-	public void setNombre_uni(String nombre_uni) {
-		this.nombre_uni = nombre_uni;
-	}
-
-	public String getCarrera_uni() {
-		return carrera_uni;
-	}
-
-	public void setCarrera_uni(String carrera_uni) {
-		this.carrera_uni = carrera_uni;
-	}
 
 
 

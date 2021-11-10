@@ -19,8 +19,8 @@ public class RequestServiceImpl implements IRequestService {
 
 	@Override
 	@Transactional
-	public boolean insertar(Request solicitudclase) {
-		Request objRequest = dRequest.save(solicitudclase);
+	public boolean insertar(Request request) {
+		Request objRequest = dRequest.save(request);
 		if (objRequest == null)
 			return false;
 		else
@@ -29,10 +29,10 @@ public class RequestServiceImpl implements IRequestService {
 
 	@Override
 	@Transactional
-	public boolean modificar(Request solicitudclase) {
+	public boolean modificar(Request request) {
 		boolean flag = false;
 		try {
-			dRequest.save(solicitudclase);
+			dRequest.save(request);
 			flag = true;
 		} catch (Exception ex) {
 			System.out.println("Sucedió un error al modificar");

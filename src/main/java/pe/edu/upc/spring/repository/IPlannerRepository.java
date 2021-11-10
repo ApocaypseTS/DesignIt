@@ -12,6 +12,6 @@ import pe.edu.upc.spring.model.Planner;
 @Repository
 public interface IPlannerRepository extends JpaRepository<Planner, Integer> {
 
-	@Query("From Planner t where t.nombre like %:nombre%")
+	@Query("From Planner p where p.nombre like %:nombre%")
 	List<Planner> buscarNombre(@Param("nombre") String nombre);
 }

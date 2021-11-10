@@ -19,8 +19,8 @@ public class PlannerServiceImpl implements IPlannerService {
 
 	@Override
 	@Transactional
-	public boolean insertar(Planner tutor) {
-		Planner objPlanner = dPlanner.save(tutor);
+	public boolean insertar(Planner planner) {
+		Planner objPlanner = dPlanner.save(planner);
 		if (objPlanner == null)
 			return false;
 		else
@@ -29,10 +29,10 @@ public class PlannerServiceImpl implements IPlannerService {
 
 	@Override
 	@Transactional
-	public boolean modificar(Planner tutor) {
+	public boolean modificar(Planner planner) {
 		boolean flag = false;
 		try {
-			dPlanner.save(tutor);
+			dPlanner.save(planner);
 			flag = true;
 		} catch (Exception ex) {
 			System.out.println("Sucedió un error al modificar");

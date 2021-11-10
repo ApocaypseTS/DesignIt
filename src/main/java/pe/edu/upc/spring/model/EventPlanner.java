@@ -20,9 +20,7 @@ public class EventPlanner implements Serializable{
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private int idEventPlanner;
-	
-	@Column(name="nota", nullable=false, length=2)
-	private String nota;
+
 
 	@Column(name="costoPorHora", nullable=false, length=3)
 	private double costoHora;
@@ -43,11 +41,11 @@ public class EventPlanner implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public EventPlanner(int idEventPlanner, String nota, double costoHora, String horarioDisponible, Event event,
+	public EventPlanner(int idEventPlanner, double costoHora, String horarioDisponible, Event event,
 			Planner planner) {
 		super();
 		this.idEventPlanner = idEventPlanner;
-		this.nota = nota;
+
 		this.costoHora = costoHora;
 		this.horarioDisponible = horarioDisponible;
 		this.event = event;
@@ -62,13 +60,6 @@ public class EventPlanner implements Serializable{
 		this.idEventPlanner = idEventPlanner;
 	}
 
-	public String getNota() {
-		return nota;
-	}
-
-	public void setNota(String nota) {
-		this.nota = nota;
-	}
 
 	public double getCostoHora() {
 		return costoHora;

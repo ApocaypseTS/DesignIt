@@ -128,7 +128,7 @@
 				<div class="container-fluid">
 					<h1 class="h3 mb-4 text-gray-800">CLIENTES REGISTRADOS</h1>
 
-					<a  style="border-bottom-color:blue" th:href="@{/cliente/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/customer/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span> AGREGAR
@@ -150,17 +150,17 @@
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="cli: ${listaClientes}">
-									<td th:text="${cli.idCliente}"></td>
-									<td th:text="${cli.nombre}"></td>
-									<td th:text="${cli.apellido}"></td>
-									<td th:text="${cli.dni}"></td>
-									<td th:text="${cli.telefono}"></td>
-									<td th:text="${cli.correo}"></td>
+								<tr th:each="cust: ${listCustomers}">
+									<td th:text="${cust.idCustomer}"></td>
+									<td th:text="${cust.nombre}"></td>
+									<td th:text="${cust.apellido}"></td>
+									<td th:text="${cust.dni}"></td>
+									<td th:text="${cust.telefono}"></td>
+									<td th:text="${cust.correo}"></td>
 									
 									
-									<td><a th:href="@{/cliente/eliminar?id=}+${cli.idCliente}">Eliminar</a></td>
-									<td><a th:href="@{'/cliente/modificar/' + ${cli.idCliente}}">Modificar</a></td>
+									<td><a th:href="@{/customer/eliminar?id=}+${cli.idCustomer}">Eliminar</a></td>
+									<td><a th:href="@{'/customer/modificar/' + ${cli.idCustomer}}">Modificar</a></td>
 								</tr>
 						</tbody>
 					</table>
