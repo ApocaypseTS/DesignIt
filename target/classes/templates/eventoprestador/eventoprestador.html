@@ -48,7 +48,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -134,7 +134,7 @@
 					<form th:action="@{/eventPlanner/registrar}" method="post" th:object="${eventPlanner}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
-								<h2 class="m-0 font-weight-bold text-dark">REGISTRO CURSOS</h2>
+								<h2 class="m-0 font-weight-bold text-dark">REGISTRO EVENTOS</h2>
 							</div>
 							<div class="form-group">
 					
@@ -155,7 +155,7 @@
 						<select
 							class="form-control" th:field="*{event.idEvent}">
 
-							<option th:each="e: ${listEvent}" th:value="${e.idEvent}"
+							<option th:each="e: ${listaEvents}" th:value="${e.idEvent}"
 								th:text="${e.nameEvent}"
 								th:selected="(${e.idEvent} == *{event.idEvent})"></option>
 						</select>
@@ -164,7 +164,7 @@
 						<select
 							class="form-control" th:field="*{planner.idPlanner}">
 
-							<option th:each="p: ${listPlanner}" th:value="${p.idPlanner}"
+							<option th:each="p: ${listaPlanners}" th:value="${p.idPlanner}"
 								th:text="${p.nombre}"
 								th:selected="(${p.idPlanner} == *{planner.idPlanner})"></option>
 						</select>

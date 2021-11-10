@@ -4,7 +4,7 @@
 <head th:replace="layout/layout :: head">
 		<meta charset="ISO-8859-1"></meta>
 		
-		<title>Presatdor</title>
+		<title>Prestador</title>
 		
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		
@@ -45,7 +45,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -127,7 +127,7 @@
 
 
 				<div class="container-fluid">
-					<h1 class="h3 mb-4 text-gray-800">TUTORES REGISTRADOS</h1>
+					<h1 class="h3 mb-4 text-gray-800">PRESTADORES REGISTRADOS</h1>
 
 					<a  style="border-bottom-color:blue" th:href="@{/planner/irRegistrar}" id="add-row" 
 							type="button"
@@ -147,12 +147,12 @@
 									<th class="text-center">TELEFONO</th>																		
 									<th class="text-center">CORREO</th>
 																											
-									<th class="text-center">OPERACIÓN</th>
-									<th class="text-center">OPERACIÓN</th>
+									<th class="text-center">OPERACI&Oacute;N</th>
+									<th class="text-center">OPERACI&Oacute;N</th>
 							</tr>
 						</thead>
 						<tbody>
-								<tr th:each="p: ${listPlanner}">
+								<tr th:each="p: ${listaPlanners}">
 									<td th:text="${p.idPlanner}"></td>
 									<td th:text="${p.nombre}"></td>
 									<td th:text="${p.apellido}"></td>
