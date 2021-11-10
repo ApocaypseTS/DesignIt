@@ -45,7 +45,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -139,25 +139,24 @@
 						<thead class="thead-dark">
 							<tr align="center">
 									<th class="text-center">CODIGO</th>
-									<th class="text-center">NOTA</th>
+									<th class="text-center">EVENTO</th>
+									<th class="text-center">PRESTAMISTA</th>
 									<th class="text-center">COSTO HORA</th>
-									<th class="text-center">CURSO</th>
 									<th class="text-center">HORARIO DISPONIBLE</th>
-									<th class="text-center">TUTOR</th>
 									<th class="text-center">OPERACI&Oacute;N</th>
 									<th class="text-center">OPERACI&Oacute;N</th>	
 																																		</tr>
 						</thead>
 						<tbody>
-								<tr th:each="ep: ${listEventPlanner}">
+								<tr th:each="ep: ${listaEventPlanner}">
 									<td th:text="${ep.idEventPlanner}"></td>
-									<td th:text="${ep.costoHora}"></td>
 									<td th:text="${ep.event.nameEvent}"></td>
-									<td th:text="${ep.horarioDisponible}"></td>
 									<td th:text="${ep.planner.nombre}"></td>
+									<td th:text="${ep.costoHora}"></td>
+									<td th:text="${ep.horarioDisponible}"></td>
 							
-									<td><a th:href="@{/cursotutor/eliminar?id=}+${ep.idCursoTutor}">Eliminar</a></td>
-									<td><a th:href="@{'/cursotutor/modificar/' + ${ep.idCursoTutor}}">Modificar</a></td>
+									<td><a th:href="@{/eventPlanner/eliminar?id=}+${ep.idEventPlanner}">Eliminar</a></td>
+									<td><a th:href="@{'/eventPlanner/modificar/' + ${ep.idEventPlanner}}">Modificar</a></td>
 								</tr>
 						</tbody>
 					</table>
