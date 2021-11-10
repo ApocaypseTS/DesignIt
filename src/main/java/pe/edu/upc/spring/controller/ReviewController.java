@@ -20,7 +20,7 @@ import pe.edu.upc.spring.service.ICustomerService;
 import pe.edu.upc.spring.service.IPlannerService;
 
 @Controller
-@RequestMapping("/resenaplanner")
+@RequestMapping("/review")
 public class ReviewController {
 
 	@Autowired
