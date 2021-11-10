@@ -1,158 +1,127 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
-
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-
-<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" th:href="@{/css/style_land.css}">
-<script type="text/javascript" th:src="@{/js/js_land.js}"></script>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design It</title>
+<link rel="stylesheet" th:href="@{/css/style_landing.css}">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
 <body>
-  <header>
-    <div class="company-logo">D</div>
-    <nav class="navbar">
-      <ul class="nav-items">
-        <li class="nav-item"><a href="#" class="nav-link">INICIO</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">NOSOTROS</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">CONTACTANOS</a></li>
-      </ul>
-    </nav>
-    <div class="menu-toggle">
-      <i class="bx bx-menu"></i>
-      <i class="bx bx-x"></i>
-    </div>
-  </header>
-  <main>
-    <!-- HOME SECTION -->
-    <section class="container section-1">
-      <div class="slogan">
-        <h1 class="company-title">DESIGN IT</h1>
-        <h2 class="company-slogan">
-          Nosotros te ayudamos con tu evento
-        </h2>
-      </div>
-      <div class="home-computer-container">
-        <img class="home-computer" src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/home_img.png?raw=true" alt="a computer in dark with shadow" class="home-img">
-      </div>
-    </section>
+    <header class="hero">
+        <nav class="nav__hero">
+            <div class="container nav__container">
+                <div class="logo">
+                    <h2 class="logo__name">Design It<span class="point">.</span></h2>
+                </div>
+                <div class="links">
+                    <a th:href="@{/landing}" class="link">Inicio</a>
+                    <a th:href="#" class="link">Nosotros</a>
+                    <a th:href="#" class="link link--active">Contacto</a>
+                </div>
+            </div>
+        </nav>
 
-    <!-- OFFER SECTION -->
-    <section class="container section-2">
-      <!-- offer 1 -->
-      <div class="offer offer-1">
-        <img src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/offer_1.png?raw=true" alt="a computer in dark with with white shadow" class="offer-img offer-1-img">
-        <div class="offer-description offer-desc-1">
-          <h2 class="offer-title">Macbook pro</h2>
-          <p class="offer-hook">This a Macbook pro nulla vulputate magna vel odio sagittis bibendium...</p>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-      </div>
-      <!-- offer 2 -->
-      <div class="offer offer-2">
-        <img src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/offer_2.png?raw=true" alt="a opened computer" class="offer-img offer-2-img">
-        <div class="offer-description offer-desc-2">
-          <h2 class="offer-title">Lenovo</h2>
-          <p class="offer-hook">This a Lenovo nulla vulputate magna vel odio sagittis bibendium...</p>
-          <div class="cart-btn">ADD TO CART</div>
-        </div>
-      </div>
-    </section>
 
-    <!-- PRODUCT SECTION -->
-    <section class="container section-3">
-      <!-- product - 1 -->
-      <div class="product product-1">
-        <img src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/comp_1.png?raw=true" alt="computer to sell" class="product-img">
-        <span class="product_add_cart">ADD TO CART</span>
-      </div>
-      <!-- product - 2 -->
-      <div class="product product-2">
-        <img src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/comp_2.png?raw=true" alt="computer to sell" class="product-img">
-        <span class="product_add_cart">ADD TO CART</span>
-      </div>
-      <!-- product - 3 -->
-      <div class="product product-3">
-        <img src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/comp_3.png?raw=true" alt="computer to sell" class="product-img">
-        <span class="product_add_cart">ADD TO CART</span>
-      </div>
-      <!-- product - 4 -->
-      <div class="product product-4">
-        <img src="https://github.com/r-e-d-ant/Computer-store-website/blob/main/assets/images/comp_4.png?raw=true" alt="computer to sell" class="product-img">
-        <span class="product_add_cart">ADD TO CART</span>
-      </div>
-    </section>
+        <section class="container hero__main">
+            <div class="hero__textos">
+                <h1 class="title"> <span class="title--active">Design It</span></h1>
+                <p class="copy">Aquí encontraras todo lo que necesitas para tus eventos o también podrás ofrecer tus servicios a todos para que puedan conocer mas sobre tu negocio, asi que no esperes mas y <span class="copy__active">Resgistrate</span></p>
 
-    <!-- SPONSOR SECTION -->
-    <section class="container section-4">
-      <!-- SPONSOR group 1 -->
-      <div class="sponsor sponsor-1"><img src="https://raw.githubusercontent.com/r-e-d-ant/Computer-store-website/b90ac65459206fef22e9b87313f587185554263b/assets/images/microsoft.svg" alt=""></div>
-      <div class="sponsor sponsor-2"><img src="https://raw.githubusercontent.com/r-e-d-ant/Computer-store-website/b90ac65459206fef22e9b87313f587185554263b/assets/images/apple.svg" alt=""></div>
+            </div>
+            <img src="img/papel.png" class="mockup">
+        </section>
+    </header>
 
-      <!-- SPONSOR group 2 -->
-      <div class="sponsor sponsor-3"><img src="https://raw.githubusercontent.com/r-e-d-ant/Computer-store-website/b90ac65459206fef22e9b87313f587185554263b/assets/images/dell.svg" alt=""></div>
-      <div class="sponsor sponsor-4"><img src="https://raw.githubusercontent.com/r-e-d-ant/Computer-store-website/b90ac65459206fef22e9b87313f587185554263b/assets/images/ibm.svg" alt=""></div>
-    </section>
+    <main>
+        <section class="services">
+            <div class="container">
 
-    <!-- SUBSCRIBE SECTION-->
-    <section class="container section-5">
-      <h2 class="subscribe-input-label">NEWSLETTER</h2>
-      <div class="subscribe-container">
-        <input type="text" id="email-subscribe" placeholder="Email address...">
-        <input type="submit" value="SUBSCRIBE">
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container top-footer">
-      <!-- footer item 1 -->
-      <div class="footer-item">
-        <h2 class="footer-title">ADDRESS</h2>
-        <div class="footer-items">
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing st18</h3>
+                <h2 class="subtitle"><span class="point">¿Como funciona?</span></h2><br>
+                <p class="copy__section">Solo debes seguir tres sencillos pasos que veras a conitnuación:</p>
+
+                <article class="container-cards">
+                    <div class="card">
+                        <img src="img/cliente.jpeg" class="card__img">
+                        <div class="cards__text">
+                            <p class="card__list">Podras hacer muchas cosas como </p>
+                            <h3 class="card__title">Cliente<span class="point"></span></h3>
+                            <p class="card__copy">1. Buscar el servicio que necesites para tu evento en base a tus preferencias</p>
+                            <p class="card__copy">2. Selecciona el que mejor te parezca y envía tu solicitud para que te realice un presupuesto mas detallado</p>
+                            <p class="card__copy">3. Acepta el de tu preferencia, realiza el pago y ya estarás lsito para tu evento</p><br>
+                            <a href="#" class="card__button">Ingresar</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="img/prestador.jpg" class="card__img">
+                        <div class="cards__text">
+                            <p class="card__list">Podras hacer muchas cosas como</p>
+                            <h3 class="card__title">Contratista<span class="point"></span></h3>
+                            <p class="card__copy">1. Escoge el área en el que ofreceras tu servicio, pueden ser de una a mas</p>
+                            <p class="card__copy">2. Selecciona el que mejor te parezca y envía tu solicitud para que te realice un presupuesto mas detallado</p>
+                            <p class="card__copy">3. Acepta el de tu preferencia, realiza el pago y ya estarás lsito para tu evento</p><BR>
+                            <a href="#" class="card__button">Ingresar</a>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+
+
+        <section class="email container container--modifier">
+            <h2 class="subtitle subtitle--modifier">Somos tu mejor opción para organizar tu evento <span class="point">.</span></h2>
+
+            <p class="copy__section copy__section--modifier">Encontraras diversas opciones para escoger para tu evento, ademas, informacion detallada</p>
+
+            <div class="check">
+                <div class="check__item">
+                    <i class='bx bx-check' ></i>
+                    <div class="check__numbers">
+                        <p class="check__number">+200</p>
+                        <p class="check__copy">Eventos exitosos</p>
+                    </div>
+                </div>
+                <div class="check__item">
+                    <i class='bx bx-check' ></i>
+                    <div class="check__numbers">
+                        <p class="check__number">+200</p>
+                        <p class="check__copy">Eventos exitosos</p>
+                    </div>
+                </div>
+                <div class="check__item">
+                    <i class='bx bx-check' ></i>
+                    <div class="check__numbers">
+                        <p class="check__number">+200</p>
+                        <p class="check__copy">Eventos exitosos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__caption">
+
+            <section class="get-email">
+                <h3 class="title__footer">¿Estás listo para trabajar con nosotros?</h3>
+                <form class="newsletter newsletter--modifier">
+                    <input type="text" class="newsletter__input" placeholder="Ingresa tu email">
+                    <input type="submit" class="newsletter__submit" value="Comienza hoy">
+                </form>
+                <div class="socialmedia">
+                    <p class="socialmedia__legend">Siguenos en:</p>
+                    <i class='socialmedia__icon bx bxl-facebook-circle'></i>
+                    <i class='socialmedia__icon bx bxl-linkedin-square'></i>                                                                                                        
+                    <i class='socialmedia__icon bx bxl-twitter' ></i>   
+                    <i class='socialmedia__icon bx bxl-instagram' ></i>
+                    <i class='socialmedia__icon bx bxl-github' ></i>  
+                </div>
+            </section>
         </div>
-      </div>
-      <!-- footer item 2 -->
-      <div class="footer-item">
-        <h2 class="footer-title">SERVICES</h2>
-        <div class="footer-items">
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-        </div>
-      </div>
-      <!-- footer item 3 -->
-      <div class="footer-item">
-        <h2 class="footer-title">SUPPLIERS</h2>
-        <div class="footer-items">
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-        </div>
-      </div>
-      <!-- footer item 4 -->
-      <div class="footer-item">
-        <h2 class="footer-title">INVESTMENT</h2>
-        <div class="footer-items">
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-          <h3>Adipisicing elit.</h3>
-        </div>
-      </div>
-    </div>
-    <div class="container end-footer">
-      <div class="copyright">copyright � 1600 - 2021, <b>DOWNTOWN TECH LIVER</b></div>
-      <a class="designer" href="#">Thierry M</a>
-    </div>
-  </footer>
+
+
+    </footer>
 </body>
 </html>
