@@ -29,13 +29,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 					.antMatchers("/pago/**").access("hasRole('ROLE_ADMIN')")
 					.antMatchers("/eventoprestador/**").access("hasRole('ROLE_PRESTADOR') or hasRole('ROLE_ADMIN')")
 					.antMatchers("/metodopago/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_CLIENTE')")
-					.antMatchers("/resenaprestador/**").access("hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')")
+					.antMatchers("/resenaPrestador/**").access("hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')")
 					.antMatchers("/solicitudevento/**").access("hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')")					
 					
-					.antMatchers("/welcome/**").access("hasRole('ROLE_PRESTADOR') or hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')").and().formLogin()
+					.antMatchers("/bienvenido**").access("hasRole('ROLE_PRESTADOR') or hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')").and().formLogin()
 					
 					.successHandler(sucessHandler).loginPage("/login").loginProcessingUrl("/login")
-					.defaultSuccessUrl("/welcome/bienvenido").permitAll().and().logout().logoutSuccessUrl("/login")
+					.defaultSuccessUrl("/bienvenido").permitAll().and().logout().logoutSuccessUrl("/login")
 					.permitAll().and().exceptionHandling().accessDeniedPage("/error");
 
 		} catch (Exception e) {
