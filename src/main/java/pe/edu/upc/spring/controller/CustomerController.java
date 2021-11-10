@@ -32,19 +32,19 @@ public class CustomerController {
 	@RequestMapping("/")
 	public String irPaginaListadoCustomers(Map<String, Object> model) {
 		model.put("listaCustomers", cService.listar());
-		return "customer/listCustomer";
+		return "cliente/listCliente";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("customer", new Customer());
-		return "customer/customer";
+		return "cliente/cliente";
 	}
 
 	@RequestMapping("/registrar")
 	public String registrar(@Valid @ModelAttribute Customer objCustomer, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors())
-			return "customer/customer";
+			return "cliente/cliente";
 		else {
 			boolean flag = cService.insertar(objCustomer);
 			if (flag)
@@ -64,7 +64,7 @@ public class CustomerController {
 			return "redirect:/customer/listar";
 		} else {
 			model.addAttribute("customer", objCustomer);
-			return "customer/customer";
+			return "cliente/cliente";
 		}
 	}
 	
@@ -80,7 +80,7 @@ public class CustomerController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaCustomers", cService.listar());
 		}
-		return "customer/listCustomer";
+		return "cliente/listCliente";
 		}
 	
 	@RequestMapping("/listar")

@@ -38,21 +38,21 @@ public class PaymentController {
 	@RequestMapping("/")
 	public String irPaginaListadoPayments(Map<String, Object> model) {
 		model.put("listaPayments", pService.listar());
-		return "payment/listPayment";
+		return "pago/listPago";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("payment", new Payment());
-		model.addAttribute("listaMethodPayment", mService.listar());
+		model.addAttribute("listaMetodoPago", mService.listar());
 		model.addAttribute("listaRequest", rService.listar());
-		return "payment/payment";
+		return "pago/pago";
 	}
 
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute Payment objPayment, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors())
-			return "payment/payment";
+			return "pago/pago";
 		else {
 			boolean flag = pService.insertar(objPayment);
 			if (flag)
@@ -71,10 +71,10 @@ public class PaymentController {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
 			return "redirect:/payment/listar";
 		} else {
-			model.addAttribute("listaMethodPayment", mService.listar());
+			model.addAttribute("listaMetodoPago", mService.listar());
 			model.addAttribute("listaRequest", rService.listar());
 			model.addAttribute("payment", objPayment);
-			return "payment/payment";
+			return "pago/pago";
 		}
 	}
 	
@@ -88,9 +88,9 @@ public class PaymentController {
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 			model.put("mensaje", "Ocurrio un error");
-			model.put("listaPayment", pService.listar());
+			model.put("listaPayments", pService.listar());
 		}
-		return "payment/listPayment";
+		return "pago/listPago";
 		}
 	
 	@RequestMapping("/listar")

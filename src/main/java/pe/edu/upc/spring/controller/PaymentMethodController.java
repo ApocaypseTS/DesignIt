@@ -31,27 +31,27 @@ public class PaymentMethodController {
 
 	@RequestMapping("/")
 	public String irPaginaListadoPaymentMethod(Map<String, Object> model) {
-		model.put("listaPaymentMethod", pmService.listar());
-		return "methodpayment/listPaymentMethod";
+		model.put("listaMetodoPago", pmService.listar());
+		return "metodopago/listMetodoPago";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
-		model.addAttribute("methodpayment", new PaymentMethod());
-		return "methodpayment/methodpayment";
+		model.addAttribute("paymentMethod", new PaymentMethod());
+		return "metodopago/metodopago";
 	}
 	
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute PaymentMethod objPaymentMethod, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors())
-			return "methodpayment/methodpayment";
+			return "metodopago/metodopago";
 		else {
 			boolean flag = pmService.insertar(objPaymentMethod);
 			if (flag)
-				return "redirect:/methodpayment/listar";
+				return "redirect:/paymentMethod/listar";
 			else {
 				model.addAttribute("mensaje", "Ocurrió un error");
-				return "redirect:/methodpayment/irRegistrar";
+				return "redirect:/paymentMethod/irRegistrar";
 			}
 		}
 	}
@@ -61,10 +61,10 @@ public class PaymentMethodController {
 		Optional<PaymentMethod> objPaymentMethod = pmService.listarId(id);
 		if (objPaymentMethod == null) {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
-			return "redirect:/methodpayment/listar";
+			return "redirect:/paymentMethod/listar";
 		} else {
-			model.addAttribute("methodpayment", objPaymentMethod);
-			return "methodpayment/methodpayment";
+			model.addAttribute("paymentMethod", objPaymentMethod);
+			return "metodopago/metodopago";
 		}
 	}
 	
@@ -73,19 +73,19 @@ public class PaymentMethodController {
 		try {
 			if (id!=null && id>0) {
 				pmService.eliminar(id);
-				model.put("listaPaymentMethod", pmService.listar());
+				model.put("listaMetodoPago", pmService.listar());
 			}
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 			model.put("mensaje", "Ocurrio un error");
-			model.put("listaPaymentMethod", pmService.listar());
+			model.put("listaMetodoPago", pmService.listar());
 		}
-		return "methodpayment/listPaymentMethod";
+		return "metodopago/listMetodoPago";
 		}
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
-		model.put("listaPaymentMethod", pmService.listar());
+		model.put("listaMetodoPago", pmService.listar());
 		return "metodopago/listMetodoPago";
 	}
 	
