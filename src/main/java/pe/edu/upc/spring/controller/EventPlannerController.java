@@ -97,6 +97,6 @@ public class EventPlannerController {
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaEventPlanner", evplService.listar());
-		return "eventplanner/listEventPlanner";
+		return "eventoprestador/listEventoPrestador";
 	}
 }

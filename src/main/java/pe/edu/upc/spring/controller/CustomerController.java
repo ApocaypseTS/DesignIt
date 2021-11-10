@@ -86,6 +86,6 @@ public class CustomerController {
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaCustomers", cService.listar());
-		return "customer/listCustomer";
+		return "cliente/listCLiente";
 	}
 }

@@ -83,6 +83,6 @@ public class PlannerController {
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaPlanners", pService.listar());
-		return "planner/listPlanner";
+		return "prestador/listPrestador";
 	}
 }

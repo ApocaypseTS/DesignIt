@@ -98,7 +98,7 @@ public class ReviewController {
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaReview", rService.listar());
-		return "resenaplanner/listReview";
+		return "resenaPrestador/listResenaPrestador";
 	}
 	
 

@@ -49,7 +49,7 @@ public class RequestController {
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("request", new Request());
 		model.addAttribute("listaEventPlanner", evplService.listar());
-		return "request/request";
+		return "solicitudevento/solicitudevento";
 	}
 
 	@RequestMapping("/registrar")

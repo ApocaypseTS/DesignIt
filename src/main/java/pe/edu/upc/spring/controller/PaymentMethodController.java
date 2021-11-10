@@ -86,7 +86,7 @@ public class PaymentMethodController {
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaPaymentMethod", pmService.listar());
-		return "methodpayment/listPaymentMethod";
+		return "metodopago/listMetodoPago";
 	}
 	
 	
