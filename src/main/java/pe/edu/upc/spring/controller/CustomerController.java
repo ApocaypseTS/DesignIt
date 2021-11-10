@@ -28,6 +28,10 @@ public class CustomerController {
 	public String irPaginaBienvenida() {
 		return "bienvenido";
 	}
+	@RequestMapping("/registro")
+	public String irregistro() {
+		return "registro";
+	}
 
 	@RequestMapping("/")
 	public String irPaginaListadoCustomers(Map<String, Object> model) {
@@ -86,6 +90,6 @@ public class CustomerController {
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaCustomers", cService.listar());
-		return "customer/listCustomer";
+		return "cliente/listCliente";
 	}
 }
