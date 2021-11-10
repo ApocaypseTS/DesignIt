@@ -149,15 +149,15 @@
 																																		</tr>
 						</thead>
 						<tbody>
-								<tr th:each="pa: ${listaPagos}">
-									<td th:text="${pa.idPago}"></td>
-									<td th:text="${pa.solicitudClase.montoTotal}"></td>
+								<tr th:each="pa: ${listaPayments}">
+									<td th:text="${pa.idPayment}"></td>
+									<td th:text="${pa.request.montoTotal}"></td>
 									<td th:text="${pa.fecha}"></td>
 									<td th:text="${pa.numeroTarj}"></td>
 									<td th:text="${pa.caducidad}"></td>
-									<td th:text="${pa.solicitudClase.idSolicitudClase}"></td>
+									<td th:text="${pa.request.idRequest}"></td>
 									<td th:text="${pa.nombreTitular}"></td>
-									<td th:text="${pa.metodoPago.nombre}"></td>									
+									<td th:text="${pa.paymentMethod.nombre}"></td>									
 
 								</tr>
 						</tbody>

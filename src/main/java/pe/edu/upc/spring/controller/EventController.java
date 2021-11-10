@@ -29,19 +29,19 @@ public class EventController {
 	@RequestMapping("/")
 	public String irPaginaListadoPlanners(Map<String, Object> model) {
 		model.put("listaEvents", evService.listar());
-		return "event/listEvent";
+		return "evento/listEvento";
 	}
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
 		model.addAttribute("event", new Event());
-		return "event/event";
+		return "evento/evento";
 	}
 
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute Event objEvent, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors())
-			return "event/event";
+			return "evento/evento";
 		else {
 			boolean flag = evService.insertar(objEvent);
 			if (flag)
@@ -61,7 +61,7 @@ public class EventController {
 			return "redirect:/event/listar";
 		} else {
 			model.addAttribute("event", objEvent);
-			return "event/event";
+			return "evento/evento";
 		}
 	}
 	
@@ -77,12 +77,12 @@ public class EventController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaEvent", evService.listar());
 		}
-		return "event/listEvent";
+		return "evento/listEvento";
 		}
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaEvent", evService.listar());
-		return "event/listEvent";
+		return "evento/listEvento";
 	}
 }

@@ -155,12 +155,12 @@
 									
 									<label for=metodoPago>ID DE LA SOLICITUD - MONTO A PAGAR: </label> <select
 										class="form-control"
-										th:field="*{solicitudClase.idSolicitudClase}">
+										th:field="*{request.idRequest}">
 
-										<option th:each="s: ${listaSolicitudClase}"
-											th:value="${s.idSolicitudClase}"
-											th:text="${s.idSolicitudClase} + ' - ' + ${s.montoTotal}"
-											th:selected="(${s.idSolicitudClase} == *{solicitudClase.idSolicitudClase})"></option>
+										<option th:each="s: ${listaRequest}"
+											th:value="${s.idRequest}"
+											th:text="${s.idRequest} + ' - ' + ${s.montoTotal}"
+											th:selected="(${s.idRequest} == *{Request.idRequest})"></option>
 									</select>
 
 									<label for="fecha">FECHA:</label> <input type="date"
