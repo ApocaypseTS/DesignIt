@@ -45,7 +45,7 @@ public class Payment implements Serializable{
 	private PaymentMethod paymentMethod;
 	
 	@ManyToOne
-	@JoinColumn(name="idSolicitudClase", nullable=false)
+	@JoinColumn(name="idRequest", nullable=false)
 	private Request request;
 	
 	public Payment() {
