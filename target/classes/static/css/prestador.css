@@ -1,0 +1,36 @@
+.container-fluid{
+    background-color:rgba(223, 223, 223, 0.863);
+    position: absolute;
+    height: 86%;
+    width: 50%;
+    top: 24%;
+    left: 25%;
+    border-color: rgb(248, 142, 234);
+    border-style: solid;
+    border-width: 6px;
+    border-radius:20px;
+}
+.container-fluid input{
+	
+	width:50%;
+ height: 40px;
+   position: relative;
+   left:40%;
+}
+.container-fluid label{
+	
+	
+   position: relative;
+   top:40px;
+   left:10%;
+}
+.container-fluid button{
+	position: relative;
+	left:33%;
+	 background-color:blue;
+	 color:white;
+}
+#cancelar{
+	position: relative;
+	left:40%;
+}

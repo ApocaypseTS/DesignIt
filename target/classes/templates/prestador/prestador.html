@@ -1,108 +1,94 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-	<head th:replace="layout/layout :: head">
+	
 		
 		<meta charset="ISO-8859-1"></meta>
 		
 		<title>Prestador</title>
 		
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		
-		<link 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
-				rel="stylesheet" id="bootstrap-css">
-		</link>
+         <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/prestador.css}">
+         <link rel="stylesheet" th:href="@{/css/bienvenido.css}">
 
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-		</script>
-		
-		<script type="text/javascript" th:src="@{/js/tutor.js}"></script>
 
 	</head>
 	
 	<body>
-	<div id="wrapper">
-
+<div id="wrapper">
 		<ul class="navbar-nav sidebar sidebar-dark accordion"
-			id="accordionSidebar" style="background-color: rgb(128, 0, 128);">
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/welcome/bienvenido}"> 
-			<div class="sidebar-brand-icon">
-			<i class="fas fa-desktop"></i>
+			id="accordionSidebar" >
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/matricula}">
+				<div class="sidebar-brand-icon">
+					<i class="fas fa-desktop"></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">CLIENTE</div>
+				<img th:src="@{/img/salud.png}" alt="">
+				<div class="titulo"> <b>DESIGN IT</b> </div>
 			</a>
+			<ul></ul>
 
-			<hr class="sidebar-divider my-0">
 
-			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Men&uacute;</span>
-			</a>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/customer/listar}">Cliente</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/event/listar}">Evento</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/eventPlanner/listar}">Agregar Evento</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/paymentMethod/listar}">M&eacute;todo
-							de Pago</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
-							a Prestador</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{request/listar}">Solicitar
-							Evento</a>
-					</div>
-				</div></li>
-			<hr class="sidebar-divider">
 
-		</ul>
+			<div id="todo">
+			<div id="e1">
+				<div  aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{/payment/bienvenido}">Inicio</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="e2">
+				<div aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{/planner/listar}">Mis trabajadores</a>
+						</div>
+					</div>
+				</div>
+				
+					<div id="e3">		
+				<div aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{/eventPlanner/listar}">Mis Solicitud</a>
+						</div>
+						</div>
+			</div>
+			<div id="e4">
+				<div  aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{@{/payment/listar}}">Mis pagos</a>
+					</div>
+				</div>
+			</div>
+				<div id="e5">
+				<div aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{/eventPlanner/listar}">Nosotros</a>
+					</div>
+				</div>
+			</div>
+						
+		</div>
+	</div>
 
 		<!-- Content Wrapper -->
-		<div id="content-wrapper" class="d-flex flex-column"
-			style="background: rgb(192, 192, 192)">
+		<div id="content-wrapper" class="d-flex flex-column">
 
 			<div id="content">
 
 				<nav
-					class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow"
-					style="background: rgb(255, 128, 128)">
+					class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow">
 
 					<ul class="navbar-nav ml-auto">
 
@@ -196,8 +182,10 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/planner/listar}"
+							
+							<a th:href="@{/planner/listar}" id="cancelar"
 								class="btn btn-danger"> Cancelar</a>
+								
 						</div>
 					</form>
 				</div>
