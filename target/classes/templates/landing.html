@@ -9,19 +9,18 @@
 </head>
 <body>
     <header class="hero">
-        <nav class="nav__hero">
-            <div class="container nav__container">
+        <nav class="navhero">
+            <div class="container navcontainer">
                 <div class="logo">
                     <h2 class="logo__name">Design It<span class="point">.</span></h2>
                 </div>
                 <div class="links">
-                    <a th:href="@{/landing}" class="link">Inicio</a>
-                    <a th:href="#" class="link">Nosotros</a>
-                    <a th:href="#" class="link link--active">Contacto</a>
+                    <a th:href="@{/welcome/bienvenido4}" class="link">Inicio</a>
+                    <a  class="link">Nosotros</a>
+                    <a class="link link--active">Contacto</a>
                 </div>
             </div>
         </nav>
-
 
         <section class="container hero__main">
             <div class="hero__textos">
@@ -29,7 +28,7 @@
                 <p class="copy">Aquí encontraras todo lo que necesitas para tus eventos o también podrás ofrecer tus servicios a todos para que puedan conocer mas sobre tu negocio, asi que no esperes mas y <span class="copy__active">Resgistrate</span></p>
 
             </div>
-            <img src="img/papel.png" class="mockup">
+            <img th:src="@{/img/2.jpg}" class="mockup">
         </section>
     </header>
 
@@ -42,25 +41,25 @@
 
                 <article class="container-cards">
                     <div class="card">
-                        <img src="img/cliente.jpeg" class="card__img">
+                        <img th:src="@{/img/cliente.jpeg}" class="card__img">
                         <div class="cards__text">
                             <p class="card__list">Podras hacer muchas cosas como </p>
                             <h3 class="card__title">Cliente<span class="point"></span></h3>
                             <p class="card__copy">1. Buscar el servicio que necesites para tu evento en base a tus preferencias</p>
                             <p class="card__copy">2. Selecciona el que mejor te parezca y envía tu solicitud para que te realice un presupuesto mas detallado</p>
                             <p class="card__copy">3. Acepta el de tu preferencia, realiza el pago y ya estarás lsito para tu evento</p><br>
-                            <a href="#" class="card__button">Ingresar</a>
+                            <a th:href="@{/welcome/ae}" class="card__button">Ingresar</a>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="img/prestador.jpg" class="card__img">
+                        <img th:src="@{/img/prestador.jpg}" class="card__img">
                         <div class="cards__text">
                             <p class="card__list">Podras hacer muchas cosas como</p>
                             <h3 class="card__title">Contratista<span class="point"></span></h3>
                             <p class="card__copy">1. Escoge el área en el que ofreceras tu servicio, pueden ser de una a mas</p>
                             <p class="card__copy">2. Selecciona el que mejor te parezca y envía tu solicitud para que te realice un presupuesto mas detallado</p>
                             <p class="card__copy">3. Acepta el de tu preferencia, realiza el pago y ya estarás lsito para tu evento</p><BR>
-                            <a href="#" class="card__button">Ingresar</a>
+                            <a href="@{/welcome/ae}" class="card__button">Ingresar</a>
                         </div>
                     </div>
 

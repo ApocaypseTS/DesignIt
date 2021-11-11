@@ -11,6 +11,14 @@ public class WelcomeController {
 	public String irPaginaBienvenida() {
 		return "bienvenido";
 	}
+	@RequestMapping("/bienvenido4")
+	public String irPaginaBienvenida4() {
+		return "landing";
+	}
+	@RequestMapping("/ae")
+	public String irPaginaBienvenida0() {
+		return "login";
+	}
 	@RequestMapping("/bienvenido2")
 	public String irPaginaBienvenid() {
 		return "ingresa";
