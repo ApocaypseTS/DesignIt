@@ -92,14 +92,16 @@ public class ReviewController {
 			model.put("mensaje", "Ocurrio un error");
 			model.put("listaReview", rService.listar());
 		}
-		return "resenaPrestador/listResenaPresatdor";
-		}
+		return "resenaPrestador/listResenaPresatdor" ;
+				}
+	
 	
 	@RequestMapping("/listar")
 	public String listar(Map<String, Object> model) {
 		model.put("listaReview", rService.listar());
 		return "resenaPrestador/listResenaPresatdor";
 	}
+	
 	
 
 	

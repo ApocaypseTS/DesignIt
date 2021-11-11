@@ -23,5 +23,9 @@ public class WelcomeController {
 	public String irP() {
 		return "registro";
 	}
+	@RequestMapping("/bienvenido4")
+	public String irP3() {
+		return "seleccionar";
+	}
 	
 }
