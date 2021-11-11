@@ -28,6 +28,10 @@ public class CustomerController {
 	public String irPaginaBienvenida() {
 		return "bienvenido";
 	}
+	@RequestMapping("/cliente")
+	public String irPaginaBienvenida2() {
+		return "cliente/cliente2";
+	}
          @RequestMapping("/bienvenido1")
 	public String irPaginaBienvenida1() {
 			return "seleccionar";
