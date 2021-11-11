@@ -1,15 +1,21 @@
 .container-fluid{
     background-color: rgba(243, 217, 240, 0.911);
     position: absolute;
-    height: 86%;
+    height: 100%;
     width: 60%;
-    top: 20%;
+ 
     left: 40%;
    
+}
+h2{
+	 position: absolute;
+	 top:2%;
+	 left:20%;
 }
 .container-fluid input{
 	
 	width:50%;
+	 top:100px;
  height: 40px;
    position: relative;
    left:40%;
@@ -18,7 +24,7 @@
 	
 	
    position: relative;
-   top:40px;
+   top:140px;
    left:10%;
 }
 .container-fluid button{
@@ -26,10 +32,12 @@
 	left:33%;
 	 background-color:blue;
 	 color:white;
+	 top:110px;
 }
 #cancelar{
 	position: relative;
 	left:40%;
+	 top:110px;
 }
 #imagen{
 	 position: absolute;
