@@ -1,93 +1,105 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-
+<head th:replace="layout/layout :: head">
 		<meta charset="ISO-8859-1"></meta>
 		
 		<title>Prestador</title>
 		
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		
-		
-         <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-	
-         <link rel="stylesheet" th:href="@{/css/bienvenido.css}">
+		<link 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+				rel="stylesheet" id="bootstrap-css">
+		</link>
 
+		<script
+			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
+		</script>
 		
+		<script type="text/javascript" th:src="@{/js/tutor.js}"></script>
 </head>
 <body>
-<div id="wrapper">
+	<div id="wrapper">
+
 		<ul class="navbar-nav sidebar sidebar-dark accordion"
-			id="accordionSidebar" >
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/matricula}">
-				<div class="sidebar-brand-icon">
-					<i class="fas fa-desktop"></i>
+			id="accordionSidebar" style="background-color: rgb(128, 0, 128);">
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/welcome/bienvenido}"> 
+			<div class="sidebar-brand-icon">
+			<i class="fas fa-desktop"></i>
 				</div>
-				<img th:src="@{/img/salud.png}" alt="">
-				<div class="titulo"> <b>DESIGN IT</b> </div>
+				<div class="sidebar-brand-text mx-3">CLIENTE</div>
 			</a>
-			<ul></ul>
 
+			<hr class="sidebar-divider my-0">
 
-
-			<div id="todo">
-			<div id="e1">
-				<div  aria-labelledby="headingTwo"
+			<li class="nav-item"><a class="nav-link collapsed" href="#"
+				data-target="#collapseTwo" aria-expanded=true
+				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Men&uacute;</span>
+			</a>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/payment/bienvenido}">Inicio</a>
+						<a class="collapse-item" th:href="@{/customer/listar}">Cliente</a>
 					</div>
 				</div>
-			</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/event/listar}">Evento</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/eventPlanner/listar}">Agregar Evento</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/paymentMethod/listar}">M&eacute;todo
+							de Pago</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
+							a Prestador</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/request/listar}">Solicitar
+							Evento</a>
+					</div>
+				</div></li>
+			<hr class="sidebar-divider">
 
-			<div id="e2">
-				<div aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/planner/listar}">Mis trabajadores</a>
-						</div>
-					</div>
-				</div>
-				
-					<div id="e3">		
-				<div aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/eventPlanner/listar}">Mis Solicitud</a>
-						</div>
-						</div>
-			</div>
-			<div id="e4">
-				<div  aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{@{/payment/listar}}">Mis pagos</a>
-					</div>
-				</div>
-			</div>
-				<div id="e5">
-				<div aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/eventPlanner/listar}">Nosotros</a>
-					</div>
-				</div>
-			</div>
-						
-		</div>
-	</div>
+		</ul>
+
 		<!-- Content Wrapper -->
-			<div id="content-wrapper" class="d-flex flex-column"
-			 style="color: rgb(0, 0, 0)">
+		<div id="content-wrapper" class="d-flex flex-column"
+			style="background: rgb(192, 192, 192)">
 
 			<div id="content">
-<nav
+
+				<nav
 					class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow"
-					>
+					style="background: rgb(255, 128, 128)">
 
 					<ul class="navbar-nav ml-auto">
 
@@ -116,17 +128,14 @@
 
 				<div class="container-fluid">
 					<h1 class="h3 mb-4 text-gray-800">PRESTADORES REGISTRADOS</h1>
-					<br>
-<br>
-<br>
 
-					<a style="background-color:rgb(196, 49, 49)" th:href="@{/planner/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/planner/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span> AGREGAR
 						</a>
-<br><br>
-						<table class="table table-bordered table-hover table-striped" id="tab_logic" >
+
+						<table class="table table-bordered table-hover table-striped" id="tab_logic">
 
 						<thead class="thead-dark">
 							<tr align="center">
