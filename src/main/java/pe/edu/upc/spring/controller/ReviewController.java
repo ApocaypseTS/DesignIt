@@ -45,16 +45,16 @@ public class ReviewController {
 
 	@RequestMapping("/irRegistrar")
 	public String irPaginaRegistrar(Model model) {
-		model.addAttribute("resenaplanner", new Review());
+		model.addAttribute("review", new Review());
 		model.addAttribute("listaCustomers", cService.listar());
 		model.addAttribute("listaPlanners", pService.listar());
-		return "resenaPrestador/resenaPrestador";
+		return "resenaPrestador/resenaprestador";
 	}
 	
 	@RequestMapping("/registrar")
 	public String registrar(@ModelAttribute Review objResena, BindingResult binRes, Model model) throws ParseException {
 		if (binRes.hasErrors()) {
-			return "resenaPrestador/resenaPrestador";
+			return "resenaPrestador/resenaprestador";
 		}else {
 			boolean flag = rService.insertar(objResena);
 			if (flag)
@@ -76,7 +76,7 @@ public class ReviewController {
 			model.addAttribute("listaCustomers", cService.listar());
 			model.addAttribute("listaPlanners", pService.listar());
 			model.addAttribute("resenaplanner", objResena);
-			return "resenaPrestador/listResenaPresatdor";
+			return "resenaPrestador/resenaprestador";
 		}
 	}
 	
