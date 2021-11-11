@@ -37,7 +37,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 					
 					.successHandler(sucessHandler).loginPage("/login").loginProcessingUrl("/login")
 					.defaultSuccessUrl("/welcome/bienvenido").permitAll().and().logout().logoutSuccessUrl("/login")
-					.permitAll().and().exceptionHandling().accessDeniedPage("/error_403");
+					.permitAll().and().exceptionHandling().accessDeniedPage("/error");
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
