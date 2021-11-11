@@ -23,6 +23,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		try {
 			http.authorizeRequests()
+					.antMatchers("/inicio/landing").permitAll()
 					.antMatchers("/prestador/**").access("hasRole('ROLE_PRESTADOR') or hasRole('ROLE_ADMIN')")
 					.antMatchers("/cliente/**").access("hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')")
 					.antMatchers("/evento/**").access("hasRole('ROLE_ADMIN')")

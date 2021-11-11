@@ -1,52 +1,71 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org"
+<html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-	
-<head th:replace="layout/layout :: head">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>2021-02</title>
+
+<!-- Custom fonts for this template-->
+<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body>
-	<div id="wrapper">
+
+<body id="page-top">
+	<span sec:authentication="name"></span>
+
+		<div id="wrapper">
 
 		<ul class="navbar-nav sidebar sidebar-dark accordion"
-			id="accordionSidebar" style="background-color: #5CB1EE;">
-			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/matricula}">
-				<div class="sidebar-brand-icon">
-					<i class="fas fa-desktop"></i>
+			id="accordionSidebar" style="background-color: rgb(128, 0, 128);">
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/welcome/bienvenido}"> 
+			<div class="sidebar-brand-icon">
+			<i class="fas fa-desktop"></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">PRESTADORES Y CLIENTES</div>
+				<div class="sidebar-brand-text mx-3">CLIENTE</div>
 			</a>
 
 			<hr class="sidebar-divider my-0">
+
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
 				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Menu</span>
+				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Men&uacute;</span>
 			</a>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/customer/listar}">Cliente</a>
+						<a class="collapse-item" th:href="@{/customer/listar}">Cliente</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/planner/listar}">Prestador</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/event/listar}">Evento</a>
+						<a class="collapse-item" th:href="@{/event/listar}">Evento</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/eventPlanner/listar}">Agregar Evento</a>
+						<a class="collapse-item" th:href="@{/eventPlanner/listar}">Agregar Evento</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -58,74 +77,71 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/paymentMethod/listar}">Metodo de Pago</a>
+						<a class="collapse-item" th:href="@{/paymentMethod/listar}">M&eacute;todo
+							de Pago</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/review/listar}">Resena a Prestador</a>
+						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
+							a Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/request/listar}">Solicitar Evento</a>
+						<a class="collapse-item" th:href="@{request/listar}">Solicitar
+							Evento</a>
 					</div>
-				</div>
-				</li>
-
+				</div></li>
 			<hr class="sidebar-divider">
 
 		</ul>
 
 		<!-- Content Wrapper -->
 		<div id="content-wrapper" class="d-flex flex-column"
-			style="background: #D6FFF7">
+			style="background: rgb(192, 192, 192)">
 
 			<div id="content">
 
 				<nav
 					class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow"
-					style="background: #51AFF2">
+					style="background: rgb(255, 128, 128)">
 
 					<ul class="navbar-nav ml-auto">
 
 						<li class="nav-item dropdown no-arrow"><a
-							class="nav-link dropdown-toggle" th:href="@{#}" id="userDropdown"
+							class="nav-link dropdown-toggle" href="#" id="userDropdown"
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"><span
 								class="mr-2 d-none d-lg-inline text-white"
 								sec:authentication="name"> Usuario</span> <i
 								class="fas fa-user-circle fa-lg fa-fw mr-2 text-white"></i> </a>
-							<div class="dropdown-menu dropdown-menu-right shadow"
-								aria-labelledby="userDropdown" style="background: #BEE4FF">
+							<div
+								class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="userDropdown"
+								style="background: rgb(255, 128, 255)">
 								<a class="dropdown-item" th:href="@{/login}"
-									style="background: #BAD8EF"> <i
+									style="background: rgb(128, 128, 192)"> <i
 									class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-white"></i> <span
-									class="text-white">Cerrar sesion</span>
+									class="text-white">Cerrar sesi&oacute;n</span>
 								</a>
 							</div></li>
 
 					</ul>
 				</nav>
+				<div class="container">
 
+					<div class="card bg-dark text-white">
+						<div class="card-body">
+							<h5 class="card-title">Los sentimos , NO tienes permisos
+								para acceder a este recurso.</h5>
+							<a th:href="@{/customer/list}" class="btn btn-outline-danger"
+								role="button">Ir al inicio</a>
 
-				<div class="container-fluid" align="center">
-					<div class="container">
-						<h1 class="text-dark">BIENVENIDO A DESIGN IT</h1>
-						<br /> <img class="mb-4" th:src="@{/imagenes/2.png}"
-							alt="compu" style="width: 28%; height: 28%; margin: auto;">
-						<p class="lead text-muted">SLOGAN</p>
+						</div>
 					</div>
 				</div>
-
-			</div>
-			<footer th:replace="layout/layout :: footer"></footer>
-		</div>
-	</div>
 </body>
 </html>
