@@ -1,0 +1,100 @@
+@charset "ISO-8859-1";
+body{
+    background-color: #273654;
+
+}
+#cuadro{
+    position: absolute;
+    top: 20%;
+    left:10%;
+    height: 40%;
+    width: 20%;
+    background-color: white;
+    border-radius:20px;
+    border-color: rgb(248, 142, 234);
+    border-style: solid;
+    border-width: 6px;
+}
+#cuadro1{
+    position: absolute;
+    height: 40%;
+    width: 20%;
+    left:36%;
+    top: 20%;
+    background-color: white;
+    border-radius:20px;
+    border-color: rgb(248, 142, 234);
+    border-style: solid;
+    border-width: 6px;
+}
+#cuadro2{
+    position: absolute;
+    height: 40%;
+    width: 20%;
+    left:60%;
+    top: 20%;
+    background-color: white;
+    border-radius:20px;
+    border-color: rgb(248, 142, 234);
+    border-style: solid;
+    border-width: 6px;
+}
+#cuadro img{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    left:10%;
+}
+#cuadro1 img{
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    left:10%;
+    top:5%;
+}
+#cuadro2 img{
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    left:10%;
+    top:5%;
+}
+a{
+    font-size: 30px;
+    background-color: rgb(248, 250, 131);
+    color: black;
+}
+#cuadro1 a{
+    position: absolute;
+    top:80%;
+    left: 20%;
+    text-decoration: none;
+    font-family: monospace;
+    border-radius:20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 2px;
+}
+
+#cuadro a{
+    position: absolute;
+    top:80%;
+    left: 25%;
+    text-decoration: none;
+    font-family: monospace;
+    border-radius:20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 2px;
+}
+#cuadro2 a{
+    position: absolute;
+    top:80%;
+    left: 15%;
+    text-decoration: none;
+    font-family: monospace;
+    border-radius:20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 2px;
+}
