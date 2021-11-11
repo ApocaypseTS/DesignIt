@@ -23,7 +23,7 @@
 
 			<div id="todo">
 			<div id="e1">
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+				<div  aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item"
@@ -33,7 +33,7 @@
 			</div>
 
 			<div id="e2">
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+				<div  aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item"
@@ -42,7 +42,34 @@
 					</div>
 				</div>
 				
-				
+					<div id="e3">		
+				<div aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{/eventPlanner/listar}">Mis Solicitud</a>
+						</div>
+						</div>
+			</div>
+			<div id="e4">
+				<div aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{@{/payment/listar}}">Mis pagos</a>
+					</div>
+				</div>
+			</div>
+				<div id="e5">
+				<div aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item"
+							th:href="@{/eventPlanner/listar}">Nosotros</a>
+					</div>
+				</div>
+			</div>
+						
 		</div>
 	</div>
 			<footer th:replace="layout/layout :: footer"></footer>
