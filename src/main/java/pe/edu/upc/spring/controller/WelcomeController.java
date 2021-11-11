@@ -21,7 +21,7 @@ public class WelcomeController {
 	}
 	@RequestMapping("/bienvenido1")
 	public String irP() {
-		return "registro";
+		return "seleccionar";
 	}
 	
 }
