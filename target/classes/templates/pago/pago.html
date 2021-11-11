@@ -131,8 +131,8 @@
 
 
 				<div class="container-fluid">
-					<form th:action="@{/pago/registrar}" method="post"
-						th:object="${pago}">
+					<form th:action="@{/payment/registrar}" method="post"
+						th:object="${payment}">
 						<div class="form-row col-6">
 							<div class="form-group col-md-12">
 								<h2 class="m-0 font-weight-bold text-dark">REGISTRO DE
@@ -141,16 +141,16 @@
 							<div class="form-group">
 
 								<label for="idPago">ID:</label> <input type="text"
-									class="form-control" th:field="*{idPago}"></input>
+									class="form-control" th:field="*{idPayment}"></input>
 
 								<div class="form-group">
 
 									<label for=metodoPago>M&Eacute;TODO DE PAGO: </label> <select
-										class="form-control" th:field="*{metodoPago.idMetodo}">
+										class="form-control" th:field="*{paymentMethod.idMethod}">
 
-										<option th:each="m: ${listaMetodoPago}"
-											th:value="${m.idMetodo}" th:text="${m.nombre}"
-											th:selected="(${m.idMetodo} == *{metodoPago.idMetodo})"></option>
+										<option th:each="m: ${listaPaymentMethod}"
+											th:value="${m.idMethod}" th:text="${m.name}"
+											th:selected="(${m.idMethod} == *{paymentMethod.idMethod})"></option>
 									</select> 
 									
 									<label for=metodoPago>ID DE LA SOLICITUD - MONTO A PAGAR: </label> <select
@@ -160,7 +160,7 @@
 										<option th:each="s: ${listaRequest}"
 											th:value="${s.idRequest}"
 											th:text="${s.idRequest} + ' - ' + ${s.montoTotal}"
-											th:selected="(${s.idRequest} == *{Request.idRequest})"></option>
+											th:selected="(${s.idRequest} == *{request.idRequest})"></option>
 									</select>
 
 									<label for="fecha">FECHA:</label> <input type="date"
@@ -213,7 +213,7 @@
 							<button type="submit" class="btn btn-dark">
 								<i class="fas fa-save"></i> Grabar
 							</button>
-							<a th:href="@{/pago/listar}" class="btn btn-danger"> Cancelar</a>
+							<a th:href="@{/payment/listar}" class="btn btn-danger"> Cancelar</a>
 						</div>
 					</form>
 				</div>
