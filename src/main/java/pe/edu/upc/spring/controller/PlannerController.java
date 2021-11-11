@@ -23,7 +23,7 @@ public class PlannerController {
 
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "bienvenido4";
+		return "bienvenido";
 	}
 
 	
