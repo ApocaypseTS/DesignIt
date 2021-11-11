@@ -2,79 +2,50 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="layout/layout :: head">
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/bienvenido.css}">
 </head>
 <body>
 	<div id="wrapper">
 
 		<ul class="navbar-nav sidebar sidebar-dark accordion"
-			id="accordionSidebar" style="background-color: #5CB1EE;">
+			id="accordionSidebar" style="background-color: #273654;" >
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/matricula}">
 				<div class="sidebar-brand-icon">
-					<i class="fas fa-desktop"></i>
+					
 				</div>
-				<div class="sidebar-brand-text mx-3">PRESTADORES Y CLIENTES</div>
+				<img class="ae" th:src="@{/img/salud.png}" style="width: 20%; height: 150%; margin: auto; position: relative;
+	left:24px; "></img>
+				<div class="sidebar-brand-text mx-3" id="ae">Design it</div>
 			</a>
 
 			<hr class="sidebar-divider my-0">
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
 				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Menu</span>
+				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>ROL</span>
 			</a>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item"
-							th:href="@{/customer/listar}">Cliente</a>
+							th:href="@{/customer/bienvenido2}">Cliente</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item"
-							th:href="@{/planner/listar}">Prestador</a>
+							th:href="@{/planner/bienvenido}">Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item"
-							th:href="@{/event/listar}">Evento</a>
+							th:href="@{/customer/bienvenido1}">Administrador</a>
 					</div>
 				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/eventPlanner/listar}">Agregar Evento</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/paymentMethod/listar}">Metodo de Pago</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/review/listar}">Resena a Prestador</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item"
-							th:href="@{/request/listar}">Solicitar Evento</a>
-					</div>
-				</div>
+				
 				</li>
 
 			<hr class="sidebar-divider">
@@ -89,7 +60,7 @@
 
 				<nav
 					class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow"
-					style="background: #51AFF2">
+					style="   background-color:#273654">
 
 					<ul class="navbar-nav ml-auto">
 
@@ -115,9 +86,10 @@
 
 				<div class="container-fluid" align="center">
 					<div class="container">
-						<h1 class="text-dark">BIENVENIDO A DESIGN IT</h1>
-						<br /> <img class="mb-4" th:src="@{/imagenes/2.png}"
-							alt="compu" style="width: 28%; height: 28%; margin: auto;">
+					
+						<br /> <img class="mb-4" th:src="@{/img/centro.png}" style="position: absolute;
+	top:9%;left:15%;width:85%;"
+							>
 						<p class="lead text-muted">SLOGAN</p>
 					</div>
 				</div>
@@ -126,5 +98,9 @@
 			<footer th:replace="layout/layout :: footer"></footer>
 		</div>
 	</div>
+	
+	
+	
+	
 </body>
 </html>
