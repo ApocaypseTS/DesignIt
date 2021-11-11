@@ -49,7 +49,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -87,7 +87,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{request/listar}">Solicitar
+						<a class="collapse-item" th:href="@{/request/listar}">Solicitar
 							Evento</a>
 					</div>
 				</div></li>
@@ -142,17 +142,16 @@
 								<label for="idRequest">ID:</label> <input type="text"
 									class="form-control" th:field="*{idRequest}"></input>
 
-								<div class="form-group">
+								<!--<div class="form-group">
 
-									<label for=metodoPago>TIPO DE EVENTO - PRESTADOR - HORA DEL EVENTO: </label> <select
+									<label for=horasEvento>TIPO DE EVENTO - PRESTADOR - HORA DEL EVENTO: </label> <select
 										class="form-control" th:field="*{eventPlanner.idEventPlanner}">
 
 										<option th:each="c: ${listEventPlanner}"
 											th:value="${c.idEventPlanner}"
 											th:text="${c.event.nameEvent} + ' - ' + ${c.planner.nombre} + ' - ' + ${c.horarioDisponible}"
 											th:selected="(${c.idEventPlanner} == *{eventPlanner.idEventPlanner})"></option>
-									</select> 
-
+									</select> -->
 
 									<label for="fechaEvento">FECHA:</label> <input type="date"
 										th:field="*{fechaEvento}" class="form-control" id="fechaEvento"></input>
@@ -169,8 +168,15 @@
 										th:if="${#fields.hasErrors('horasEvento')}"
 										th:errors="*{horasEvento}"></div>
 										
-										
-								</div>
+									<label for=prestador>NOMBRE DEL PRESTADOR: </label>
+									<select
+										class="form-control" th:field="*{eventPlanner.idEventPlanner}">
+
+										<option th:each="m: ${listaEventPlanner}" th:value="${m.idEventPlanner}"
+											th:text="${m.planner.nombre}"
+											th:selected="(${m.idEventPlanner} == *{eventPlanner.idEventPlanner})"></option>
+									</select>
+										<!-- </div> -->
 
 							</div>
 

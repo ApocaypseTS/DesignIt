@@ -123,13 +123,12 @@ public class Payment implements Serializable{
 		this.paymentMethod = paymentMethod;
 	}
 
-	public Request getSolicitudClase() {
+	public Request getRequest() {
 		return request;
 	}
 
-	public void setSolicitudClase(Request request) {
+	public void setRequest(Request request) {
 		this.request = request;
 	}
-
 	
 }

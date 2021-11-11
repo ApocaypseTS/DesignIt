@@ -75,7 +75,6 @@ public class RequestController {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
 			return "redirect:/request/listar";
 		} else {
-
 			model.addAttribute("request", objRequest);
 			return "solicitudevento/solicitudevento";
 		}

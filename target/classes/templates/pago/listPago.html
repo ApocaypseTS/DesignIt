@@ -83,7 +83,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{request/listar}">Solicitar
+						<a class="collapse-item" th:href="@{/request/listar}">Solicitar
 							Evento</a>
 					</div>
 				</div></li>
@@ -128,7 +128,7 @@
 				<div class="container-fluid">
 					<h1 class="h3 mb-4 text-gray-800">HISTORIAL DE PAGOS</h1>
 
-<a  style="border-bottom-color:blue" th:href="@{/payment/irRegistrar}" id="add-row"
+					<a  style="border-bottom-color:blue" th:href="@{/payment/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span> AGREGAR
@@ -139,25 +139,27 @@
 						<thead class="thead-dark">
 							<tr align="center">
 									<th class="text-center">CODIGO</th>
-									<th class="text-center">MONTO</th>
+									<th class="text-center">METODO DE PAGO</th>
+									<th class="text-center">COSTO</th>
 									<th class="text-center">FECHA</th>
 									<th class="text-center">NUM.TARJETA</th>
 									<th class="text-center">CADUCIDAD</th>
 									<th class="text-center">N.SOLICITUD</th>									
 									<th class="text-center">NOMBRE</th>																		
-									<th class="text-center">METODO</th>
+									
 																																		</tr>
 						</thead>
 						<tbody>
 								<tr th:each="pa: ${listaPayments}">
 									<td th:text="${pa.idPayment}"></td>
+									<td th:text="${pa.paymentMethod.name}"></td>
 									<td th:text="${pa.request.montoTotal}"></td>
 									<td th:text="${pa.fecha}"></td>
 									<td th:text="${pa.numeroTarj}"></td>
 									<td th:text="${pa.caducidad}"></td>
 									<td th:text="${pa.request.idRequest}"></td>
 									<td th:text="${pa.nombreTitular}"></td>
-									<td th:text="${pa.paymentMethod.nombre}"></td>									
+																		
 
 								</tr>
 						</tbody>
