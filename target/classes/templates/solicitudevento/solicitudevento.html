@@ -168,21 +168,13 @@
 										th:if="${#fields.hasErrors('horasEvento')}"
 										th:errors="*{horasEvento}"></div>
 										
-									<label for="montoTotal">COSTO TOTAL:</label> <input
-										type="text" th:field="*{montoTotal}" class="form-control"
-										id="montoTotal"></input>
-
-									<div class="alert alert-danger"
-										th:if="${#fields.hasErrors('montoTotal')}"
-										th:errors="*{montoTotal}"></div>
-										
-									<label for=eventPlanner>PRESTADOR:</label>
+									<label for=prestador>NOMBRE DEL PRESTADOR: </label>
 									<select
 										class="form-control" th:field="*{eventPlanner.idEventPlanner}">
 
-										<option th:each="e: ${listaEventPlanner}" th:value="${e.idRequest}"
-											th:text="${e.planner.nombre}"
-											th:selected="(${e.idRequest} == *{eventPlanner.idEventPlanner})"></option>
+										<option th:each="m: ${listaEventPlanner}" th:value="${m.idEventPlanner}"
+											th:text="${m.planner.nombre}"
+											th:selected="(${m.idEventPlanner} == *{eventPlanner.idEventPlanner})"></option>
 									</select>
 										<!-- </div> -->
 
