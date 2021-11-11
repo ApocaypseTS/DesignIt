@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
 
-	<head th:replace="layout/layout :: head">
-		
-		<meta charset="ISO-8859-1"></meta>
-		
-		<title>CURSO-TUTOR</title>
-		
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		
-		<link 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
-				rel="stylesheet" id="bootstrap-css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
+<title>2021-02</title>
 
-		<script
-			src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js">
-		</script>
-		
-		<script type="text/javascript" th:src="@{/js/cursotutor.js}"></script>
+<!-- Custom fonts for this template-->
+<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
 
-	</head>
-	
-	<body>
-	<div id="wrapper">
+<!-- Custom styles for this template-->
+<link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+	<span sec:authentication="name"></span>
+
+		<div id="wrapper">
 
 		<ul class="navbar-nav sidebar sidebar-dark accordion"
 			id="accordionSidebar" style="background-color: rgb(128, 0, 128);">
@@ -48,7 +53,7 @@
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
+						<a class="collapse-item" th:href="@{/planner/listar}">Prestaor</a>
 					</div>
 				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
@@ -126,76 +131,17 @@
 
 					</ul>
 				</nav>
+				<div class="container">
 
+					<div class="card bg-dark text-white">
+						<div class="card-body">
+							<h5 class="card-title">Los sentimos , NO tienes permisos
+								para acceder a este recurso.</h5>
+							<a th:href="@{/customer/list}" class="btn btn-outline-danger"
+								role="button">Ir al inicio</a>
 
-
-
-				<div class="container-fluid">
-					<form th:action="@{/eventPlanner/registrar}" method="post" th:object="${eventPlanner}">
-						<div class="form-row col-6">
-							<div class="form-group col-md-12">
-								<h2 class="m-0 font-weight-bold text-dark">REGISTRO EVENTOS</h2>
-							</div>
-							<div class="form-group">
-					
-					<label for="idCursoTutor">ID:</label> 
-					<input type="text" class="form-control" th:field="*{idEventPlanner}"></input>
-					
-					<div class="form-group">
-						
-						<label 	for="costoHora">COSTO X HORA:</label> 
-						<input type="text" th:field="*{costoHora}" class="form-control" id="costoHora"></input>
-	
-						<div class="alert alert-danger" th:if="${#fields.hasErrors('costoHora')}" 
-							th:errors="*{costoHora}">
 						</div>
-						
-						
-						<label for=event.nameEvent>NOMBRE DEL EVENTO: </label>
-						<select
-							class="form-control" th:field="*{event.idEvent}">
-
-							<option th:each="e: ${listaEvents}" th:value="${e.idEvent}"
-								th:text="${e.nameEvent}"
-								th:selected="(${e.idEvent} == *{event.idEvent})"></option>
-						</select>
-						
-						<label for=planner.nombre>NOMBRE DEL PRESTADOR: </label>
-						<select
-							class="form-control" th:field="*{planner.idPlanner}">
-
-							<option th:each="p: ${listaPlanners}" th:value="${p.idPlanner}"
-								th:text="${p.nombre}"
-								th:selected="(${p.idPlanner} == *{planner.idPlanner})"></option>
-						</select>
-						
-						<label 	for="horarioDisponible">HORARIO DISPONIBLE:</label> 
-						<input type="text" th:field="*{horarioDisponible}" class="form-control" id="horarioDisponible"></input>
-	
-						<div class="alert alert-danger" th:if="${#fields.hasErrors('horarioDisponible')}" 
-							th:errors="*{horarioDisponible}">
-						</div>
-
 					</div>
-					
 				</div>
-
-
-						</div>
-						<div class="form-group col-md-12 text-left">
-							<br>
-							<button type="submit" class="btn btn-dark">
-								<i class="fas fa-save"></i> Grabar
-							</button>
-							<a th:href="@{/eventPlanner/listar}"
-								class="btn btn-danger"> Cancelar</a>
-						</div>
-					</form>
-				</div>
-				<footer th:replace="layout/layout :: footer"></footer>
-			</div>
-		</div>
-
-	</body>
-	
+</body>
 </html>
