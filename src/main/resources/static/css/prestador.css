@@ -1,14 +1,11 @@
 .container-fluid{
-    background-color:rgba(223, 223, 223, 0.863);
+    background-color: rgba(243, 217, 240, 0.911);
     position: absolute;
     height: 86%;
-    width: 50%;
-    top: 24%;
-    left: 25%;
-    border-color: rgb(248, 142, 234);
-    border-style: solid;
-    border-width: 6px;
-    border-radius:20px;
+    width: 60%;
+    top: 20%;
+    left: 40%;
+   
 }
 .container-fluid input{
 	
@@ -33,4 +30,12 @@
 #cancelar{
 	position: relative;
 	left:40%;
+}
+#imagen{
+	 position: absolute;
+	 top:30%;
+	 left:5%;
+	 height: 50%;
+	  width: 30%;
+	 
 }
