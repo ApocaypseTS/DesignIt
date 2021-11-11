@@ -23,9 +23,10 @@ public class PlannerController {
 
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "bienvenido";
+		return "bienvenido4";
 	}
 
+	
 	@RequestMapping("/")
 	public String irPaginaListadoPlanners(Map<String, Object> model) {
 		model.put("listaPlanners", pService.listar());
