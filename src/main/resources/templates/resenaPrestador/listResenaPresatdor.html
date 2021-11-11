@@ -145,7 +145,7 @@
 									<th class="text-center">CLIENTE</th>
 												
 									<th class="text-center">OPERACI&Oacute;N</th>
-									<th class="text-center">OPERACI&Oacute;N</th>																						</tr>
+									<!--<th class="text-center">OPERACI&Oacute;N</th>-->																						</tr>
 						</thead>
 						<tbody>
 								<tr th:each="re: ${listaReview}">
@@ -155,7 +155,7 @@
 									<td th:text="${re.customer.nombre}"></td>	
 									
 									<td><a th:href="@{/review/eliminar?id=}+${re.idResena}">Eliminar</a></td>
-									<td><a th:href="@{'/review/modificar/' + ${re.idResena}}">Modificar</a></td>								
+									<!--<td><a th:href="@{'/review/modificar/' + ${re.idResena}}">Modificar</a></td>-->								
 								</tr>
 						</tbody>
 					</table>

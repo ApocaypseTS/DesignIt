@@ -24,6 +24,7 @@ import pe.edu.upc.spring.model.Planner;
 
 import pe.edu.upc.spring.service.IRequestService;
 import pe.edu.upc.spring.service.IEventPlannerService;
+import pe.edu.upc.spring.service.IPlannerService;
 
 @Controller
 @RequestMapping("/request")
@@ -75,7 +76,6 @@ public class RequestController {
 			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
 			return "redirect:/request/listar";
 		} else {
-
 			model.addAttribute("request", objRequest);
 			return "solicitudevento/solicitudevento";
 		}

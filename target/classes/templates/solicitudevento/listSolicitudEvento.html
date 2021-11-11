@@ -138,11 +138,11 @@
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span>Agregar</a>
 							
-					<a style="border-bottom-color: green"
+					<!--<a style="border-bottom-color: green"
 						th:href="@{/request/irBuscar}" id="add-row" type="button"
 						class="btn btn-primary btn-md left-block"> <span
 						class="glyphicon glyphicon-search"></span>Buscar
-					</a>
+					</a>-->
 						
 					
 						<table class="table table-bordered table-hover table-striped" id="tab_logic">
@@ -158,7 +158,7 @@
 									
 								
 									<th class="text-center">OPERACI&Oacute;N</th>
-									<th class="text-center">OPERACI&Oacute;N</th>
+									<!--<th class="text-center">OPERACI&Oacute;N</th>-->
 							</tr>
 						</thead>
 						<tbody>
@@ -170,7 +170,7 @@
 									<td th:text="${se.eventPlanner.planner.nombre}"></td>
 									
 									<td><a th:href="@{/request/eliminar?id=}+${se.idRequest}">Eliminar</a></td>
-									<td><a th:href="@{'/request/modificar/' + ${se.idRequest}}">Modificar</a></td>
+									<!--<td><a th:href="@{'/request/modificar/' + ${se.idRequest}}">Modificar</a></td>-->
 								</tr>
 						</tbody>
 					</table>
