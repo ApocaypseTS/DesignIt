@@ -11,5 +11,9 @@ public class WelcomeController {
 	public String irPaginaBienvenida() {
 		return "bienvenido";
 	}
+	@RequestMapping("/bienvenido1")
+	public String irP() {
+		return "registro";
+	}
 	
 }

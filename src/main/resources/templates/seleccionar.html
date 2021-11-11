@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	
+<head >
+<link rel="stylesheet" th:href="@{/css/seleccionar.css}">
+
+</head>
+
+    <body>
+<div id="cuadro">
+   <img src="{/img/img5.svg}">
+   <a th:href="@{/planner/irRegistrar}" class="btn btn-danger">Cliente</a>
+</div>
+<div id="cuadro1">
+   <img src="{/img/img6.svg}">
+    <a th:href="@{/planner/irRegistrar}" type="button"class="btn btn-danger"> Prestamista</a>
+</div>
+
+
+    </body>
