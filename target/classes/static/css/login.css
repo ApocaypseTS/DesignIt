@@ -1,92 +1,93 @@
-body{
-    background-color: black;
+@charset "ISO-8859-1";
+#img1{
+position: absolute;
+height: 70%;
+width: 30%;
+top: 20%;
+left: 5%;
+}
+#clase1{
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    top: 0%;
+    left:40%;
+    background-color: #273654;
+
+}
+#clase2{
+    position: absolute;  
+    height: 70%;
+    width: 80%;
+    top: 15%;
+    left: 10%;
+    background-color: white;
+    border-radius:20px;
+    border-color: rgb(248, 142, 234);
+    border-style: solid;
+    border-width: 6px;
+}
+h2{
+    position: absolute;  
+    top: 4%;
+    left: 40%;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
-img{
-    position: absolute;
-    top: 10%;
-    height: 80%;
-    width: 30%;
-    left: 10%;
-}
-::-webkit-scrollbar {
-    display: none;
-}
-#cuadro{
-    background-color: white;
-    height: 70%;
-    width: 40%;
-    position: absolute;
-   top:18%;
-    left: 50%;
-    border-radius: 25px;
-    border: 8px solid #73AD21;
-    border-color: rgb(246, 255, 118);
-}
-#cuadro h1{
-    position: relative;
-    top: 20px;
-    left: 190px;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
-#label1{
-   
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    font-size: 20px;
-    font-family: monospace;
+.i1{
+    position: absolute; 
+    top: 28%;
+    left:34%
     
 }
-input{
-height: 30px;
-width: 155px;
+.i1 input{
+   width: 160%;
+height: 50px;
 }
-
-
-#label2{
-  
+.i2{
+    position: absolute; 
+    top: 47%;
+    left:30%
+    
+}
+.i2 input{
+    width: 160%;
+height: 50px;
+}
+#i1a{
     position: absolute;
-    top: 50%;
-    left:15%;
   
-  font-size: 20px;
-  
-  font-family: monospace;
-     
-}
-input{
-    width: 210px;
-}
-#inicio{
-    position: absolute;
-   top: 70%;
-   left:40%;
-    right: 70px;
-   
-    background: rgb(247, 235, 74);
-text-align: center;
-white-space: normal;
-    color: black;
-    padding:10px ;
-    width: 100px;
-    border-radius: 20%;
+    top: 29%;
+    left: 10%;
     font-size: 20px;
-    border: 3px solid rgb(12, 10, 10);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom:0
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-
-
-p{
-    position: relative;
-    top: 150px;
-    left:130px;
-}
-
-#cuenta{
+#i2a{
     position: absolute;
-    top: 85%;
+    top: 48%;
+    left: 10%;
+    font-size: 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#boton button{
+background-color:rgb(248, 142, 234); 
+color: black;
+position: absolute;
+    top: 70%;
     left: 35%;
-    color: blue;
+    height: 10%;
+    width: 30%;
+    border-radius:20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 4px;
+    font-size: 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#i3{
+    position: absolute;
+    top: 83%;
+    left: 35%;
 }
