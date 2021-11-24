@@ -34,9 +34,9 @@
 
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
 				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Cliente</span>
+				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Men&uacute;</span>
 			</a>
-				<!--  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" th:href="@{/customer/listar}">Cliente</a>
@@ -47,33 +47,7 @@
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
-				</div>-->
-								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
-							a Prestador</a>
-					</div>
 				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{request/listar}">Solicitar
-							Evento</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
-					</div>
-					
-				</div>
-				
-			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Prestador</span>
-			</a>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
@@ -86,7 +60,12 @@
 						<a class="collapse-item" th:href="@{/eventPlanner/listar}">Agregar Evento</a>
 					</div>
 				</div>
-
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
+					</div>
+				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
@@ -94,8 +73,20 @@
 							de Pago</a>
 					</div>
 				</div>
-
-				</li>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
+							a Prestador</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/request/listar}">Solicitar
+							Evento</a>
+					</div>
+				</div></li>
 			<hr class="sidebar-divider">
 
 		</ul>
@@ -142,15 +133,15 @@
 							
 							
 
-					<a  style="border-bottom-color:blue" th:href="@{/eventPlanner/irRegistrar}" id="add-row" 
+					<a  style="border-bottom-color:blue" th:href="@{/request/irRegistrar}" id="add-row" 
 							type="button"
 							class="btn btn-primary btn-md left-block"> <span
 							class="glyphicon glyphicon-plus" ></span>Agregar</a>
 							
 					<a style="border-bottom-color: green"
-						th:href="@{/eventPlanner/irBuscar}" id="add-row" type="button"
+						th:href="@{/request/irBuscar}" id="add-row" type="button"
 						class="btn btn-primary btn-md left-block"> <span
-						class="glyphicon glyphicon-search"></span>
+						class="glyphicon glyphicon-search"></span>Buscar
 					</a>
 						
 					
@@ -160,27 +151,25 @@
 							<tr align="center">
 							
 									<th class="text-center">ID</th>
-									<th class="text-center">PRESATDOR</th>
-									<th class="text-center">EVENTO</th>
-									<th class="text-center">HORA</th>
-									<th class="text-center">FECHA</th>
-									<th class="text-center">DURACION DEL EVENTO (HORAS)</th>
-									<th class="text-center">COSTO</th>
-									<th class="text-center">MONTO TOTAL</th>
+									<th class="text-center">FECHA EVENTO</th>
+									<th class="text-center">HORAS EVENTO</th>
+									<th class="text-center">COSTO TOTAL</th>
+									<th class="text-center">PRESTADOR</th>
 								
+									<th class="text-center">OPERACI&Oacute;N</th>
+									<th class="text-center">OPERACI&Oacute;N</th>
 							</tr>
 						</thead>
 						<tbody>
 								<tr th:each="se: ${listaRequest}">
 									<td th:text="${se.idRequest}"></td>							
-									<td th:text="${se.eventPlanner.planner.nombre}"></td>
-									<td th:text="${se.eventPlanner.event.nameEvent}"></td>
-									<td th:text="${se.eventPlanner.horarioDisponible}"></td>
-									<td th:text="${se.fechaEvento}"></td>
+									<td th:text="${#dates.format(se.fechaEvento,'dd/MM/yyyy')}"></td>
 									<td th:text="${se.horasEvento}"></td>
-									<td th:text="${se.eventPlanner.costoHora}"></td>
-									<td th:text="${#numbers.formatDecimal(se.montoTotal,0,'COMMA',2,'POINT')}"></td>
+									<td th:text="${se.montoTotal}"></td>
+									<td th:text="${se.eventPlanner.planner.nombre}"></td>
 									
+									<td><a th:href="@{/request/eliminar?id=}+${se.idRequest}">Eliminar</a></td>
+									<td><a th:href="@{'/request/modificar/' + ${se.idRequest}}">Modificar</a></td>
 								</tr>
 						</tbody>
 					</table>

@@ -34,9 +34,9 @@
 
 			<li class="nav-item"><a class="nav-link collapsed" href="#"
 				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Cliente</span>
+				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Men&uacute;</span>
 			</a>
-				<!--  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" th:href="@{/customer/listar}">Cliente</a>
@@ -47,33 +47,7 @@
 					<div class="bg-white py-2 collapse-inner rounded">
 						<a class="collapse-item" th:href="@{/planner/listar}">Prestador</a>
 					</div>
-				</div>-->
-								<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
-							a Prestador</a>
-					</div>
 				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{request/listar}">Solicitar
-							Evento</a>
-					</div>
-				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-					data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
-					</div>
-					
-				</div>
-				
-			<li class="nav-item"><a class="nav-link collapsed" href="#"
-				data-target="#collapseTwo" aria-expanded=true
-				aria-controls="collapseTwo"> <i class="fas fa-fw fa-cog"></i> <span>Prestador</span>
-			</a>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
@@ -86,7 +60,12 @@
 						<a class="collapse-item" th:href="@{/eventPlanner/listar}">Agregar Evento</a>
 					</div>
 				</div>
-
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/payment/listar}">Pago</a>
+					</div>
+				</div>
 				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
@@ -94,8 +73,20 @@
 							de Pago</a>
 					</div>
 				</div>
-
-				</li>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/review/listar}">Rese&ntilde;a
+							a Prestador</a>
+					</div>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+					data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<a class="collapse-item" th:href="@{/request/listar}">Solicitar
+							Evento</a>
+					</div>
+				</div></li>
 			<hr class="sidebar-divider">
 
 		</ul>
@@ -149,12 +140,12 @@
 						<thead class="thead-dark">
 							<tr align="center">
 									<th class="text-center">CODIGO</th>
-									<th class="text-center">VALORACION</th>
-									<th class="text-center">TUTOR</th>
+									<th class="text-center">VALORACI&Oacute;N</th>
+									<th class="text-center">PRESTADOR</th>
 									<th class="text-center">CLIENTE</th>
 												
-									<th class="text-center">OPERACIÓN</th>
-									<th class="text-center">OPERACIÓN</th>																						</tr>
+									<th class="text-center">OPERACI&Oacute;N</th>
+									<th class="text-center">OPERACI&Oacute;N</th>																						</tr>
 						</thead>
 						<tbody>
 								<tr th:each="re: ${listaReview}">
