@@ -9,12 +9,9 @@ public class WelcomeController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "bienvenido";
+		return "landing";
 	}
-	@RequestMapping("/bienvenido1")
-	public String irP() {
-		return "registro";
-	}
+	
 	@RequestMapping("/error")
 	public String irError() {
 		return "error_403";
