@@ -41,14 +41,14 @@ public class ReviewServiceImpl implements IReviewService {
 
 	@Override
 	@Transactional
-	public void eliminar(int idReseña) {
-		dResena.deleteById(idReseña);
+	public void eliminar(int idResena) {
+		dResena.deleteById(idResena);
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public Optional<Review> listarId(int idReseña) {
-		return dResena.findById(idReseña);
+	public Optional<Review> listarId(int idResena) {
+		return dResena.findById(idResena);
 	}
 
 	@Override
