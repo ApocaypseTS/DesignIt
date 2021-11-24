@@ -15,5 +15,9 @@ public class WelcomeController {
 	public String irP() {
 		return "registro";
 	}
+	@RequestMapping("/error")
+	public String irError() {
+		return "error_403";
+	}
 	
 }

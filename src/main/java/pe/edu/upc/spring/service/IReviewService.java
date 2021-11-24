@@ -10,7 +10,7 @@ public interface IReviewService {
 
 	public boolean insertar (Review review);
 	public boolean modificar(Review review);
-	public void eliminar(int idReseña);
+	public void eliminar(int idResena);
 	public Optional<Review> listarId(int idReview);
 	List<Review> listar();
 	List<Review> buscarValoracion(int valoracion);
