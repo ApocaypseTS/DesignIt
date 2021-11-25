@@ -63,4 +63,11 @@ public class CustomerServiceImpl implements ICustomerService {
 	public List<Customer> buscarName(String nombre) {
 		return dCustomer.buscarNombre(nombre);
 	}
+	
+	
+	@Override
+	@Transactional(readOnly = true)
+	public List<Customer> buscarPlanner(String idPlanner) {
+		return dCustomer.buscarNombre(idPlanner);
+	}
 }

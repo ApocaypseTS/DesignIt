@@ -14,4 +14,9 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
 
 	@Query("From Customer c where c.nombre like %:nombre%")
 	List<Customer> buscarNombre(@Param("nombre") String nombre);
+	
+	
+	/*@Query("From Customer c where c.reviews.planner.idPlanner like %:idPlanner%")
+	List<Customer> buscarPlanner(@Param("idPlanner") String idPlanner);*/
+	
 }

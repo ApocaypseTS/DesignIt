@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<title>Inicio</title>
+
+<link rel="stylesheet" th:href="@{/css/style_landing.css}">
+<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+<body>
+<header class="hero">
+    <nav class="nav__hero">
+        <div class="container nav__container">
+            <div class="logo">
+                <h2 class="logo__name">Design It<span class="point">.</span></h2>
+            </div>
+            <div class="links">
+                <a href="@{/landing}" class="link">Inicio</a>
+                <a href="@{/nosotros}" class="link link--active">Nosotros</a>
+                <a href="#" class="link">Contacto</a>
+            </div>
+        </div>
+    </nav>
+        <section class="container hero__main">
+            <div class="hero__textos">
+                <h1 class="title"> <span class="title--active">El equipo Design It</span></h1>
+              
+
+            </div>
+            <img th:src="@{/img/team.png}" class="mockup">
+        </section>
+</header>
+
+<section class="testimony">
+    <div class="container">
+        <h2 class="subtitle">Nosotros<span class="point">.</span></h2>
+        <p class="copy__section">En Design It tenemos a los mejores profesionales para ti. Somos una empresa cuyo fin es hacer mas sencilla la búsqueda de personal para los eventos de nuestros usuarios. En nuestra aplicación podrás encontrar al pastelero que necesites para tu fiesta o el local que necesites para organizarlo. Asimismo, si tienes una empresa o emprendimiento que se encuentre relacionado a los eventos como mesero, pastelero, etc. tienes la posibilidad de encontrar una gran oportunidad de trabajo. </p>
+
+        <div class="testimony-container">
+            <div class="testimony__card">
+                <img th:src="@{/img/user.png}" class="testimony__img">
+                <div class="testimony__copy">
+                    <i class='bx bxl-google testimony__logo'></i>
+                    <div class="testimony__info">
+                        <h3 class="testimony__name">Dana Contreras</h3>
+                        <p class="testimony__position">Scrum Master</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimony__card">
+                <img th:src="@{/img/user.png}" class="testimony__img">
+                <div class="testimony__copy">
+                    <i class='bx bxl-apple testimony__logo'></i>
+                    <div class="testimony__info">
+                        <h3 class="testimony__name">Triska Susanivar</h3>
+                        <p class="testimony__position">Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimony__card">
+                <img th:src="@{/img/user.png}" class="testimony__img">
+                <div class="testimony__copy">
+                    <i class='bx bxl-apple testimony__logo'></i>
+                    <div class="testimony__info">
+                        <h3 class="testimony__name">Nicole Kraenau</h3>
+                        <p class="testimony__position">Product Owner</p>
+                    </div>
+                </div>
+            </div>
+          <!--  <div class="testimony__card">
+                <div class="testimony__text">
+                    <img src="img/google_logo.svg" class="google__logo">
+                    <p class="testimony__history">“Desde que empezamos a trabajar con Templune comenzamos a obtener resultados increíbles. Ahora hemos llegado a un mayor número de clientes potenciales”</p>
+                    <div class="testimony__copy testimony__copy--modifier">
+                        <img src="img/first-person.jpg" class="testimony__logo logo--picture">
+                        <div class="testimony__info">
+                            <h3 class="testimony__name">Nicole Kraenau</h3>
+                            <p class="testimony__position">Product Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</section>
+</body>
+</html>

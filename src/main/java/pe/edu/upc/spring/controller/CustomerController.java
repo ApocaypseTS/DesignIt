@@ -1,4 +1,5 @@
 package pe.edu.upc.spring.controller;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -23,7 +24,9 @@ public class CustomerController {
 
 	@Autowired
 	private ICustomerService cService;
-
+	private Customer idCus;
+	private String CusId;
+	private List<Customer> listCus;
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
 		return "bienvenido";
@@ -96,4 +99,15 @@ public class CustomerController {
 		model.put("listaCustomers", cService.listar());
 		return "cliente/listCLiente";
 	}
+	
+	
+	@RequestMapping("/reporte")
+	public String listarCust(Model model) {
+		CusId=String.valueOf(idCus.getIdCustomer());
+		listCus=cService.buscarPlanner(CusId);
+		model.addAttribute("listarPlanner", idCus);
+		model.addAttribute("ListCustByPla", listCus);
+		return "consulta/consCliente";
+	}
+	
 }
