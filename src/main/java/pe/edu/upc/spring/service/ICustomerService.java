@@ -13,4 +13,9 @@ public interface ICustomerService {
 	public Optional<Customer> listarId(int idCustomer);
 	List<Customer> listar();
 	List<Customer> buscarName(String name);
+	
+	
+	List<Customer> buscarPlanner(String idPlanner);
+	
+	
 }

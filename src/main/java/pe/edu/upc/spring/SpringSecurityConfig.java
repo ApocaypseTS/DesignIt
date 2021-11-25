@@ -34,11 +34,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 					.antMatchers("/request/**").access("hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')")					
 					 .antMatchers("/welcome/bienvenido").permitAll()
 					 .antMatchers("/welcome/nosotros").permitAll()
-					 .antMatchers("/welcome/error").permitAll()
+	
 					.antMatchers("/welcome/**").access("hasRole('ROLE_PRESTADOR') or hasRole('ROLE_CLIENTE') or hasRole('ROLE_ADMIN')").and().formLogin()
 					
 					.successHandler(sucessHandler).loginPage("/login").loginProcessingUrl("/login")
-					.defaultSuccessUrl("/welcome/bienvenido").permitAll().and().logout().logoutSuccessUrl("/login")
+					.defaultSuccessUrl("/welcome/bienvenido1").permitAll().and().logout().logoutSuccessUrl("/login")
 					.permitAll().and().exceptionHandling().accessDeniedPage("/welcome/error");
 
 		} catch (Exception e) {
