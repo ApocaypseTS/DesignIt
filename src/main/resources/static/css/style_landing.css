@@ -1,13 +1,14 @@
 @charset "ISO-8859-1";
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root{
-    --gold1:#F4BD76;
-    --gold2:#F6CD8F;
+    --gold1:#F88EEA;
+    --gold2:#f3c9d7;
     --gray:#ffffff80;
     --gray2:#f7d9d990;
     --black1: #1A1B1F;
-    --black2: #30353B;
+    --black2: #281548;
     --shadow: 0 8px 8px;
     --color_shadow: #00000033;
 }
@@ -122,7 +123,7 @@ body{
 .cta{
     padding: 20px 30px;
     display: inline-block;
-    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    background: linear-gradient(180deg, #ffbba6 0%, #f76c6f 100%);
     text-decoration: none;
     color: var(--black2);
     font-weight: 700;
@@ -165,7 +166,7 @@ body{
 }
 
 .card{
-    width: 30%;
+    width: 45%;
     padding: 30px 0;
     overflow: hidden;
     background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
@@ -210,7 +211,7 @@ body{
 
 .card__button{
     display: block;
-    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    background: linear-gradient(180deg, #ffbba6 0%, #f76c6f 100%);
     border-radius: 6px;
     text-decoration: none;
     width: 100%;
@@ -488,21 +489,6 @@ body{
     width: 100%;
 }
 
-.politica__privacidad{
-    color: inherit;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.politica__privacidad:hover{
-    text-decoration: underline;
-}
-
-.politica__privacidad--margin{
-    margin-right: 10px;
-}
-
 .get-email{
     width: 50%;
 }
@@ -541,7 +527,7 @@ body{
 
 
 .item__contact--gold{
-    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    background: linear-gradient(180deg, #ffbba6 0%, #f76c6f 100%);
     color: var(--black1);
 }
 
