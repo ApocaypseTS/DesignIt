@@ -7,14 +7,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/welcome")
 public class WelcomeController {
 	
-	@RequestMapping("/landing")
-	public String irPaginaBienve() {
+	@RequestMapping("/bienvenido")
+	public String irPaginaBienvenida() {
+		return "bienvenido";
+	}
+	@RequestMapping("/bienvenido4")
+	public String irPaginaBienvenida4() {
 		return "landing";
 	}
-	
-	@RequestMapping("/error")
-	public String irError() {
-		return "error_403";
+	@RequestMapping("/ae")
+	public String irPaginaBienvenida0() {
+		return "login";
+	}
+	@RequestMapping("/bienvenido2")
+	public String irPaginaBienvenid() {
+		return "ingresa";
+	}
+	@RequestMapping("/bienvenido3")
+	public String irPaginaBienvenid3() {
+		return "/redirect:planner";
+	}
+	@RequestMapping("/bienvenido1")
+	public String irP() {
+		return "seleccionar";
 	}
 	
 }

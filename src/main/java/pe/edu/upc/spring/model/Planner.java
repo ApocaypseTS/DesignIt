@@ -31,8 +31,8 @@ public class Planner implements Serializable{
 	@Column(name="apellido", nullable=false, length=50)
 	private String apellido;
 
-	@Column(name="dni", nullable=false, length=9)
-	private int dni;
+	@Column(name="dni", nullable=false, length=8)
+	private String dni;
 	
 	@Column(name="telefono", nullable=false, length=9)
 	private int telefono;
@@ -43,7 +43,7 @@ public class Planner implements Serializable{
 		super();
 	}
 
-	public Planner(int idPlanner, String correo, String contrasena, String nombre, String apellido, int dni, int telefono,
+	public Planner(int idPlanner, String correo, String contrasena, String nombre, String apellido, String dni, int telefono,
 			String horario_disponible, Set<Request> solicitudEventos,
 			Set<EventPlanner> cursoPlanners, Set<Review> reviews) {
 		super();
@@ -98,11 +98,11 @@ public class Planner implements Serializable{
 		this.apellido = apellido;
 	}
 
-	public int getDni() {
+	public String getDni() {
 		return dni;
 	}
 
-	public void setDni(int dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 

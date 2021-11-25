@@ -28,9 +28,13 @@ public class CustomerController {
 	public String irPaginaBienvenida() {
 		return "bienvenido";
 	}
-	@RequestMapping("/bienvenido1")
+	@RequestMapping("/cliente")
+	public String irPaginaBienvenida2() {
+		return "cliente/cliente2";
+	}
+         @RequestMapping("/bienvenido1")
 	public String irPaginaBienvenida1() {
-		return "seleccionar";
+			return "seleccionar";
 	}
 
 	@RequestMapping("/")
