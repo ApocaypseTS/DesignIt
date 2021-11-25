@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design It</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio</title>
 <link rel="stylesheet" th:href="@{/css/style_landing.css}">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+
 </head>
 <body>
     <header class="hero">
@@ -15,8 +16,8 @@
                     <h2 class="logo__name">Design It<span class="point">.</span></h2>
                 </div>
                 <div class="links">
-                    <a th:href="@{/welcome/bienvenido4}" class="link">Inicio</a>
-                    <a  class="link">Nosotros</a>
+                    <a th:href="@{/welcome/bienvenido}" class="link">Inicio</a>
+                    <a  class="@{/welcome/nosotros}">Nosotros</a>
                     <a class="link link--active">Contacto</a>
                 </div>
             </div>

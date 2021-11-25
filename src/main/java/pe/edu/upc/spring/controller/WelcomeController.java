@@ -9,11 +9,11 @@ public class WelcomeController {
 	
 	@RequestMapping("/bienvenido")
 	public String irPaginaBienvenida() {
-		return "bienvenido";
+		return "landing";
 	}
 	@RequestMapping("/bienvenido4")
 	public String irPaginaBienvenida4() {
-		return "landing";
+		return "bienvenido";
 	}
 	@RequestMapping("/ae")
 	public String irPaginaBienvenida0() {
@@ -30,6 +30,14 @@ public class WelcomeController {
 	@RequestMapping("/bienvenido1")
 	public String irP() {
 		return "seleccionar";
+	}
+	@RequestMapping("/nosotros")
+	public String irNosotros() {
+		return "nosotros";
+	}
+	@RequestMapping("/error")
+	public String irError() {
+		return "error_403";
 	}
 	
 }
